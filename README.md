@@ -42,3 +42,19 @@ npm run dev
 ### Caveats
 You may need to copy a certificate from the root of this repository: *.pfx to C:\tmp (yes, i realize it's tmp instead of temp).
 the docker container may need to read it to start correctly. If you need to trust it or something, the password is: "thisisnotasecurepassword" (minus quotes)
+
+### Screen Shots
+In the event you can't get this running for some reason, here are some screen shots:
+
+#### Dispatcher Screen
+![alt text][screen1]
+
+#### Swagger UI Documentation Screen
+![alt text][screen2]
+
+#### File Manager (broken) Screen
+![alt text][screen3]
+
+[screen1]: docs/img/CnCscreen1.png "Screen Shot - Dispatcher Screen"
+[screen2]: docs/img/CnCscreen2.png "Screen Shot - Api Documentation Screen"
+[screen3]: docs/img/CnCscreen3.png "Screen Shot - File Manager Screen"
