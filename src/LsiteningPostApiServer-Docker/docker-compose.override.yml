@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  listeningpostapiserver:
+    environment:
+      ASPNETCORE_URLS: ${ASPNETCORE_URLS}
+      ASPNETCORE_Kestrel__Certificates__Default__Password: ${ASPNETCORE_KESTREL_CERTIFICATE_PASSWORD}
+      ASPNETCORE_Kestrel__Certificates__Default__Path: ${ASPNETCORE_KESTREL_CERTIFICATE_PATH}
+    ports:
+      - "5000:80"
+      - "5001:443"
+    volumes:
+      - ${APPDATA}\ASP.NET\Https:/root/.aspnet/https:ro
+      - ${APPDATA}\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${CERTIFICATE_PATH}:/root/.dotnet/https:ro

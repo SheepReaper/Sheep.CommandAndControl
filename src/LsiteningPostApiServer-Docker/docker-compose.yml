@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  listeningpostapiserver:
+    image: ${DOCKER_REGISTRY-}listeningpostapiserver
+    build:
+      context: ../ListeningPostApiServer
+      dockerfile: Dockerfile
