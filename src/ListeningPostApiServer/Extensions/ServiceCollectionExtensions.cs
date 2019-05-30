@@ -135,7 +135,7 @@ namespace ListeningPostApiServer.Extensions
                             Description =
                                 "A \"simple\" ASP.NET Core Web API for your typical, run-of-the-mill Command & Control Server",
                             TermsOfService =
-                                "Absolutely no one is allowed to use this thing but me and my evaluators. This is a demonstration project for a job application. No guarantees or warranties of any kind!",
+                                "No guarantees or warranties of any kind!",
                             Contact = new Contact
                             {
                                 Name = "Bryan Gonzalez",
