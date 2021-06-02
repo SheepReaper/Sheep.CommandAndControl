@@ -26,8 +26,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
-      ],
+        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') }
+      ]
     },
     hot: true,
     contentBase: false, // since we use CopyWebpackPlugin.
@@ -42,7 +42,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     proxy: config.dev.proxyTable,
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
-      poll: config.dev.poll,
+      poll: config.dev.poll
     }
   },
   plugins: [
