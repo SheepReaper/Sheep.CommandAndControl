@@ -1,11 +1,19 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="md" type="dark" variant="primary" sticky>
+    <b-navbar
+      toggleable="md"
+      type="dark"
+      variant="primary"
+      sticky
+    >
       <b-navbar-brand href="#">C &amp; C</b-navbar-brand>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle target="nav-collapse" />
 
-      <b-collapse id="nav-collapse" is-nav>
+      <b-collapse
+        id="nav-collapse"
+        is-nav
+      >
         <b-navbar-nav>
           <b-nav-item :to="{ path: '/' }">Home</b-nav-item>
           <b-nav-item :to="{ path: '/command' }">Command</b-nav-item>
@@ -21,10 +29,12 @@
               size="sm"
               class="mr-sm-2"
               placeholder="Global Search (Not Implemented)"
-            ></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit"
-              >Search</b-button
-            >
+            />
+            <b-button
+              size="sm"
+              class="my-2 my-sm-0"
+              type="submit"
+            >Search</b-button>
           </b-nav-form>
 
           <!-- <b-nav-item-dropdown right>
@@ -37,20 +47,25 @@
     </b-navbar>
     <router-view />
 
-    <b-navbar fixed="bottom" toggleable="sm" type="dark" variant="primary">
-      <b-collapse id="nav-collapse" is-nav>
+    <b-navbar
+      fixed="bottom"
+      toggleable="sm"
+      type="dark"
+      variant="primary"
+    >
+      <b-collapse
+        id="nav-collapse"
+        is-nav
+      >
         <b-navbar-nav>
           <b-navbar-brand>Listening Station 1.0</b-navbar-brand>
           <b-nav-item
-            >Agents Reporting <b-badge>{{ agentCount }}</b-badge></b-nav-item
-          >
+          >Agents Reporting <b-badge>{{ agentCount }}</b-badge></b-nav-item>
           <b-nav-item
-            >Pending Tasks <b-badge>{{ pendingTaskCount }}</b-badge></b-nav-item
-          >
+          >Pending Tasks <b-badge>{{ pendingTaskCount }}</b-badge></b-nav-item>
           <b-nav-item
-            >Files Collected
-            <b-badge>{{ exfiltratedFileCount }}</b-badge></b-nav-item
-          >
+          >Files Collected
+          <b-badge>{{ exfiltratedFileCount }}</b-badge></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -59,16 +74,40 @@
 
 <script>
 // import ListeningPostService from '@/services/ListeningPostService'
+import {
+  BBadge,
+  BButton,
+  BCollapse,
+  BFormInput,
+  BNavbar,
+  BNavbarBrand,
+  BNavbarNav,
+  BNavbarToggle,
+  BNavForm,
+  BNavItem
+} from 'bootstrap-vue'
 
 export default {
   name: 'App',
+  components: {
+    BBadge,
+    BButton,
+    BCollapse,
+    BFormInput,
+    BNavbar,
+    BNavbarBrand,
+    BNavbarNav,
+    BNavbarToggle,
+    BNavForm,
+    BNavItem
+  },
   props: {
     endpoint: {
       type: String,
       default: 'https://localhost:5001'
     }
   },
-  data () {
+  data() {
     return {
       agents: [],
       tasks: [],
@@ -76,18 +115,25 @@ export default {
     }
   },
   computed: {
-    agentCount () {
+    agentCount() {
       return this.agents.length
     },
-    pendingTaskCount () {
+    pendingTaskCount() {
       return this.tasks.length
     },
-    exfiltratedFileCount () {
+    exfiltratedFileCount() {
       return this.files.length
     }
   },
+  mounted() {
+    this.fetchAgents()
+
+    setInterval(() => this.fetchAgents(), 5000)
+    setInterval(() => this.updateTasks(), 5000)
+    setInterval(() => this.updateFiles(), 5000)
+  },
   methods: {
-    async fetchAgents () {
+    async fetchAgents() {
       fetch(this.endpoint + '/implant')
         .then(response => response.json())
         .then(data => {
@@ -95,7 +141,7 @@ export default {
         })
         .catch(error => console.error(error))
     },
-    async updateTasks () {
+    async updateTasks() {
       var newTasks = []
       for (var i = 0; i < this.agents.length; i++) {
         var agent = this.agents[i]
@@ -106,7 +152,7 @@ export default {
       }
       this.tasks = newTasks
     },
-    async updateFiles () {
+    async updateFiles() {
       var newFiles = []
       for (var i = 0; i < this.agents.length; i++) {
         var agent = this.agents[i]
@@ -117,16 +163,8 @@ export default {
       }
       this.files = newFiles
     }
-  },
-  mounted () {
-    this.fetchAgents()
-
-    setInterval(() => this.fetchAgents(), 5000)
-    setInterval(() => this.updateTasks(), 5000)
-    setInterval(() => this.updateFiles(), 5000)
   }
 }
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>
