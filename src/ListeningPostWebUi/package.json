@@ -60,7 +60,7 @@
     "rimraf": "2.7.1",
     "sass-loader": "7.3.1",
     "semver": "5.7.1",
-    "shelljs": "0.7.8",
+    "shelljs": "0.8.4",
     "uglifyjs-webpack-plugin": "2.2.0",
     "url-loader": "0.5.9",
     "vue-loader": "14.2.4",
