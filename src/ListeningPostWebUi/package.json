@@ -16,7 +16,7 @@
     "axios": "0.21.1",
     "bootstrap": "4.3.1",
     "bootstrap-vue": "2.0.0-rc.18",
-    "jquery": "1.9.1",
+    "jquery": "3.5.0",
     "vue": "2.6.10",
     "vue-router": "3.0.3",
     "vue2-dropzone": "3.5.8",
