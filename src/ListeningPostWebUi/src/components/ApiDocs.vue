@@ -1,18 +1,21 @@
 <template>
-    <div id="iframe-wrapper" :style="iframe.wrapperStyle">
-        <iframe v-if="loaded"
-        :src="iframe.src"
-        :style="iframe.style"
-        :height="iframe.style.height"
-        :width="iframe.style.width"
-        type="application/pdf"
-        frameborder="0"
-      ></iframe>
-    </div>
+  <div
+    id="iframe-wrapper"
+    :style="iframe.wrapperStyle">
+    <iframe
+      v-if="loaded"
+      :src="iframe.src"
+      :style="iframe.style"
+      :height="iframe.style.height"
+      :width="iframe.style.width"
+      type="application/pdf"
+      frameborder="0"
+    />
+  </div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       loaded: false,
       iframe: {
@@ -24,7 +27,7 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted() {
     this.iframe.style = {
       // position: 'absolute',
       width: window.innerWidth,

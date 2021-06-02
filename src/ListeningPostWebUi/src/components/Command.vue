@@ -3,52 +3,54 @@
     <b-row class="mt-3">
       <b-col>
         <b-card-group>
-          <b-card header-tag="header" title="Command Dispatcher">
+          <b-card
+            header-tag="header"
+            title="Command Dispatcher"
+          >
             <div slot="header">
               <h3>Issue Commands</h3>
             </div>
             <b-card-body>
               <b-form-group label="Command Mode:">
-                <b-form-radio-group v-model="commandMode"
+                <b-form-radio-group
+                  v-model="commandMode"
                   :options="[
                     'Direct Bash Command',
                     'Special PUSH',
                     'Special PULL',
-                    'Debug: Create Agent',
+                    'Debug: Create Agent'
                   ]"
-                >
-                </b-form-radio-group>
+                />
               </b-form-group>
               <b-form-group
                 id="commandParameterGroup"
-                description="Please enter the desired bash-compatible command OR SourcePath DestinationPath of a File to Deploy OR The path of a File on target system you wish to retrieve."
-                label="Command / Special Command Arguments"
-                label-for="commandParameterInput"
                 :invalid-feedback="cPinvalidFeedback"
                 :valid-feedback="cPvalidFeedback"
                 :state="cPstate"
+                description="Please enter the desired bash-compatible command OR SourcePath DestinationPath of a File to Deploy OR The path of a File on target system you wish to retrieve."
+                label="Command / Special Command Arguments"
+                label-for="commandParameterInput"
               >
                 <b-form-input
                   id="commandParameterInput"
                   v-model="commandParameter"
                   :state="cPstate"
                   trim
-                >
-                </b-form-input>
+                />
               </b-form-group>
               <b-form-group
                 id="commandParameterGroup2"
+                :state="cPstate"
                 description="Fair warning, the speed of execution is completely dependant on the rate of check in from agents."
                 label="Looking good? Execute!"
                 label-for="submitButton"
-                :state="cPstate"
               >
                 <b-button
                   id="submitButton"
                   :disabled="!cPstate"
-                  @click="this.tryCallApi"
+                  @click="tryCallApi"
                 >
-                SEND IT
+                  SEND IT
                 </b-button>
               </b-form-group>
             </b-card-body>
@@ -70,7 +72,11 @@
                   v-for="agent in agents"
                   :key="agent.id"
                 >
-                  <b-form-checkbox :value="agent.id" v-model="selectedAgents" switch>
+                  <b-form-checkbox
+                    :value="agent.id"
+                    v-model="selectedAgents"
+                    switch
+                  >
                     <b>Agent Id: </b>{{ agent.id }} <b>Tasks: </b>
                     <b-badge>{{ agent.tasks.length }} </b-badge>
                   </b-form-checkbox>
@@ -78,11 +84,17 @@
               </b-list-group>
             </b-card-body>
           </b-card>
-          <b-card header-tag="header" title="Command History">
+          <b-card
+            header-tag="header"
+            title="Command History"
+          >
             <h3 slot="header">Monitor</h3>
             <b-card-body>
               <b-list-group>
-                <b-list-group-item v-for="task in tasksSorted" :key="task.id">
+                <b-list-group-item
+                  v-for="task in tasksSorted"
+                  :key="task.id"
+                >
                   TaskId: {{ task.id }} Command: {{ task.command }}
                 </b-list-group-item>
               </b-list-group>
@@ -95,10 +107,42 @@
 </template>
 <script>
 // import ListeningPostService from '@/services/ListeningPostService'
+import {
+  BContainer,
+  BRow,
+  BCol,
+  BCardGroup,
+  BCard,
+  BCardBody,
+  BBadge,
+  BFormGroup,
+  BFormRadioGroup,
+  BFormInput,
+  BButton,
+  BListGroup,
+  BListGroupItem,
+  BFormCheckbox
+} from 'bootstrap-vue'
 
 export default {
   name: 'Command',
-  data () {
+  components: {
+    BContainer,
+    BRow,
+    BCol,
+    BCardGroup,
+    BCard,
+    BCardBody,
+    BBadge,
+    BFormCheckbox,
+    BFormGroup,
+    BFormRadioGroup,
+    BFormInput,
+    BButton,
+    BListGroup,
+    BListGroupItem
+  },
+  data() {
     return {
       commandParameter: '',
       selectedAgents: [],
@@ -106,34 +150,34 @@ export default {
     }
   },
   computed: {
-    agents () {
+    agents() {
       return this.$parent.agents
     },
-    tasks () {
+    tasks() {
       return this.$parent.tasks
     },
-    tasksSorted () {
+    tasksSorted() {
       var newArr = [...this.$parent.tasks].sort(
         this.compareValues('id', 'desc')
       )
       return newArr
     },
-    cPstate () {
+    cPstate() {
       return this.commandParameter.length > 0
     },
-    cPinvalidFeedback () {
+    cPinvalidFeedback() {
       if (this.commandParameter.length > 0) {
         return ''
       } else {
-        return 'Please enter something (If you\'re just spawning an agent, enter an integer that hasn\'t been used yet.)'
+        return "Please enter something (If you're just spawning an agent, enter an integer that hasn't been used yet.)"
       }
     },
-    cPvalidFeedback () {
+    cPvalidFeedback() {
       return this.cPstate === true ? 'Thanks!' : ''
     }
   },
   methods: {
-    compareValues (key, order = 'asc') {
+    compareValues(key, order = 'asc') {
       return function (a, b) {
         if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
           // property doesn't exist on either object
@@ -152,9 +196,9 @@ export default {
 
         return order === 'desc' ? comparison * -1 : comparison
         // eslint-disable-next-line
-      };
+      }
     },
-    async tryCallApi () {
+    async tryCallApi() {
       var endpoint = this.$parent.endpoint
       var commandMessage = this.commandParameter
       var param = '/' + commandMessage
@@ -211,5 +255,4 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

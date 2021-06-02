@@ -5,10 +5,13 @@
         A list of files show up here when available
         <b-list-group>
           <b-list-group-item
-            v-for="fileItem in this.files"
+            v-for="fileItem in files"
             :key="fileItem.guid"
           >
-          File Name: <b>{{fileItem.filename}}</b> Guid: <b>{{fileItem.guid}}</b> Path on Server: <b>{{fileItem.tempFilePath}}</b> Updated: <b>{{fileItem.updated}}</b>
+            File Name: <b>{{ fileItem.filename }}</b> Guid:
+            <b>{{ fileItem.guid }}</b> Path on Server:
+            <b>{{ fileItem.tempFilePath }}</b> Updated:
+            <b>{{ fileItem.updated }}</b>
           </b-list-group-item>
         </b-list-group>
       </b-col>
@@ -19,10 +22,21 @@
           id="drop1"
           :options="dropOptions"
           @vdropzone-complete="uploadToServer"
-        ></vue-dropzone>
-        <ckeditor :editor="editor" v-model="editorData" :config="editorConfig"></ckeditor>
-        <b-form-file id="inputFile" v-on:change="loadFile()" v-model="pickerFile"></b-form-file>
-        <b-form-textarea rows="10" id="textArea"></b-form-textarea>
+        />
+        <ckeditor
+          :editor="editor"
+          v-model="editorData"
+          :config="editorConfig"
+        />
+        <b-form-file
+          id="inputFile"
+          v-model="pickerFile"
+          @change="loadFile()"
+        />
+        <b-form-textarea
+          id="textArea"
+          rows="10"
+        />
         <b-button @click="uploadToServer()">Upload</b-button>
       </b-col>
     </b-row>
@@ -35,29 +49,35 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 
 export default {
   name: 'FileReader',
-  data () {
+  components: {
+    vueDropzone
+  },
+  data() {
     return {
       editor: ClassicEditor,
       editorData: '',
       files: [],
       pickerFile: [],
-      editorConfig: {
-      },
+      editorConfig: {},
       dropOptions: {
         url: 'https://localhost:5001/File/pull/0'
       }
     }
   },
   computed: {
-    endpoint () {
+    endpoint() {
       return this.$parent.endpoint
     }
   },
-  components: {
-    vueDropzone
+  mounted() {
+    this.fetchFiles()
+
+    setInterval(() => {
+      this.fetchFiles()
+    }, 5000)
   },
   methods: {
-    uploadToServer (file) {
+    uploadToServer(file) {
       let formData = new FormData()
 
       formData.append('file', file)
@@ -75,7 +95,7 @@ export default {
         .then(success => console.log(success))
         .catch(error => console.log(error))
     },
-    fetchFiles () {
+    fetchFiles() {
       fetch(this.endpoint + '/File/', {
         method: 'GET',
         mode: 'cors',
@@ -90,7 +110,7 @@ export default {
         })
         .catch(error => console.log(error))
     },
-    loadFile () {
+    loadFile() {
       var fileToLoad = this.pickerFile.value
 
       if (fileToLoad) {
@@ -102,13 +122,6 @@ export default {
         reader.readAsText(fileToLoad, 'UTF-8')
       }
     }
-  },
-  mounted () {
-    this.fetchFiles()
-
-    setInterval(() => {
-      this.fetchFiles()
-    }, 5000)
   }
 }
 </script>
