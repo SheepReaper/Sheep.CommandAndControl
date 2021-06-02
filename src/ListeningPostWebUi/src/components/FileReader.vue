@@ -115,7 +115,7 @@ export default {
 
       if (fileToLoad) {
         var reader = new FileReader()
-        reader.onload = function (fileLoadedEvent) {
+        reader.onload = function(fileLoadedEvent) {
           var textFromFileLoaded = fileLoadedEvent.target.result
           document.getElementById('textArea').value = textFromFileLoaded
         }
