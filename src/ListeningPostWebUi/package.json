@@ -13,11 +13,11 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "12.4.0",
     "@ckeditor/ckeditor5-vue": "1.0.3",
+    "@popperjs/core": "2.9.2",
     "axios": "0.21.1",
     "bootstrap": "5.0.1",
     "bootstrap-vue": "2.21.2",
     "jquery": "3.6.0",
-    "popper.js": "1.16.1",
     "vue": "2.6.13",
     "vue-router": "3.5.1",
     "vue2-dropzone": "3.6.0",
