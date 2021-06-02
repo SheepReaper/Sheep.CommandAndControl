@@ -87,6 +87,8 @@ import {
   BNavItem
 } from 'bootstrap-vue'
 
+export const mountPoint = '#app'
+
 export default {
   name: 'App',
   components: {

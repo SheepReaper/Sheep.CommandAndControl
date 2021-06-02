@@ -44,13 +44,16 @@
 </template>
 
 <script>
-import vueDropzone from 'vue2-dropzone'
+import vue2Dropzone from 'vue2-dropzone'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+import CKEditor from '@ckeditor/ckeditor5-vue2'
+import { BContainer, BRow, BCol, BListGroup, BFormFile, BButton, BListGroupItem, BFormTextarea } from 'bootstrap-vue'
+import 'vue2-dropzone/dist/vue2Dropzone.min.css'
 
 export default {
   name: 'FileReader',
   components: {
-    vueDropzone
+    vueDropzone: vue2Dropzone, BContainer, BRow, BCol, BFormTextarea, BFormFile, BButton, BListGroup, BListGroupItem, ckeditor: CKEditor.component
   },
   data() {
     return {
