@@ -2,9 +2,9 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import App from './App'
+import App, { mountPoint } from './App.vue'
 import router from './router'
-import CKEditor from '@ckeditor/ckeditor5-vue'
+// import CKEditor from '@ckeditor/ckeditor5-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -17,11 +17,11 @@ Vue.use(IconsPlugin)
 // Vue.use(LayoutPlugin)
 // Vue.use(CardPlugin)
 // Vue.use(VBScrollspyPlugin)
-Vue.use(CKEditor)
+// Vue.use(CKEditor)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: mountPoint,
   router,
   components: { App },
   template: '<App/>'
