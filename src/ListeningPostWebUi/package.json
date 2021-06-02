@@ -15,7 +15,7 @@
     "@ckeditor/ckeditor5-vue": "1.0.3",
     "axios": "0.21.1",
     "bootstrap": "4.3.1",
-    "bootstrap-vue": "2.0.0-rc.18",
+    "bootstrap-vue": "2.0.4",
     "jquery": "1.9.1",
     "vue": "2.6.10",
     "vue-router": "3.0.3",
