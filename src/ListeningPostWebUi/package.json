@@ -43,7 +43,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^7.10.0",
     "eslint-webpack-plugin": "^2.5.4",
-    "file-loader": "1.1.11",
+    "file-loader": "6.2.0",
     "friendly-errors-webpack-plugin": "1.7.0",
     "html-webpack-plugin": "4.5.2",
     "mini-css-extract-plugin": "^1.6.0",
