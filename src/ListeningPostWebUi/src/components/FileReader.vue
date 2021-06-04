@@ -24,8 +24,8 @@
           @vdropzone-complete="uploadToServer"
         />
         <ckeditor
-          :editor="editor"
           v-model="editorData"
+          :editor="editor"
           :config="editorConfig"
         />
         <b-form-file
@@ -37,7 +37,9 @@
           id="textArea"
           rows="10"
         />
-        <b-button @click="uploadToServer()">Upload</b-button>
+        <b-button @click="uploadToServer()">
+          Upload
+        </b-button>
       </b-col>
     </b-row>
   </b-container>
