@@ -6,11 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
-using Swashbuckle.AspNetCore.Swagger;
-using System;
+using Microsoft.OpenApi.Models;
 using System.IO;
 using System.Reflection;
+using System;
 
 namespace ListeningPostApiServer.Extensions
 {
@@ -95,9 +94,7 @@ namespace ListeningPostApiServer.Extensions
         {
             return services
                 .AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-                .AddJsonOptions(options =>
-                    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+                .SetCompatibilityVersion(CompatibilityVersion.Latest);
         }
 
         /// <summary>
@@ -128,25 +125,23 @@ namespace ListeningPostApiServer.Extensions
             return
                 services.AddSwaggerGen(options =>
                     {
-                        options.SwaggerDoc("v1", new Info
+                        options.SwaggerDoc("v1", new OpenApiInfo
                         {
                             Title = "Listening Post API",
                             Version = "v1",
                             Description =
                                 "A \"simple\" ASP.NET Core Web API for your typical, run-of-the-mill Command & Control Server",
-                            TermsOfService =
-                                "No guarantees or warranties of any kind!",
-                            Contact = new Contact
+                            Contact = new OpenApiContact
                             {
                                 Name = "Bryan Gonzalez",
                                 Email = "bgonza868@gmail.com",
-                                Url = "https://github.com/bryan5989"
+                                Url = new Uri("https://github.com/bryan5989")
                             },
-                            License = new License
+                            License = new OpenApiLicense
                             {
                                 Name =
                                     "This is really not Licensed for distribution, but for a real project, it would be GNU GPLv3",
-                                Url = "https://www.gnu.org/licenses/gpl-3.0.en.html"
+                                Url = new Uri("https://www.gnu.org/licenses/gpl-3.0.en.html")
                             }
                         });
                         options.IncludeXmlComments(xmlPath);
