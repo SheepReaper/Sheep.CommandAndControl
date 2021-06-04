@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build-env
 WORKDIR /app
 COPY ListeningPostApiServer.csproj ./
 RUN dotnet restore
