@@ -83,7 +83,7 @@ export default {
   },
   methods: {
     uploadToServer(file) {
-      let formData = new FormData()
+      const formData = new FormData()
 
       formData.append('file', file)
 
@@ -116,12 +116,12 @@ export default {
         .catch(error => console.log(error))
     },
     loadFile() {
-      var fileToLoad = this.pickerFile.value
+      const fileToLoad = this.pickerFile.value
 
       if (fileToLoad) {
-        var reader = new FileReader()
+        const reader = new FileReader()
         reader.onload = function(fileLoadedEvent) {
-          var textFromFileLoaded = fileLoadedEvent.target.result
+          const textFromFileLoaded = fileLoadedEvent.target.result
           document.getElementById('textArea').value = textFromFileLoaded
         }
         reader.readAsText(fileToLoad, 'UTF-8')

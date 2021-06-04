@@ -161,7 +161,7 @@ export default {
       return this.$parent.tasks
     },
     tasksSorted() {
-      var newArr = [...this.$parent.tasks].sort(
+      const newArr = [...this.$parent.tasks].sort(
         this.compareValues('id', 'desc')
       )
       return newArr
@@ -183,7 +183,10 @@ export default {
   methods: {
     compareValues(key, order = 'asc') {
       return function(a, b) {
-        if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+        if (
+          !Object.prototype.hasOwnProperty.call(a, key) ||
+          !Object.prototype.hasOwnProperty.call(b, key)
+        ) {
           // property doesn't exist on either object
           return 0
         }
@@ -203,16 +206,16 @@ export default {
       }
     },
     async tryCallApi() {
-      var endpoint = this.$parent.endpoint
-      var commandMessage = this.commandParameter
-      var param = '/' + commandMessage
-      var controller = '/Tasking'
+      const endpoint = this.$parent.endpoint
+      const commandMessage = this.commandParameter
+      let param = '/' + commandMessage
+      const controller = '/Tasking'
 
-      var messageBody = {
+      const messageBody = {
         command: commandMessage
       }
 
-      var requestOptions = {
+      const requestOptions = {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -221,18 +224,18 @@ export default {
       }
 
       if (this.commandMode === 'Debug: Create Agent') {
-        requestOptions['method'] = 'GET'
+        requestOptions.method = 'GET'
       } else if (this.commandMode === 'Direct Bash Command') {
-        requestOptions['body'] = JSON.stringify(messageBody)
+        requestOptions.body = JSON.stringify(messageBody)
         param = ''
       } else if (this.commandMode === 'Special PUSH') {
         param = ''
-        messageBody['command'] = 'push ' + messageBody['command']
-        requestOptions['body'] = JSON.stringify(messageBody)
+        messageBody.command = 'push ' + messageBody.command
+        requestOptions.body = JSON.stringify(messageBody)
       } else if (this.commandMode === 'Special PULL') {
         param = ''
-        messageBody['command'] = 'pull ' + messageBody['command']
-        requestOptions['body'] = JSON.stringify(messageBody)
+        messageBody.command = 'pull ' + messageBody.command
+        requestOptions.body = JSON.stringify(messageBody)
       } else {
         return
       }
@@ -247,7 +250,7 @@ export default {
       //   command: param
       // }
 
-      var apiString = endpoint + controller + param
+      const apiString = endpoint + controller + param
 
       fetch(apiString, requestOptions)
         .then(response => response.json())
