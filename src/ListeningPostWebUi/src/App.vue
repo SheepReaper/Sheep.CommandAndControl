@@ -161,22 +161,22 @@ export default {
         .catch(error => console.error(error))
     },
     async updateTasks() {
-      var newTasks = []
-      for (var i = 0; i < this.agents.length; i++) {
-        var agent = this.agents[i]
-        for (var j = 0; j < agent.tasks.length; j++) {
-          var task = agent.tasks[j]
+      const newTasks = []
+      for (let i = 0; i < this.agents.length; i++) {
+        const agent = this.agents[i]
+        for (let j = 0; j < agent.tasks.length; j++) {
+          const task = agent.tasks[j]
           newTasks.push(task)
         }
       }
       this.tasks = newTasks
     },
     async updateFiles() {
-      var newFiles = []
-      for (var i = 0; i < this.agents.length; i++) {
-        var agent = this.agents[i]
-        for (var j = 0; j < agent.exfiltratedFiles.length; j++) {
-          var file = agent.exfiltratedFiles[j]
+      const newFiles = []
+      for (let i = 0; i < this.agents.length; i++) {
+        const agent = this.agents[i]
+        for (let j = 0; j < agent.exfiltratedFiles.length; j++) {
+          const file = agent.exfiltratedFiles[j]
           newFiles.push(file)
         }
       }
