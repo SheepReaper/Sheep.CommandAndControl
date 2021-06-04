@@ -92,14 +92,14 @@ namespace ListeningPostApiServer
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
-            services.ConfigureMvc();
-
             services
                 .ConfigureAppDbContext()
                 .ConfigureRepositoryInjection()
                 .ConfigureSwagger()
                 //.ConfigureHttps()
                 .ConfigureCors(MyAllowSpecificOrigins);
+
+            services.ConfigureMvc().AddMvcOptions(options => options.EnableEndpointRouting = false);
         }
 
         #endregion Methods
