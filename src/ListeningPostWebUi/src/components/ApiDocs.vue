@@ -1,14 +1,14 @@
 <template>
   <div
     id="iframe-wrapper"
-    :style="iframe.wrapperStyle">
+    :style="iframe.wrapperStyle"
+  >
     <iframe
       v-if="loaded"
       :src="iframe.src"
       :style="iframe.style"
       :height="iframe.style.height"
       :width="iframe.style.width"
-      type="application/pdf"
       frameborder="0"
     />
   </div>

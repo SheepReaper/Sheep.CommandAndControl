@@ -6,7 +6,9 @@
       variant="primary"
       sticky
     >
-      <b-navbar-brand href="#">C &amp; C</b-navbar-brand>
+      <b-navbar-brand href="#">
+        C &amp; C
+      </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
 
@@ -15,11 +17,21 @@
         is-nav
       >
         <b-navbar-nav>
-          <b-nav-item :to="{ path: '/' }">Home</b-nav-item>
-          <b-nav-item :to="{ path: '/command' }">Command</b-nav-item>
-          <b-nav-item :to="{ path: '/queues' }">Manage Queues</b-nav-item>
-          <b-nav-item :to="{ path: '/fileManager' }">File Manager</b-nav-item>
-          <b-nav-item :to="{ path: '/docs' }">Api Docs</b-nav-item>
+          <b-nav-item :to="{ path: '/' }">
+            Home
+          </b-nav-item>
+          <b-nav-item :to="{ path: '/command' }">
+            Command
+          </b-nav-item>
+          <b-nav-item :to="{ path: '/queues' }">
+            Manage Queues
+          </b-nav-item>
+          <b-nav-item :to="{ path: '/fileManager' }">
+            File Manager
+          </b-nav-item>
+          <b-nav-item :to="{ path: '/docs' }">
+            Api Docs
+          </b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -34,7 +46,9 @@
               size="sm"
               class="my-2 my-sm-0"
               type="submit"
-            >Search</b-button>
+            >
+              Search
+            </b-button>
           </b-nav-form>
 
           <!-- <b-nav-item-dropdown right>
@@ -59,13 +73,16 @@
       >
         <b-navbar-nav>
           <b-navbar-brand>Listening Station 1.0</b-navbar-brand>
-          <b-nav-item
-          >Agents Reporting <b-badge>{{ agentCount }}</b-badge></b-nav-item>
-          <b-nav-item
-          >Pending Tasks <b-badge>{{ pendingTaskCount }}</b-badge></b-nav-item>
-          <b-nav-item
-          >Files Collected
-          <b-badge>{{ exfiltratedFileCount }}</b-badge></b-nav-item>
+          <b-nav-item>
+            Agents Reporting <b-badge>{{ agentCount }}</b-badge>
+          </b-nav-item>
+          <b-nav-item>
+            Pending Tasks <b-badge>{{ pendingTaskCount }}</b-badge>
+          </b-nav-item>
+          <b-nav-item>
+            Files Collected
+            <b-badge>{{ exfiltratedFileCount }}</b-badge>
+          </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

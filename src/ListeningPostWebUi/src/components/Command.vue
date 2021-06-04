@@ -65,7 +65,9 @@
             header-tag="header"
             title="Select which agents will receive commands:"
           >
-            <h3 slot="header">Active Agents (Implants)</h3>
+            <h3 slot="header">
+              Active Agents (Implants)
+            </h3>
             <b-card-body>
               <b-list-group>
                 <b-list-group-item
@@ -73,8 +75,8 @@
                   :key="agent.id"
                 >
                   <b-form-checkbox
-                    :value="agent.id"
                     v-model="selectedAgents"
+                    :value="agent.id"
                     switch
                   >
                     <b>Agent Id: </b>{{ agent.id }} <b>Tasks: </b>
@@ -88,7 +90,9 @@
             header-tag="header"
             title="Command History"
           >
-            <h3 slot="header">Monitor</h3>
+            <h3 slot="header">
+              Monitor
+            </h3>
             <b-card-body>
               <b-list-group>
                 <b-list-group-item

@@ -8,7 +8,9 @@
       <b-button
         :to="{ path: '/command' }"
         variant="primary"
-      >Begin!</b-button>
+      >
+        Begin!
+      </b-button>
     </b-jumbotron>
   </div>
 </template>
