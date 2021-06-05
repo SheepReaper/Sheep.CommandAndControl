@@ -1,6 +1,0 @@
-// vue.config.js
-{
-  "devServer": {
-    "proxy": "https://localhost:5001/"
-  }
-}
