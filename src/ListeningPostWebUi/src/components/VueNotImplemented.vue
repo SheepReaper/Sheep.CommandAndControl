@@ -14,7 +14,7 @@ import { BJumbotron } from 'bootstrap-vue'
 export default {
   name: 'VueNotImplemented',
   components: { BJumbotron },
-  data() {
+  data () {
     return {}
   }
 }

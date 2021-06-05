@@ -1,7 +1,7 @@
 import Api from './Api'
 
 export default {
-  getImplants() {
+  getImplants () {
     return Api.get('/implant')
   }
 }

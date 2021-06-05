@@ -126,7 +126,7 @@ export default {
       default: 'https://localhost:5001'
     }
   },
-  data() {
+  data () {
     return {
       agents: [],
       tasks: [],
@@ -134,17 +134,17 @@ export default {
     }
   },
   computed: {
-    agentCount() {
+    agentCount () {
       return this.agents.length
     },
-    pendingTaskCount() {
+    pendingTaskCount () {
       return this.tasks.length
     },
-    exfiltratedFileCount() {
+    exfiltratedFileCount () {
       return this.files.length
     }
   },
-  mounted() {
+  mounted () {
     this.fetchAgents()
 
     setInterval(() => this.fetchAgents(), 5000)
@@ -152,7 +152,7 @@ export default {
     setInterval(() => this.updateFiles(), 5000)
   },
   methods: {
-    async fetchAgents() {
+    async fetchAgents () {
       fetch(this.endpoint + '/implant')
         .then(response => response.json())
         .then(data => {
@@ -160,7 +160,7 @@ export default {
         })
         .catch(error => console.error(error))
     },
-    async updateTasks() {
+    async updateTasks () {
       const newTasks = []
       for (let i = 0; i < this.agents.length; i++) {
         const agent = this.agents[i]
@@ -171,7 +171,7 @@ export default {
       }
       this.tasks = newTasks
     },
-    async updateFiles() {
+    async updateFiles () {
       const newFiles = []
       for (let i = 0; i < this.agents.length; i++) {
         const agent = this.agents[i]

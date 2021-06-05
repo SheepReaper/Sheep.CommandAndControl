@@ -11,7 +11,7 @@
 <script>
 export default {
   methods: {
-    loadTextFromFile(ev) {
+    loadTextFromFile (ev) {
       const file = ev.target.files[0]
       const reader = new FileReader()
 

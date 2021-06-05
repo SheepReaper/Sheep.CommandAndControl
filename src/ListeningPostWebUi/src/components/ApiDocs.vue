@@ -15,7 +15,7 @@
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
       loaded: false,
       iframe: {
@@ -27,7 +27,7 @@ export default {
       }
     }
   },
-  mounted() {
+  mounted () {
     this.iframe.style = {
       // position: 'absolute',
       width: window.innerWidth,
