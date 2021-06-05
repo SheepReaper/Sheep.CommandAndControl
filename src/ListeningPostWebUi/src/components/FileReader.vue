@@ -57,7 +57,7 @@ export default {
   components: {
     vueDropzone: vue2Dropzone, BContainer, BRow, BCol, BFormTextarea, BFormFile, BButton, BListGroup, BListGroupItem, ckeditor: CKEditor.component
   },
-  data() {
+  data () {
     return {
       editor: ClassicEditor,
       editorData: '',
@@ -70,11 +70,11 @@ export default {
     }
   },
   computed: {
-    endpoint() {
+    endpoint () {
       return this.$parent.endpoint
     }
   },
-  mounted() {
+  mounted () {
     this.fetchFiles()
 
     setInterval(() => {
@@ -82,7 +82,7 @@ export default {
     }, 5000)
   },
   methods: {
-    uploadToServer(file) {
+    uploadToServer (file) {
       const formData = new FormData()
 
       formData.append('file', file)
@@ -100,7 +100,7 @@ export default {
         .then(success => console.log(success))
         .catch(error => console.log(error))
     },
-    fetchFiles() {
+    fetchFiles () {
       fetch(this.endpoint + '/File/', {
         method: 'GET',
         mode: 'cors',
@@ -115,12 +115,12 @@ export default {
         })
         .catch(error => console.log(error))
     },
-    loadFile() {
+    loadFile () {
       const fileToLoad = this.pickerFile.value
 
       if (fileToLoad) {
         const reader = new FileReader()
-        reader.onload = function(fileLoadedEvent) {
+        reader.onload = function (fileLoadedEvent) {
           const textFromFileLoaded = fileLoadedEvent.target.result
           document.getElementById('textArea').value = textFromFileLoaded
         }

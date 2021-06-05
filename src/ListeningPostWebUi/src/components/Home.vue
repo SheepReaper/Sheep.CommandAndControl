@@ -20,7 +20,7 @@ import { BJumbotron, BButton } from 'bootstrap-vue'
 export default {
   name: 'Home',
   components: { BJumbotron, BButton },
-  data() {
+  data () {
     return {}
   }
 }
