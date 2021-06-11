@@ -3,10 +3,7 @@
     <b-row class="mt-3">
       <b-col>
         <b-card-group>
-          <b-card
-            header-tag="header"
-            title="Command Dispatcher"
-          >
+          <b-card header-tag="header" title="Command Dispatcher">
             <div slot="header">
               <h3>Issue Commands</h3>
             </div>
@@ -65,15 +62,10 @@
             header-tag="header"
             title="Select which agents will receive commands:"
           >
-            <h3 slot="header">
-              Active Agents (Implants)
-            </h3>
+            <h3 slot="header">Active Agents (Implants)</h3>
             <b-card-body>
               <b-list-group>
-                <b-list-group-item
-                  v-for="agent in agents"
-                  :key="agent.id"
-                >
+                <b-list-group-item v-for="agent in agents" :key="agent.id">
                   <b-form-checkbox
                     v-model="selectedAgents"
                     :value="agent.id"
@@ -86,19 +78,11 @@
               </b-list-group>
             </b-card-body>
           </b-card>
-          <b-card
-            header-tag="header"
-            title="Command History"
-          >
-            <h3 slot="header">
-              Monitor
-            </h3>
+          <b-card header-tag="header" title="Command History">
+            <h3 slot="header">Monitor</h3>
             <b-card-body>
               <b-list-group>
-                <b-list-group-item
-                  v-for="task in tasksSorted"
-                  :key="task.id"
-                >
+                <b-list-group-item v-for="task in tasksSorted" :key="task.id">
                   TaskId: {{ task.id }} Command: {{ task.command }}
                 </b-list-group-item>
               </b-list-group>
@@ -146,7 +130,7 @@ export default {
     BListGroup,
     BListGroupItem
   },
-  data () {
+  data() {
     return {
       commandParameter: '',
       selectedAgents: [],
@@ -154,34 +138,34 @@ export default {
     }
   },
   computed: {
-    agents () {
+    agents() {
       return this.$parent.agents
     },
-    tasks () {
+    tasks() {
       return this.$parent.tasks
     },
-    tasksSorted () {
+    tasksSorted() {
       const newArr = [...this.$parent.tasks].sort(
         this.compareValues('id', 'desc')
       )
       return newArr
     },
-    cPstate () {
+    cPstate() {
       return this.commandParameter.length > 0
     },
-    cPinvalidFeedback () {
+    cPinvalidFeedback() {
       if (this.commandParameter.length > 0) {
         return ''
       } else {
         return "Please enter something (If you're just spawning an agent, enter an integer that hasn't been used yet.)"
       }
     },
-    cPvalidFeedback () {
+    cPvalidFeedback() {
       return this.cPstate === true ? 'Thanks!' : ''
     }
   },
   methods: {
-    compareValues (key, order = 'asc') {
+    compareValues(key, order = 'asc') {
       return function (a, b) {
         if (
           !Object.prototype.hasOwnProperty.call(a, key) ||
@@ -205,7 +189,7 @@ export default {
         // eslint-disable-next-line
       }
     },
-    async tryCallApi () {
+    async tryCallApi() {
       const endpoint = this.$parent.endpoint
       const commandMessage = this.commandParameter
       let param = '/' + commandMessage
@@ -253,11 +237,11 @@ export default {
       const apiString = endpoint + controller + param
 
       fetch(apiString, requestOptions)
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
           console.log(data)
         })
-        .catch(error => console.error(error))
+        .catch((error) => console.error(error))
     }
   }
 }

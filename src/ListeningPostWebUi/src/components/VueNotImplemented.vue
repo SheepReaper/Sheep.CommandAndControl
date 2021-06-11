@@ -1,9 +1,6 @@
 <template>
   <div>
-    <b-jumbotron
-      header="Sorry!"
-      lead="I had something cool planned for this."
-    >
+    <b-jumbotron header="Sorry!" lead="I had something cool planned for this.">
       <p>Try one of the other areas...</p>
     </b-jumbotron>
   </div>
@@ -14,7 +11,7 @@ import { BJumbotron } from 'bootstrap-vue'
 export default {
   name: 'VueNotImplemented',
   components: { BJumbotron },
-  data () {
+  data() {
     return {}
   }
 }

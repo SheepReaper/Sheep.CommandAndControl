@@ -4,10 +4,7 @@
       <b-col>
         A list of files show up here when available
         <b-list-group>
-          <b-list-group-item
-            v-for="fileItem in files"
-            :key="fileItem.guid"
-          >
+          <b-list-group-item v-for="fileItem in files" :key="fileItem.guid">
             File Name: <b>{{ fileItem.filename }}</b> Guid:
             <b>{{ fileItem.guid }}</b> Path on Server:
             <b>{{ fileItem.tempFilePath }}</b> Updated:
@@ -28,18 +25,9 @@
           :editor="editor"
           :config="editorConfig"
         />
-        <b-form-file
-          id="inputFile"
-          v-model="pickerFile"
-          @change="loadFile()"
-        />
-        <b-form-textarea
-          id="textArea"
-          rows="10"
-        />
-        <b-button @click="uploadToServer()">
-          Upload
-        </b-button>
+        <b-form-file id="inputFile" v-model="pickerFile" @change="loadFile()" />
+        <b-form-textarea id="textArea" rows="10" />
+        <b-button @click="uploadToServer()"> Upload </b-button>
       </b-col>
     </b-row>
   </b-container>
@@ -49,15 +37,33 @@
 import vue2Dropzone from 'vue2-dropzone'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import CKEditor from '@ckeditor/ckeditor5-vue2'
-import { BContainer, BRow, BCol, BListGroup, BFormFile, BButton, BListGroupItem, BFormTextarea } from 'bootstrap-vue'
+import {
+  BContainer,
+  BRow,
+  BCol,
+  BListGroup,
+  BFormFile,
+  BButton,
+  BListGroupItem,
+  BFormTextarea
+} from 'bootstrap-vue'
 import 'vue2-dropzone/dist/vue2Dropzone.min.css'
 
 export default {
   name: 'FileReader',
   components: {
-    vueDropzone: vue2Dropzone, BContainer, BRow, BCol, BFormTextarea, BFormFile, BButton, BListGroup, BListGroupItem, ckeditor: CKEditor.component
+    vueDropzone: vue2Dropzone,
+    BContainer,
+    BRow,
+    BCol,
+    BFormTextarea,
+    BFormFile,
+    BButton,
+    BListGroup,
+    BListGroupItem,
+    ckeditor: CKEditor.component
   },
-  data () {
+  data() {
     return {
       editor: ClassicEditor,
       editorData: '',
@@ -70,11 +76,11 @@ export default {
     }
   },
   computed: {
-    endpoint () {
+    endpoint() {
       return this.$parent.endpoint
     }
   },
-  mounted () {
+  mounted() {
     this.fetchFiles()
 
     setInterval(() => {
@@ -82,7 +88,7 @@ export default {
     }, 5000)
   },
   methods: {
-    uploadToServer (file) {
+    uploadToServer(file) {
       const formData = new FormData()
 
       formData.append('file', file)
@@ -96,11 +102,11 @@ export default {
         },
         body: formData
       })
-        .then(response => response.json())
-        .then(success => console.log(success))
-        .catch(error => console.log(error))
+        .then((response) => response.json())
+        .then((success) => console.log(success))
+        .catch((error) => console.log(error))
     },
-    fetchFiles () {
+    fetchFiles() {
       fetch(this.endpoint + '/File/', {
         method: 'GET',
         mode: 'cors',
@@ -108,14 +114,14 @@ export default {
           Accept: 'application/json'
         }
       })
-        .then(response => response.json())
-        .then(success => {
+        .then((response) => response.json())
+        .then((success) => {
           this.files = success
           console.log(success)
         })
-        .catch(error => console.log(error))
+        .catch((error) => console.log(error))
     },
-    loadFile () {
+    loadFile() {
       const fileToLoad = this.pickerFile.value
 
       if (fileToLoad) {
