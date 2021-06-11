@@ -1,37 +1,17 @@
 <template>
   <div id="app">
-    <b-navbar
-      toggleable="md"
-      type="dark"
-      variant="primary"
-      sticky
-    >
-      <b-navbar-brand href="#">
-        C &amp; C
-      </b-navbar-brand>
+    <b-navbar toggleable="md" type="dark" variant="primary" sticky>
+      <b-navbar-brand href="#"> C &amp; C </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
 
-      <b-collapse
-        id="nav-collapse"
-        is-nav
-      >
+      <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item :to="{ path: '/' }">
-            Home
-          </b-nav-item>
-          <b-nav-item :to="{ path: '/command' }">
-            Command
-          </b-nav-item>
-          <b-nav-item :to="{ path: '/queues' }">
-            Manage Queues
-          </b-nav-item>
-          <b-nav-item :to="{ path: '/fileManager' }">
-            File Manager
-          </b-nav-item>
-          <b-nav-item :to="{ path: '/docs' }">
-            Api Docs
-          </b-nav-item>
+          <b-nav-item :to="{ path: '/' }"> Home </b-nav-item>
+          <b-nav-item :to="{ path: '/command' }"> Command </b-nav-item>
+          <b-nav-item :to="{ path: '/queues' }"> Manage Queues </b-nav-item>
+          <b-nav-item :to="{ path: '/fileManager' }"> File Manager </b-nav-item>
+          <b-nav-item :to="{ path: '/docs' }"> Api Docs </b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -42,11 +22,7 @@
               class="mr-sm-2"
               placeholder="Global Search (Not Implemented)"
             />
-            <b-button
-              size="sm"
-              class="my-2 my-sm-0"
-              type="submit"
-            >
+            <b-button size="sm" class="my-2 my-sm-0" type="submit">
               Search
             </b-button>
           </b-nav-form>
@@ -61,16 +37,8 @@
     </b-navbar>
     <router-view />
 
-    <b-navbar
-      fixed="bottom"
-      toggleable="sm"
-      type="dark"
-      variant="primary"
-    >
-      <b-collapse
-        id="nav-collapse"
-        is-nav
-      >
+    <b-navbar fixed="bottom" toggleable="sm" type="dark" variant="primary">
+      <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-navbar-brand>Listening Station 1.0</b-navbar-brand>
           <b-nav-item>
@@ -126,7 +94,7 @@ export default {
       default: 'https://localhost:5001'
     }
   },
-  data () {
+  data() {
     return {
       agents: [],
       tasks: [],
@@ -134,17 +102,17 @@ export default {
     }
   },
   computed: {
-    agentCount () {
+    agentCount() {
       return this.agents.length
     },
-    pendingTaskCount () {
+    pendingTaskCount() {
       return this.tasks.length
     },
-    exfiltratedFileCount () {
+    exfiltratedFileCount() {
       return this.files.length
     }
   },
-  mounted () {
+  mounted() {
     this.fetchAgents()
 
     setInterval(() => this.fetchAgents(), 5000)
@@ -152,15 +120,15 @@ export default {
     setInterval(() => this.updateFiles(), 5000)
   },
   methods: {
-    async fetchAgents () {
+    async fetchAgents() {
       fetch(this.endpoint + '/implant')
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
           this.agents = data
         })
-        .catch(error => console.error(error))
+        .catch((error) => console.error(error))
     },
-    async updateTasks () {
+    async updateTasks() {
       const newTasks = []
       for (let i = 0; i < this.agents.length; i++) {
         const agent = this.agents[i]
@@ -171,7 +139,7 @@ export default {
       }
       this.tasks = newTasks
     },
-    async updateFiles () {
+    async updateFiles() {
       const newFiles = []
       for (let i = 0; i < this.agents.length; i++) {
         const agent = this.agents[i]
