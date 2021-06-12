@@ -1,9 +1,7 @@
-<template>
-  <div>
-    <b-jumbotron header="Sorry!" lead="I had something cool planned for this.">
-      <p>Try one of the other areas...</p>
-    </b-jumbotron>
-  </div>
+<template lang="pug">
+div
+  b-jumbotron(header='Sorry!', lead='I had something cool planned for this.')
+    p Try one of the other areas...
 </template>
 
 <script>
@@ -16,5 +14,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>

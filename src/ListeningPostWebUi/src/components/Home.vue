@@ -1,13 +1,11 @@
-<template>
-  <div>
-    <b-jumbotron
-      header="Dashboard"
-      lead="This is where cool graphs and stuff will go"
-    >
-      <p>You proably just want to go on to the Command Section....</p>
-      <b-button :to="{ path: '/command' }" variant="primary"> Begin! </b-button>
-    </b-jumbotron>
-  </div>
+<template lang="pug">
+div
+  b-jumbotron(
+    header='Dashboard',
+    lead='This is where cool graphs and stuff will go'
+  )
+    p You proably just want to go on to the Command Section....
+    b-button(:to='{ path: "/command" }', variant='primary') Begin!
 </template>
 
 <script>
@@ -20,5 +18,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>

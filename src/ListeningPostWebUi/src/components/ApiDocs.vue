@@ -1,15 +1,15 @@
-<template>
-  <div id="iframe-wrapper" :style="iframe.wrapperStyle">
-    <iframe
-      v-if="loaded"
-      :src="iframe.src"
-      :style="iframe.style"
-      :height="iframe.style.height"
-      :width="iframe.style.width"
-      frameborder="0"
-    />
-  </div>
+<template lang="pug">
+#iframe-wrapper(:style='iframe.wrapperStyle')
+  iframe(
+    v-if='loaded',
+    :src='iframe.src',
+    :style='iframe.style',
+    :height='iframe.style.height',
+    :width='iframe.style.width',
+    frameborder='0'
+  )
 </template>
+
 <script>
 export default {
   data() {

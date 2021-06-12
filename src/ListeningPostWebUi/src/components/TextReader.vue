@@ -1,8 +1,7 @@
-<template>
-  <label class="text-reader">
-    Read File
-    <input type="file" @change="loadTextFromFile" />
-  </label>
+<template lang="pug">
+label.text-reader
+  | Read File
+  input(type='file', @change='loadTextFromFile')
 </template>
 
 <script>
@@ -19,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .text-reader {
   position: relative;
   overflow: hidden;

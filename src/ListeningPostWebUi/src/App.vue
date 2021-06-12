@@ -1,64 +1,46 @@
-<template>
-  <div id="app">
-    <b-navbar toggleable="md" type="dark" variant="primary" sticky>
-      <b-navbar-brand href="#"> C &amp; C </b-navbar-brand>
+<template lang="pug">
+div
+  b-navbar(toggleable='md', type='dark', variant='primary', sticky='')
+    b-navbar-brand(href='#') C &amp; C
+    b-navbar-toggle(target='nav-collapse')
+      b-collapse#nav-collapse(is-nav='')
+        b-navbar-nav
+          b-nav-item(:to='{ path: "/" }') Home
+          b-nav-item(:to='{ path: "/command" }') Command
+          b-nav-item(:to='{ path: "/queues" }') Manage Queues
+          b-nav-item(:to='{ path: "/fileManager" }') File Manager
+          b-nav-item(:to='{ path: "/docs" }') Api Docs
+        //- Right aligned nav items
+        b-navbar-nav.ml-auto
+          b-nav-form
+            b-form-input.mr-sm-2(
+              size='sm',
+              placeholder='Global Search (Not Implemented)'
+            )
+              b-button.my-2.my-sm-0(size='sm', type='submit')
+                | Search
 
-      <b-navbar-toggle target="nav-collapse" />
-
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item :to="{ path: '/' }"> Home </b-nav-item>
-          <b-nav-item :to="{ path: '/command' }"> Command </b-nav-item>
-          <b-nav-item :to="{ path: '/queues' }"> Manage Queues </b-nav-item>
-          <b-nav-item :to="{ path: '/fileManager' }"> File Manager </b-nav-item>
-          <b-nav-item :to="{ path: '/docs' }"> Api Docs </b-nav-item>
-        </b-navbar-nav>
-
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input
-              size="sm"
-              class="mr-sm-2"
-              placeholder="Global Search (Not Implemented)"
-            />
-            <b-button size="sm" class="my-2 my-sm-0" type="submit">
-              Search
-            </b-button>
-          </b-nav-form>
-
-          <!-- <b-nav-item-dropdown right>
-          <template slot="button-content"><em>User</em></template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-        </b-nav-item-dropdown> -->
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
-    <router-view />
-
-    <b-navbar fixed="bottom" toggleable="sm" type="dark" variant="primary">
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-navbar-brand>Listening Station 1.0</b-navbar-brand>
-          <b-nav-item>
-            Agents Reporting <b-badge>{{ agentCount }}</b-badge>
-          </b-nav-item>
-          <b-nav-item>
-            Pending Tasks <b-badge>{{ pendingTaskCount }}</b-badge>
-          </b-nav-item>
-          <b-nav-item>
-            Files Collected
-            <b-badge>{{ exfiltratedFileCount }}</b-badge>
-          </b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
-  </div>
+            //- b-nav-item-dropdown(right)
+            //- template(slot="button-content"): em User
+            //- b-dropdown-item(href="#") Profile
+            //- b-dropdown-item(href="#") Sign Out
+  router-view
+  b-navbar(fixed='bottom', toggleable='sm', type='dark', variant='primary')
+    b-collapse#nav-collapse(is-nav='')
+      b-navbar-nav
+        b-navbar-brand Listening Station 1.0
+        b-nav-item
+          | Agents Reporting
+          b-badge {{ agentCount }}
+        b-nav-item
+          | Pending Tasks
+          b-badge {{ pendingTaskCount }}
+        b-nav-item
+          | Files Collected
+          b-badge {{ exfiltratedFileCount }}
 </template>
 
 <script>
-// import ListeningPostService from '@/services/ListeningPostService'
 import {
   BBadge,
   BButton,
@@ -153,5 +135,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss"></style>
