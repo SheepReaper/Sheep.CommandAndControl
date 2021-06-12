@@ -1,100 +1,47 @@
-<template>
-  <b-container fluid>
-    <b-row class="mt-3">
-      <b-col>
-        <b-card-group>
-          <b-card header-tag="header" title="Command Dispatcher">
-            <div slot="header">
-              <h3>Issue Commands</h3>
-            </div>
-            <b-card-body>
-              <b-form-group label="Command Mode:">
-                <b-form-radio-group
-                  v-model="commandMode"
-                  :options="[
-                    'Direct Bash Command',
-                    'Special PUSH',
-                    'Special PULL',
-                    'Debug: Create Agent'
-                  ]"
-                />
-              </b-form-group>
-              <b-form-group
-                id="commandParameterGroup"
-                :invalid-feedback="cPinvalidFeedback"
-                :valid-feedback="cPvalidFeedback"
-                :state="cPstate"
-                description="Please enter the desired bash-compatible command OR SourcePath DestinationPath of a File to Deploy OR The path of a File on target system you wish to retrieve."
-                label="Command / Special Command Arguments"
-                label-for="commandParameterInput"
-              >
-                <b-form-input
-                  id="commandParameterInput"
-                  v-model="commandParameter"
-                  :state="cPstate"
-                  trim
-                />
-              </b-form-group>
-              <b-form-group
-                id="commandParameterGroup2"
-                :state="cPstate"
-                description="Fair warning, the speed of execution is completely dependant on the rate of check in from agents."
-                label="Looking good? Execute!"
-                label-for="submitButton"
-              >
-                <b-button
-                  id="submitButton"
-                  :disabled="!cPstate"
-                  @click="tryCallApi"
-                >
-                  SEND IT
-                </b-button>
-              </b-form-group>
-            </b-card-body>
-          </b-card>
-        </b-card-group>
-      </b-col>
-    </b-row>
-    <b-row class="mt-3">
-      <b-col id="leftPane">
-        <b-card-group deck>
-          <b-card
-            header-tag="header"
-            title="Select which agents will receive commands:"
-          >
-            <h3 slot="header">Active Agents (Implants)</h3>
-            <b-card-body>
-              <b-list-group>
-                <b-list-group-item v-for="agent in agents" :key="agent.id">
-                  <b-form-checkbox
-                    v-model="selectedAgents"
-                    :value="agent.id"
-                    switch
-                  >
-                    <b>Agent Id: </b>{{ agent.id }} <b>Tasks: </b>
-                    <b-badge>{{ agent.tasks.length }} </b-badge>
-                  </b-form-checkbox>
-                </b-list-group-item>
-              </b-list-group>
-            </b-card-body>
-          </b-card>
-          <b-card header-tag="header" title="Command History">
-            <h3 slot="header">Monitor</h3>
-            <b-card-body>
-              <b-list-group>
-                <b-list-group-item v-for="task in tasksSorted" :key="task.id">
-                  TaskId: {{ task.id }} Command: {{ task.command }}
-                </b-list-group-item>
-              </b-list-group>
-            </b-card-body>
-          </b-card>
-        </b-card-group>
-      </b-col>
-    </b-row>
-  </b-container>
+<template lang="pug">
+b-container(fluid='')
+  b-row.mt-3
+    b-col
+      b-card-group
+        b-card(header-tag='header' title='Command Dispatcher')
+          div(slot='header')
+            h3 Issue Commands
+          b-card-body
+            b-form-group(label='Command Mode:')
+              b-form-radio-group(v-model='commandMode' :options="[\
+              'Direct Bash Command',\
+              'Special PUSH',\
+              'Special PULL',\
+              'Debug: Create Agent'\
+              ]")
+            b-form-group#commandParameterGroup(:invalid-feedback='cPinvalidFeedback' :valid-feedback='cPvalidFeedback' :state='cPstate' description='Please enter the desired bash-compatible command OR SourcePath DestinationPath of a File to Deploy OR The path of a File on target system you wish to retrieve.' label='Command / Special Command Arguments' label-for='commandParameterInput')
+              b-form-input#commandParameterInput(v-model='commandParameter' :state='cPstate' trim='')
+            b-form-group#commandParameterGroup2(:state='cPstate' description='Fair warning, the speed of execution is completely dependant on the rate of check in from agents.' label='Looking good? Execute!' label-for='submitButton')
+              b-button#submitButton(:disabled='!cPstate' @click='tryCallApi')
+                | SEND IT
+  b-row.mt-3
+    b-col#leftPane
+      b-card-group(deck='')
+        b-card(header-tag='header' title='Select which agents will receive commands:')
+          h3(slot='header') Active Agents (Implants)
+          b-card-body
+            b-list-group
+              b-list-group-item(v-for='agent in agents' :key='agent.id')
+                b-form-checkbox(v-model='selectedAgents' :value='agent.id' switch='')
+                  b Agent Id:
+                  | {{ agent.id }}
+                  b Tasks:
+                  b-badge {{ agent.tasks.length }}
+        b-card(header-tag='header' title='Command History')
+          h3(slot='header') Monitor
+          b-card-body
+            b-list-group
+              b-list-group-item(v-for='task in tasksSorted' :key='task.id')
+                | TaskId: {{ task.id }} Command: {{ task.command }}
+
 </template>
+
 <script>
-// import ListeningPostService from '@/services/ListeningPostService'
 import {
   BContainer,
   BRow,
@@ -224,16 +171,6 @@ export default {
         return
       }
 
-      // else {
-      //   this.commandMode === 'Direct Bash Command' {
-      //   (this.commandMode === 'Special PUSH' || this.commandMode === 'Special PULL') {
-      //   controller = '/File'
-      // }
-
-      // const messageContent = {
-      //   command: param
-      // }
-
       const apiString = endpoint + controller + param
 
       fetch(apiString, requestOptions)
@@ -246,4 +183,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped></style>

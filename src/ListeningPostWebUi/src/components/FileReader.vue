@@ -1,36 +1,35 @@
-<template>
-  <b-container fluid>
-    <b-row class="mt-3">
-      <b-col>
-        A list of files show up here when available
-        <b-list-group>
-          <b-list-group-item v-for="fileItem in files" :key="fileItem.guid">
-            File Name: <b>{{ fileItem.filename }}</b> Guid:
-            <b>{{ fileItem.guid }}</b> Path on Server:
-            <b>{{ fileItem.tempFilePath }}</b> Updated:
-            <b>{{ fileItem.updated }}</b>
-          </b-list-group-item>
-        </b-list-group>
-      </b-col>
-    </b-row>
-    <b-row class="mt-3">
-      <b-col>
-        <vue-dropzone
-          id="drop1"
-          :options="dropOptions"
-          @vdropzone-complete="uploadToServer"
-        />
-        <ckeditor
-          v-model="editorData"
-          :editor="editor"
-          :config="editorConfig"
-        />
-        <b-form-file id="inputFile" v-model="pickerFile" @change="loadFile()" />
-        <b-form-textarea id="textArea" rows="10" />
-        <b-button @click="uploadToServer()"> Upload </b-button>
-      </b-col>
-    </b-row>
-  </b-container>
+<template lang="pug">
+b-container(fluid='')
+  b-row.mt-3
+    b-col
+      | A list of files show up here when available
+      b-list-group
+        b-list-group-item(v-for='fileItem in files', :key='fileItem.guid')
+          | File Name:
+          b {{ fileItem.filename }}
+          |
+          | Guid:
+          b {{ fileItem.guid }}
+          |
+          | Path on Server:
+          b {{ fileItem.tempFilePath }}
+          |
+          | Updated:
+          b {{ fileItem.updated }}
+  b-row.mt-3
+    b-col
+      vue-dropzone#drop1(
+        :options='dropOptions',
+        @vdropzone-complete='uploadToServer'
+      )
+        ckeditor(
+          v-model='editorData',
+          :editor='editor',
+          :config='editorConfig'
+        )
+          b-form-file#inputFile(v-model='pickerFile', @change='loadFile()')
+            b-form-textarea#textArea(rows='10')
+              b-button(@click='uploadToServer()') Upload
 </template>
 
 <script>
