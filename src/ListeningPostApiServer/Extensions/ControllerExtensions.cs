@@ -1,17 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ListeningPostApiServer.Extensions
 {
     /// <summary>
-    /// A collection of helpers, mostly for debugging.
+    ///     A collection of helpers, mostly for debugging.
     /// </summary>
     public static class ControllerExtensions
     {
-        #region Methods
-
         /// <summary>
-        /// Logs the specified message to console and saves a bunch of typing..
+        ///     Logs the specified message to console and saves a bunch of typing..
         /// </summary>
         /// <param name="controller">The controller.</param>
         /// <param name="message">   The message.</param>
@@ -21,7 +19,5 @@ namespace ListeningPostApiServer.Extensions
 
             Debug.WriteLine($"{fancy}\n{message}\n{fancy}");
         }
-
-        #endregion Methods
     }
 }

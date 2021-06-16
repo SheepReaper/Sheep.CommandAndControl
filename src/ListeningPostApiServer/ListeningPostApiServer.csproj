@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <!-- <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel> -->
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <UserSecretsId>db188bd9-4081-4c69-ba50-417f2a7c5dc5</UserSecretsId>
     <DockerComposeProjectPath>..\ListeningPostApiServer-Docker\docker-compose.dcproj</DockerComposeProjectPath>
@@ -11,6 +11,8 @@
     <Company>SheepReaper</Company>
     <PackageReleaseNotes>NOT FOR RELEASE</PackageReleaseNotes>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <Nullable>enable</Nullable>
+    <DisableImplicitComponentsAnalyzers>true</DisableImplicitComponentsAnalyzers>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +22,7 @@
     <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.6" />
