@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace ListeningPostApiServer.Models
 {
@@ -18,7 +18,7 @@ namespace ListeningPostApiServer.Models
         ///     Gets or sets the error message returned by the agent.
         /// </summary>
         /// <value>The error.</value>
-        [JsonProperty("error")]
+        [JsonPropertyName("error")]
         public string Error { get; set; } = "";
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace ListeningPostApiServer.Models
         ///     Gets or sets the result message returned by the agent.
         /// </summary>
         /// <value>The results.</value>
-        [JsonProperty("results")]
+        [JsonPropertyName("results")]
         public string Results { get; set; } = "";
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace ListeningPostApiServer.Models
         ///     This is the Foreign key for the Task record associated with this response.
         /// </summary>
         /// <value>The task identifier.</value>
-        [JsonProperty("task_id")]
+        [JsonPropertyName("task_id")]
         public int TaskId { get; set; }
 
         #endregion Properties

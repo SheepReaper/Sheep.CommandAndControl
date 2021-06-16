@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <!-- <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel> -->
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <UserSecretsId>db188bd9-4081-4c69-ba50-417f2a7c5dc5</UserSecretsId>
     <DockerComposeProjectPath>..\ListeningPostApiServer-Docker\docker-compose.dcproj</DockerComposeProjectPath>
@@ -12,22 +11,15 @@
     <PackageReleaseNotes>NOT FOR RELEASE</PackageReleaseNotes>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Nullable>enable</Nullable>
-    <DisableImplicitComponentsAnalyzers>true</DisableImplicitComponentsAnalyzers>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="2021.1.0" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.7" />
+    <!-- <PackageReference Include="JetBrains.Annotations" Version="2021.1.0" /> -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.7" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <!-- <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" /> -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 

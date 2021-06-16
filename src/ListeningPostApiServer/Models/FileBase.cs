@@ -1,5 +1,5 @@
 ﻿using System;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace ListeningPostApiServer.Models
 {
@@ -28,7 +28,7 @@ namespace ListeningPostApiServer.Models
         ///     Gets or sets the actual name of the file (File Name excluding Path).
         /// </summary>
         /// <value>The actual name of the file.</value>
-        [JsonProperty("filename")]
+        [JsonPropertyName("filename")]
         public string ActualFileName { get; set; } = "";
 
         /// <summary>

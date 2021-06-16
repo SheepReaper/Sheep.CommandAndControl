@@ -18,7 +18,7 @@ namespace ListeningPostApiServer.Extensions
         /// <returns></returns>
         public static async Task<TEntity?> FindByIdAsync<TEntity>(this DbSet<TEntity> dbSet,
             CancellationToken cancellationToken = default,
-            [CanBeNull] params object[] keyValues) where TEntity : class =>
+            params object[] keyValues) where TEntity : class =>
             await dbSet.FindAsync(keyValues, cancellationToken);
     }
 }
