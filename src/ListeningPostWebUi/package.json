@@ -43,6 +43,6 @@
     "sass-loader": "12.0.0",
     "vue-cli-plugin-pug": "2.0.0",
     "vue-template-compiler": "2.6.13",
-    "webpack": "5.38.1"
+    "webpack": "5.39.1"
   }
 }
