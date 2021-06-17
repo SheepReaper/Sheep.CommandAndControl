@@ -18,7 +18,7 @@
     "bootstrap-vue": "2.21.2",
     "core-js": "3.13.1",
     "jquery": "3.6.0",
-    "vue": "2.6.13",
+    "vue": "2.6.14",
     "vue-router": "3.5.1",
     "vue2-dropzone": "3.6.0",
     "vuex": "3.6.2"
@@ -42,7 +42,7 @@
     "sass": "1.35.1",
     "sass-loader": "12.0.0",
     "vue-cli-plugin-pug": "2.0.0",
-    "vue-template-compiler": "2.6.13",
+    "vue-template-compiler": "2.6.14",
     "webpack": "5.39.1"
   }
 }
