@@ -5,7 +5,7 @@ label.text-reader
 </template>
 
 <script>
-export default {
+export const TextReader = {
   methods: {
     loadTextFromFile(ev) {
       const file = ev.target.files[0]
@@ -16,6 +16,8 @@ export default {
     }
   }
 }
+
+export { TextReader as default }
 </script>
 
 <style scoped>

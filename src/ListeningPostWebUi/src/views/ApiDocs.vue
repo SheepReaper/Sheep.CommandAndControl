@@ -11,19 +11,17 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      loaded: false,
-      iframe: {
-        // Replace with shorter url if iframe is allowed to redirect
-        // src: 'https://localhost:8080/swagger',
-        src: 'https://localhost:5001/swagger/index.html',
-        style: null,
-        wrapperStyle: null
-      }
+export const ApiDocsView = {
+  data: () => ({
+    loaded: false,
+    iframe: {
+      // Replace with shorter url if iframe is allowed to redirect
+      // src: 'https://localhost:8080/swagger',
+      src: 'https://localhost:5001/swagger/index.html',
+      style: null,
+      wrapperStyle: null
     }
-  },
+  }),
   mounted() {
     this.iframe.style = {
       // position: 'absolute',
@@ -36,4 +34,6 @@ export default {
     this.loaded = true
   }
 }
+
+export { ApiDocsView as default }
 </script>
