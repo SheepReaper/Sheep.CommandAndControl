@@ -4,78 +4,77 @@
     header='Issue Commands',
     title='Command Dispatcher'
   )
-    b-form-group(label='Command Mode:'): b-form-radio-group(
-      v-model='commandMode',
-      :options='commandOptions'
-    )
+    .mt-3
+      label.form-label.d-block(for='commandModeInputGroup') Command Mode:
+      #commandModeInputGroup.btn-group(
+        role='group',
+        aria-label='Command mode options'
+      ): template(
+        v-for='(option, i) in commandOptions'
+      )
+        input.btn-check(
+          type='radio',
+          name='commandMode',
+          autocomplete='off',
+          :checked='option === commandMode ? true : false',
+          :id='`commandModeInput${i}`',
+          @change='onCommandModeSelect(option)'
+        )
+        label.btn.btn-outline-primary(:for='`commandModeInput${i}`') {{ option }}
+    .mt-3
+      label.form-label(for='commandParameterInput') Command / Special Command Arguments
+      input#commandParameterInput.form-control(
+        :class='{ "is-valid": dirty && formIsValid, "is-invalid": dirty && !formIsValid }',
+        type='text',
+        v-model='commandParameter',
+        aria-describedby='commandParameterInputHelp',
+        required,
+        @input='formValidate'
+      )
+      #commandParameterInputHelp.form-text(for='commandParameterInput') Please enter the desired bash-compatible command OR SourcePath DestinationPath of a File to Deploy OR The path of a File on target system you wish to retrieve.
+      .invalid-feedback Please enter something (If you're just spawning an agent, enter an integer that hasn't been used yet.)
+      .valid-feedback Thanks!
 
-    b-form-group#commandParameterGroup(
-      :invalid-feedback='cPinvalidFeedback',
-      :valid-feedback='cPvalidFeedback',
-      :state='cPstate',
-      description='Please enter the desired bash-compatible command OR SourcePath DestinationPath of a File to Deploy OR The path of a File on target system you wish to retrieve.',
-      label='Command / Special Command Arguments',
-      label-for='commandParameterInput'
-    ): b-form-input#commandParameterInput(
-      v-model='commandParameter',
-      :state='cPstate',
-      trim
-    )
-
-    b-form-group#commandParameterGroup2(
-      :state='cPstate',
-      description='Fair warning, the speed of execution is completely dependant on the rate of check in from agents.',
-      label='Looking good? Execute!',
-      label-for='submitButton'
-    ): button#submitButton.btn.btn-primary(
-      :disabled='!cPstate',
-      @click='tryCallApi'
-    ) SEND IT
+    .mt-3
+      label.form-label(for='submitButton') Looking good? Execute!
+      button#submitButton.btn.btn-primary.d-block(
+        :disabled='!formIsValid',
+        type='submit',
+        aria-describedby='submitButtonHelp',
+        @click='tryCallApi'
+      ) SEND IT
+      #submitButtonHelp.form-text(for='submitButton') Fair warning, the speed of execution is completely dependant on the rate of check in from agents.
 
   .row.mt-3
-    #leftPane.col-6: b-card-group(deck)
-      QuickCard.mb-5(
-        header='Active Agents (Implants)',
-        title='Select which agents will receive commands:'
+    //- left pane
+    .col-6: QuickCard.mb-5(
+      header='Active Agents (Implants)',
+      title='Select which agents will receive commands:'
+    ): ul.list-group.mt-3: template(
+      v-for='({ id, tasks }, i) in agents'
+    ): li.list-group-item(
+      :key='i'
+    ): .form-check.form-switch
+      input.form-check-input(
+        type='checkbox',
+        :checked='selectedAgents.includes(id)',
+        :id='`agentSelectInput${i}`',
+        @change='onAgentSelect(id)'
       )
-        b-card-body: b-list-group: b-list-group-item(
-          v-for='agent in agents',
-          :key='agent.id'
-        ): b-form-checkbox(
-          v-model='selectedAgents',
-          :value='agent.id',
-          switch
-        )
-          b Agent Id: {{ agent.id }}
-          b Tasks:
-          span.badge {{ agent.tasks.length }}
+      label.form-check-label(:for='`agentSelectInput${i}`')
+        b Agent Id:
+        span.ms-1 {{ id }}
+        b.ms-2 Tasks:
+        span.badge.bg-secondary.ms-1 {{ tasks.length }}
 
-    #rightPane.col-6: QuickCard(header='Monitor', title='Command History')
-      b-card-body: b-list-group: b-list-group-item(
-        v-for='task in tasksSorted',
-        :key='task.id'
-      ) TaskId: {{ task.id }} Command: {{ task.command }}
+    //- right pane
+    .col-6: QuickCard(header='Monitor', title='Command History'): ul.list-group.mt-3
+      template(v-for='(task, i) in tasksSorted'): li.list-group-item(:key='i') TaskId: {{ task.id }} Command: {{ task.command }}
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import { QuickCard } from '../components/QuickCard.vue'
-import {
-  BContainer,
-  BRow,
-  BCol,
-  BCardGroup,
-  BCard,
-  BCardBody,
-  BBadge,
-  BFormGroup,
-  BFormRadioGroup,
-  BFormInput,
-  BButton,
-  BListGroup,
-  BListGroupItem,
-  BFormCheckbox
-} from 'bootstrap-vue'
 
 import { sendCommand, pullCommand, pushCommand, createAgent } from '../api'
 
@@ -103,6 +102,7 @@ const createComparator =
     const varB = typeof b[key] === 'string' ? b[key].toUpperCase() : b[key]
 
     let comparison = 0
+
     if (varA > varB) {
       comparison = 1
     } else if (varA < varB) {
@@ -114,26 +114,14 @@ const createComparator =
 
 export const CommandView = {
   components: {
-    BContainer,
-    BRow,
-    BCol,
-    BCardGroup,
-    BCard,
-    BCardBody,
-    BBadge,
-    BFormCheckbox,
-    BFormGroup,
-    BFormRadioGroup,
-    BFormInput,
-    BButton,
-    BListGroup,
-    BListGroupItem,
     QuickCard
   },
   data: () => ({
     commandParameter: '',
     selectedAgents: [],
-    commandMode: '',
+    commandMode: 'Direct Bash Command',
+    dirty: false,
+    formIsValid: false,
     commandOptions
   }),
   computed: {
@@ -143,30 +131,29 @@ export const CommandView = {
     },
     tasksSorted() {
       return this.tasks.sort(createComparator('id', 'desc'))
-    },
-    cPstate() {
-      return this.commandParameter.length > 0
-    },
-    cPinvalidFeedback() {
-      if (this.commandParameter.length > 0) {
-        return ''
-      } else {
-        return "Please enter something (If you're just spawning an agent, enter an integer that hasn't been used yet.)"
-      }
-    },
-    cPvalidFeedback() {
-      return this.cPstate === true ? 'Thanks!' : ''
     }
   },
   methods: {
     tryCallApi() {
-      if (this.commandMode in actionMap) {
-        actionMap[this.commandMode](this.commandParameter)
+      if (this.formIsValid && this.commandMode in actionMap) {
+        actionMap[this.commandMode](this.commandParameter, this.selectedAgents)
           .then((response) => console.log(response))
           .catch((reason) => console.error(['apiError', reason]))
       } else {
         console.error('Invalid commandMode value:', this.commandMode)
       }
+    },
+    onCommandModeSelect(mode) {
+      this.commandMode = mode
+    },
+    onAgentSelect(agentId) {
+      if (this.selectedAgents.includes(agentId))
+        this.selectedAgents = this.selectedAgents.filter((a) => a !== agentId)
+      else this.selectedAgents.push(agentId)
+    },
+    formValidate() {
+      this.dirty = true
+      this.formIsValid = this.commandParameter.length > 0
     }
   }
 }

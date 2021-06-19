@@ -1,4 +1,5 @@
-﻿using ListeningPostApiServer.Extensions;
+﻿using System.Text.Json.Serialization;
+using ListeningPostApiServer.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -66,9 +67,10 @@ namespace ListeningPostApiServer
                 .ConfigureCors(MyAllowSpecificOrigins);
 
             services
-                .ConfigureMvc().AddJsonOptions(options=>options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve);
-                // .AddNewtonsoftJson(options =>
-                //     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+                .ConfigureMvc().AddJsonOptions(options =>
+                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+            // .AddNewtonsoftJson(options =>
+            //     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
         }
 
         /// <summary>

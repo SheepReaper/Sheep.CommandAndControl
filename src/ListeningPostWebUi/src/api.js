@@ -17,11 +17,12 @@ export const fetchAgents = () => api.get('/Implant')
 
 export const createAgent = (id) => api.get(`/Tasking/${id}`)
 
-export const sendCommand = (command) => api.post('/Tasking', { command })
+export const sendCommand = (command, ids) =>
+  api.post('/Tasking', { ids, task: { command } })
 
-export const pushCommand = (path) => sendCommand(`push ${path}`)
+export const pushCommand = (path, ids) => sendCommand(`push ${path}`, ids)
 
-export const pullCommand = (path) => sendCommand(`pull ${path}`)
+export const pullCommand = (path, ids) => sendCommand(`pull ${path}`, ids)
 
 export const fetchFiles = () => api.get('/File/')
 
