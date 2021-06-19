@@ -1,77 +1,66 @@
 <template lang="pug">
-b-container(fluid)
-  b-row.mt-3: b-col
-    | A list of files show up here when available
-    b-list-group: b-list-group-item(
-      v-for='fileItem in files',
-      :key='fileItem.guid'
+.container
+  .row.mt-3: .col
+    label.form-label(for='fileList') A list of files show up here when available
+    ul#fileList.list-group: template(
+      v-for='({ filename, guid, tempFilePath, updated }, i) in files'
+    ): a.list-group-item.list-group-item-action(
+      :key='i',
+      :href='`https://localhost:5001/file/download/${guid}`'
     )
-      | File Name:
-      b {{ fileItem.filename }}
-      |
-      | Guid:
-      b {{ fileItem.guid }}
-      |
-      | Path on Server:
-      b {{ fileItem.tempFilePath }}
-      |
-      | Updated:
-      b {{ fileItem.updated }}
+      span File Name:
+      b.ms-1 {{ filename }}
+      span.ms-2 Guid:
+      b.ms-1 {{ guid }}
+      span.ms-2 Path on Server:
+      b.ms-1 {{ tempFilePath }}
+      span.ms-2 Updated:
+      b.ms-1 {{ updated }}
 
-  b-row.mt-3: b-col: vue-dropzone#drop1(:options='dropOptions')
+  .row.mt-3: .col
+    label.form-text(for='fileUploader') Upload files directly
+    vue-dropzone#fileUploader(:options='dropOptions')
 
-  ckeditor(v-model='editorData', :editor='editor', :config='editorConfig')
-  b-form-file#inputFile(v-model='pickerFile', @change='loadFile()')
-  b-form-textarea#textArea(rows='10')
-  button.btn.btn-primary(@click='uploadToServer()') Upload
+  .row.mt-3
+    .col-12
+      label.form-text(for='fileEditor') Create or edit a file
+      ckeditor#fileEditor(
+        v-model='editorData',
+        :editor='editor',
+        :config='editorConfig'
+      )
+    .col-12.mt-3
+      label.form-text(for='inputFile') Load a file to edit
+      input#inputFile.form-control(type='file', @change='onPickFile')
+
+  .row.mt-3: .col: button.btn.btn-primary(
+    :disabled='editorData === ""',
+    @click='onSave'
+  ) Save &amp; Upload
 </template>
 
 <script>
 import vue2Dropzone from 'vue2-dropzone'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import CKEditor from '@ckeditor/ckeditor5-vue2'
-import {
-  BContainer,
-  BRow,
-  BCol,
-  BListGroup,
-  BFormFile,
-  BButton,
-  BListGroupItem,
-  BFormTextarea
-} from 'bootstrap-vue'
-import 'vue2-dropzone/dist/vue2Dropzone.min.css'
 
 import { uploadFile, fetchFiles as _fetchFiles } from '../api'
 
 export const FileReaderView = {
   components: {
     vueDropzone: vue2Dropzone,
-    BContainer,
-    BRow,
-    BCol,
-    BFormTextarea,
-    BFormFile,
-    BButton,
-    BListGroup,
-    BListGroupItem,
     ckeditor: CKEditor.component
   },
   data: () => ({
     editor: ClassicEditor,
     editorData: '',
     files: [],
-    pickerFile: [],
+    currentFile: {},
     editorConfig: {},
     dropOptions: {
       url: 'https://localhost:5001/File/upload'
     }
   }),
-  computed: {
-    endpoint() {
-      return this.$parent.endpoint
-    }
-  },
   mounted() {
     this.fetchFiles()
 
@@ -80,48 +69,39 @@ export const FileReaderView = {
     }, 5000)
   },
   methods: {
-    uploadToServer(file) {
-      return uploadFile(file)
-        .then(({ data }) => console.log(['uploadResult', data]))
-        .catch((reason) => console.error(['uploadApiError', reason]))
+    onSave() {
+      return uploadFile(
+        new File(
+          [
+            new Blob([this.editorData], {
+              type: this.currentFile.type
+            })
+          ],
+          this.currentFile.name,
+          {
+            type: this.currentFile.type
+          }
+        )
+      ).catch((reason) => console.error(['fileUploadError', reason]))
     },
-    // uploadToServer(file) {
-    //   const formData = new FormData()
-
-    //   formData.append('file', file)
-
-    //   fetch(this.endpoint + '/File/pull/0', {
-    //     method: 'POST',
-    //     mode: 'cors',
-    //     headers: {
-    //       // 'Content-Type': 'multipart/form-data'
-    //       Accept: 'application/json'
-    //     },
-    //     body: formData
-    //   })
-    //     .then((response) => response.json())
-    //     .then((success) => console.log(success))
-    //     .catch((error) => console.log(error))
-    // },
+    onPickFile({ target: { files } }) {
+      this.currentFile = files[0]
+      files[0]
+        .text()
+        .then((text) => (this.editorData = text))
+        .catch((reason) => console.error(['readFileError', reason]))
+    },
     fetchFiles() {
       return _fetchFiles()
         .then(({ data }) => (this.files = data))
         .catch((reason) => console.log(['fetcFilesError', reason]))
-    },
-    loadFile() {
-      const fileToLoad = this.pickerFile.value
-
-      if (fileToLoad) {
-        const reader = new FileReader()
-        reader.onload = function (fileLoadedEvent) {
-          const textFromFileLoaded = fileLoadedEvent.target.result
-          document.getElementById('textArea').value = textFromFileLoaded
-        }
-        reader.readAsText(fileToLoad, 'UTF-8')
-      }
     }
   }
 }
 
 export { FileReaderView as default }
 </script>
+
+<style lang="scss" scoped>
+@import '~vue2-dropzone/dist/vue2Dropzone.min.css';
+</style>

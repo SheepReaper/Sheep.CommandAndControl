@@ -71,8 +71,8 @@ namespace ListeningPostApiServer.Controllers
             if (fileToSend == null)
                 return NotFound(new {message = "requested file id is not found"});
 
-            await using var stream = new FileStream(fileToSend.TempFilePath, FileMode.Open);
-            return Ok(File(stream, "application/octet-stream", fileToSend.ActualFileName));
+            return File(new FileStream(fileToSend.TempFilePath, FileMode.Open), "application/octet-stream",
+                fileToSend.ActualFileName);
         }
 
         /// <summary>
@@ -123,8 +123,8 @@ namespace ListeningPostApiServer.Controllers
             if (fileToSend == null)
                 return Ok();
 
-            await using var stream = new FileStream(fileToSend.TempFilePath, FileMode.Open);
-            return Ok(File(stream, "application/octet-stream", fileToSend.ActualFileName));
+            return File(new FileStream(fileToSend.TempFilePath, FileMode.Open), "application/octet-stream",
+                fileToSend.ActualFileName);
         }
 
         /// <summary>

@@ -89,8 +89,8 @@ namespace ListeningPostApiServer.Data
             _entities.FindByIdAsync(cancellationToken, id);
 
         /// <inheritdoc />
-        public Task<TEntity?> GetAsync(Guid id, CancellationToken cancellationToken) =>
-            _entities.FindByIdAsync(cancellationToken, id);
+        public async Task<TEntity?> GetAsync(Guid id, CancellationToken cancellationToken) =>
+            await _entities.FirstOrDefaultAsync(e => e.Guid == id, cancellationToken);
 
         /// <inheritdoc />
         public async Task<(bool parsed, TEntity? result)> TryParseIdAsync(string id,

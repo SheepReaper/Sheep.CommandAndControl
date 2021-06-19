@@ -6,7 +6,7 @@ nav.navbar.fixed-bottom.navbar-expand.navbar-dark.bg-primary: .container-fluid
     :key='i'
   )
     span {{ item.text }}
-    span.badge {{ item.value }}
+    span.badge.bg-secondary.ms-1 {{ item.value }}
 </template>
 
 <script>

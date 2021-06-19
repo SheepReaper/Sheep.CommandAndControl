@@ -15,7 +15,6 @@
     "@popperjs/core": "2.9.2",
     "axios": "0.21.1",
     "bootstrap": "5.0.1",
-    "bootstrap-vue": "2.21.2",
     "core-js": "3.14.0",
     "jquery": "3.6.0",
     "vue": "2.6.14",
@@ -44,7 +43,7 @@
     "pug-plain-loader": "1.1.0",
     "raw-loader": "4.0.2",
     "sass": "1.35.1",
-    "sass-loader": "12.1.0",
+    "sass-loader": "10.2.0",
     "vue-cli-plugin-pug": "2.0.0",
     "vue-template-compiler": "2.6.14",
     "webpack": "5.39.1"
