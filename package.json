@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "repository": "https://github.com/SheepReaper/Sheep.CommandAndControl.git",
+  "author": "Bryan Gonzalez <bgonza868@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "vls": "0.7.4"
+  }
+}

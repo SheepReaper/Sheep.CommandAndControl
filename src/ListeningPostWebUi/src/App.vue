@@ -6,12 +6,13 @@
 </template>
 
 <script>
+import { defineComponent, defineAsyncComponent } from 'vue'
 import { mapActions } from 'vuex'
 
-export const App = {
+export const App = defineComponent({
   components: {
-    AppBar: () => import('./components/AppBar.vue'),
-    AppFooter: () => import('./components/AppFooter.vue')
+    AppBar: defineAsyncComponent(() => import('@/components/AppBar.vue')),
+    AppFooter: defineAsyncComponent(() => import('@/components/AppFooter.vue'))
   },
   created() {
     this.fetchAgents()
@@ -20,11 +21,11 @@ export const App = {
   methods: {
     ...mapActions(['fetchAgents'])
   }
-}
+})
 
 export { App as default }
 </script>
 
 <style lang="scss">
-@import '~bootstrap/scss/bootstrap.scss';
+@import 'bootstrap/scss/bootstrap.scss';
 </style>

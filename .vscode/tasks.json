@@ -6,20 +6,19 @@
             "command": "dotnet",
             "type": "process",
             "args": [
-                "build",
-                "${workspaceFolder}/tests/ListeningPostApiServerTest/ListeningPostApiServerTest.csproj"
+                "build"
             ],
-            "problemMatcher": "$tsc"
+            "problemMatcher": "$msCompile",
+            "isBuildCommand": true
         },
         {
             "label": "publish",
             "command": "dotnet",
             "type": "process",
             "args": [
-                "publish",
-                "${workspaceFolder}/tests/ListeningPostApiServerTest/ListeningPostApiServerTest.csproj"
+                "publish"
             ],
-            "problemMatcher": "$tsc"
+            "problemMatcher": "$msCompile"
         },
         {
             "label": "watch",
@@ -28,9 +27,10 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/tests/ListeningPostApiServerTest/ListeningPostApiServerTest.csproj"
+                "--project",
+                "${workspaceFolder}/src/ListeningPostApiServer"
             ],
-            "problemMatcher": "$tsc"
+            "problemMatcher": "$msCompile"
         }
     ]
 }

@@ -1,4 +1,9 @@
-export const agents = (/** @type {{ agents: any; }} */ state) => state.agents
+export const agents = (state) => {
+  if (state.agents === undefined) {
+    return []
+  }
+  return state.agents
+}
 
 export default {
   agents

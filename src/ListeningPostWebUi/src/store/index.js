@@ -1,31 +1,28 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
 
 import getters from './getters'
 import actions from './actions'
 import mutations from './mutations'
 
-Vue.use(Vuex)
+// const state = () => ({agents: []})
 
 const state = {
   agents: []
 }
 
-export const store = new Vuex.Store({
+export const store = createStore({
   state,
   getters,
   actions,
   mutations
 })
 
-if (module.hot) {
-  module.hot.accept(['./getters', './actions', './mutations'], () => {
-    store.hotUpdate({
-      getters: require('./getters').default,
-      actions: require('./actions').default,
-      mutations: require('./mutations').default
-    })
-  })
-}
+// if (module.hot) {
+//   module.hot.accept(['./mutations'], () => {
+//     store.hotUpdate({
+//       mutations: require('./mutations').default
+//     })
+//   })
+// }
 
 export { store as default }

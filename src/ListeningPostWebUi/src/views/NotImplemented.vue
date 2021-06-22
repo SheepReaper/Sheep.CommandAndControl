@@ -5,11 +5,14 @@ div
 </template>
 
 <script>
-import Jumbotron from '../components/Jumbotron.vue'
+// import Jumbotron from '../components/Jumbotron.vue'
+import { defineComponent, defineAsyncComponent } from 'vue'
 
-export const NotImplementedView = {
-  components: { Jumbotron }
-}
+export const NotImplementedView = defineComponent({
+  components: {
+    Jumbotron: defineAsyncComponent(() => import('../components/Jumbotron.vue'))
+  }
+})
 
 export { NotImplementedView as default }
 </script>

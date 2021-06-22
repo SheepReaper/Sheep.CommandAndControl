@@ -1,16 +1,7 @@
-import Vue from 'vue'
+import { createApp, defineAsyncComponent } from 'vue'
 import { router } from './router'
 import { store } from './store'
 
-// import 'vue2-dropzone/dist/vue2Dropzone.min.css'
+const app = defineAsyncComponent(() => import('./App.vue'))
 
-const App = () => import('./App.vue')
-
-Vue.config.productionTip = false
-
-/* eslint-disable no-new */
-new Vue({
-  router,
-  store,
-  render: (h) => h(App)
-}).$mount('#app')
+createApp(app).use(store).use(router).mount('#app')

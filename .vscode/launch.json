@@ -5,20 +5,35 @@
    "version": "0.2.0",
    "configurations": [
         {
-            "name": ".NET Core Launch (console)",
+            "name": ".NET Core watch (development)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/ListeningPostApiServer/bin/Debug/net5.0/ListeningPostApiServer.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/src/ListeningPostApiServer",
+            "program": "dotnet",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/ListeningPostApiServer"
+            ],
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "internalConsole",
             "stopAtEntry": false,
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
-            }
+            },
+        },
+        {
+            "name": ".NET Core watch (prod)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/ListeningPostApiServer"
+            ],
+            "console": "internalConsole",
         },
         {
             "name": ".NET Core Attach",

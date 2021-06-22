@@ -10,11 +10,13 @@ div
 </template>
 
 <script>
-import { Jumbotron } from '../components/Jumbotron.vue'
+import { defineComponent, defineAsyncComponent } from 'vue'
 
-export const HomeView = {
-  components: { Jumbotron }
-}
+export const HomeView = defineComponent({
+  components: {
+    Jumbotron: defineAsyncComponent(() => import('../components/Jumbotron.vue'))
+  }
+})
 
 export { HomeView as default }
 </script>
