@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +19,6 @@ namespace ListeningPostApiServer.Controllers
     /// <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
     [Produces("application/json", "application/octet-stream")]
     [Route("[controller]")]
-    [EnableCors("AllowAll")]
     [ApiController]
     [ProducesErrorResponseType(typeof(NotFoundResult))]
     public class FileController : ControllerBase
@@ -81,6 +81,7 @@ namespace ListeningPostApiServer.Controllers
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
+        [EnableCors(CorsPolicyType.MinimalGet)]
         [HttpGet("{id:guid?}")]
         public async Task<IActionResult> Get(Guid? id)
         {
@@ -130,30 +131,39 @@ namespace ListeningPostApiServer.Controllers
         /// <summary>
         ///     Directly uploads a file to the server, bypassing associating with an agent.
         /// </summary>
-        /// <param name="file">The file.</param>
+        /// <param name="file">The files.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
         /// <remarks>Meant for user access</remarks>
-        [HttpPost("upload")]
-        public async Task<IActionResult> Upload(IFormFile file)
+        [EnableCors(CorsPolicyType.DropzoneUpload)]
+        [HttpPost]
+        [HttpOptions]
+        public async Task<IActionResult> Upload(IList<IFormFile> file)
         {
-            if (file.Length <= 0) return BadRequest();
+            var size = file.Sum(f => f.Length);
 
-            var filePath = Path.GetTempFileName();
+            if (size <= 0) return BadRequest();
 
-            await using (var stream = new FileStream(filePath, FileMode.Create))
+            var newFiles = new List<PayloadFile>();
+
+            foreach (var _file in file)
             {
-                await file.CopyToAsync(stream);
+                if (_file.Length <= 0) continue;
+
+                var filePath = Path.GetTempFileName();
+
+                await using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await _file.CopyToAsync(stream);
+                }
+
+                newFiles.Add(await _payload.AddAsync(new PayloadFile
+                {
+                    TempFilePath = filePath,
+                    ActualFileName = _file.FileName
+                }));
             }
 
-            var newExFile = new PayloadFile
-            {
-                TempFilePath = filePath,
-                ActualFileName = file.FileName
-            };
-
-            var newFile = await _payload.AddAsync(newExFile);
-
-            return Ok(newFile);
+            return Ok(newFiles);
         }
 
         /// <summary>

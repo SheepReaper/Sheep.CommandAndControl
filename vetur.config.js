@@ -9,7 +9,7 @@ module.exports = {
     {
       root: "./src/ListeningPostUi/",
       package: "./package.json",
-      // tsconfig: './tsconfig.json'
+      tsconfig: './tsconfig.json'
     },
   ],
 };

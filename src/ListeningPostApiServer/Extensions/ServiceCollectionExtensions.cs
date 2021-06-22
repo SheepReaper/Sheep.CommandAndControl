@@ -1,12 +1,14 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
+using ListeningPostApiServer.Controllers;
 using ListeningPostApiServer.Data;
 using ListeningPostApiServer.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
@@ -20,64 +22,68 @@ namespace ListeningPostApiServer.Extensions
     /// </summary>
     public static class ServiceCollectionExtensions
     {
-        #region Methods
-
         /// <summary>
         ///     Configures the application database context.
         /// </summary>
         /// <param name="services">The services.</param>
         /// <returns>IServiceCollection.</returns>
-        public static IServiceCollection ConfigureAppDbContext(this IServiceCollection services)
-        {
-            return services
-                .AddDbContext<AppDbContext>(
-                    options =>
-                        options
-                            .UseInMemoryDatabase("MyDatabaseInMemory")
-                            .UseLazyLoadingProxies());
-        }
+        public static IServiceCollection ConfigureAppDbContext(this IServiceCollection services) =>
+            services.AddDbContext<AppDbContext>(options => options
+                .UseInMemoryDatabase("MyDatabaseInMemory")
+                .UseLazyLoadingProxies());
 
         /// <summary>
         ///     Configures the CORS settings.
         /// </summary>
         /// <param name="services">      The services.</param>
-        /// <param name="corsPolicyName">Name of the cors policy.</param>
+        /// <param name="appSettings"></param>
         /// <returns>IServiceCollection.</returns>
         /// <remarks>
         ///     CORS is not a security feature! CORS is a relaxation of security. I used it in this
         ///     project because this is not a production deployment. Do not copy what I did here to a
         ///     production project.
         /// </remarks>
-        public static IServiceCollection ConfigureCors(this IServiceCollection services, string corsPolicyName)
-        {
-            return services
-                .AddCors(options => options
-                    .AddPolicy(corsPolicyName,
-                        builder =>
+        public static IServiceCollection ConfigureCors(this IServiceCollection services, IConfiguration appSettings) =>
+            services.AddCors(options =>
+                {
+                    options.AddPolicy(CorsPolicyType.DropzoneUpload, builder =>
+                        {
                             builder
-                                .WithOrigins("http://localhost:8080")
+                                .WithSmartOrigin(services, appSettings)
                                 .WithHeaders(
-                                    "content-type", // General
-                                    "cache-control", // Uploads
-                                    "x-requested-with") // Uploads
-                    )
-                );
-        }
+                                    "cache-control",
+                                    "x-requested-with");
+                        }
+                    );
+
+                    options.AddPolicy(CorsPolicyType.MinimalPost, builder =>
+                        {
+                            builder
+                                .WithSmartOrigin(services, appSettings)
+                                .WithHeaders(
+                                    "content-type"
+                                );
+                        }
+                    );
+
+                    options.AddPolicy(CorsPolicyType.MinimalGet,
+                        builder => { builder.WithSmartOrigin(services, appSettings); }
+                    );
+                }
+            );
 
         /// <summary>
         ///     Configures the HTTPS settings.
         /// </summary>
         /// <param name="services">The services.</param>
         /// <returns>IServiceCollection.</returns>
-        public static IServiceCollection ConfigureHttps(this IServiceCollection services)
-        {
-            return services
+        public static IServiceCollection ConfigureHttps(this IServiceCollection services) =>
+            services
                 .AddHttpsRedirection(options =>
                 {
                     options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
                     options.HttpsPort = 5001;
                 });
-        }
 
         /// <summary>
         ///     Configures the MVC options.
@@ -88,12 +94,10 @@ namespace ListeningPostApiServer.Extensions
         ///     While MVC is technically middleware (like just about everything in net core) MVC in this
         ///     project represents the last middleware in the request-response pipeline for this project.
         /// </remarks>
-        public static IMvcBuilder ConfigureMvc(this IServiceCollection services)
-        {
-            return services
+        public static IMvcBuilder ConfigureMvc(this IServiceCollection services) =>
+            services
                 .AddMvc(options => options.EnableEndpointRouting = false)
                 .SetCompatibilityVersion(CompatibilityVersion.Latest);
-        }
 
         /// <summary>
         ///     Configures the repository injection.
@@ -102,11 +106,6 @@ namespace ListeningPostApiServer.Extensions
         /// <returns>IServiceCollection.</returns>
         public static IServiceCollection ConfigureRepositoryInjection(this IServiceCollection services) =>
             services
-                // .AddTransient<IRepository<TaskBase>, TaskRepository>()
-                // .AddTransient<IRepository<Implant>, ImplantRepository>()
-                // .AddTransient<IRepository<Result>, ResultRepository>()
-                // // .AddTransient<IRepository<FileBase>, FileRepository>()
-                // .AddTransient<IRepository<PayloadFile>, FileRepository<PayloadFile>>()
                 .AddScoped(typeof(IRepository<>), typeof(GenericRepository<>))
                 .AddScoped<DbContext, AppDbContext>();
 
@@ -146,7 +145,5 @@ namespace ListeningPostApiServer.Extensions
                     }
                 );
         }
-
-        #endregion Methods
     }
 }

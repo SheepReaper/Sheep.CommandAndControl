@@ -5,7 +5,9 @@ label.text-reader
 </template>
 
 <script>
-export const TextReader = {
+import { defineComponent } from 'vue'
+
+export const TextReader = defineComponent({
   methods: {
     loadTextFromFile(ev) {
       const file = ev.target.files[0]
@@ -15,7 +17,7 @@ export const TextReader = {
       reader.readAsText(file)
     }
   }
-}
+})
 
 export { TextReader as default }
 </script>

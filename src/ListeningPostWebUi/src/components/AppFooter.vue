@@ -2,17 +2,16 @@
 nav.navbar.fixed-bottom.navbar-expand.navbar-dark.bg-primary: .container-fluid
   .navbar-brand Listening Station 1.0
 
-  .navbar-nav.me-auto.mb-0: template(v-for='(item, i) in statusItems'): .nav-link(
-    :key='i'
-  )
+  .navbar-nav.me-auto.mb-0: template(v-for='(item, i) in statusItems' :key='i'): .nav-link
     span {{ item.text }}
     span.badge.bg-secondary.ms-1 {{ item.value }}
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import { defineComponent } from 'vue'
 
-export const AppFooter = {
+export const AppFooter = defineComponent({
   data: () => ({
     logo: { text: 'C & C', route: { path: '/' } },
     links: [
@@ -39,7 +38,7 @@ export const AppFooter = {
       ]
     }
   }
-}
+})
 
 export { AppFooter as default }
 </script>

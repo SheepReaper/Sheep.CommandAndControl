@@ -11,7 +11,9 @@
 </template>
 
 <script>
-export const ApiDocsView = {
+import { defineComponent } from 'vue'
+
+export const ApiDocsView = defineComponent({
   data: () => ({
     loaded: false,
     iframe: {
@@ -33,7 +35,7 @@ export const ApiDocsView = {
     }
     this.loaded = true
   }
-}
+})
 
 export { ApiDocsView as default }
 </script>

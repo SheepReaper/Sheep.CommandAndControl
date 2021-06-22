@@ -12,8 +12,10 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary: .container-fluid
   router-link.navbar-brand(:to='logo.route') {{ logo.text }}
 
   #collapseTarget.collapse.navbar-collapse
-    .navbar-nav.me-auto.mb-2.mb-lg-0: template(v-for='(link, i) in links'): router-link.nav-link(
-      :key='i',
+    .navbar-nav.me-auto.mb-2.mb-lg-0: template(
+      v-for='(link, i) in links',
+      :key='i'
+    ): router-link.nav-link(
       :class='{ active: isCurrentRoute(link.route) }',
       :to='link.route',
       :aria-current='isCurrentRoute(link.route) ? "page" : false'
@@ -30,7 +32,9 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary: .container-fluid
 </template>
 
 <script>
-export const AppBar = {
+import { defineComponent } from 'vue'
+
+export const AppBar = defineComponent({
   data: () => ({
     logo: { text: 'C & C', route: { path: '/' } },
     links: [
@@ -46,7 +50,7 @@ export const AppBar = {
       return route.name === this.$route.name || route.path === this.$route.path
     }
   }
-}
+})
 
 export { AppBar as default }
 </script>

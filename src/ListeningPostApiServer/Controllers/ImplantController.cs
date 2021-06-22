@@ -15,7 +15,6 @@ namespace ListeningPostApiServer.Controllers
     /// <remarks>Used by both Agents and Users</remarks>
     [Produces("application/json")]
     [Route("[controller]")]
-    [EnableCors("AllowAll")]
     [ApiController]
     [ProducesErrorResponseType(typeof(NotFoundResult))]
     public class ImplantController : ControllerBase
@@ -49,6 +48,7 @@ namespace ListeningPostApiServer.Controllers
         /// </summary>
         /// <param name="id">The identifier (agent-reported).</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
+        [EnableCors(CorsPolicyType.MinimalGet)]
         [HttpGet("{id:int?}")]
         public async Task<IActionResult> Get(int id = 0)
         {

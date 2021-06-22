@@ -3,9 +3,9 @@
   .row.mt-3: .col
     label.form-label(for='fileList') A list of files show up here when available
     ul#fileList.list-group: template(
-      v-for='({ filename, guid, tempFilePath, updated }, i) in files'
+      v-for='({ filename, guid, tempFilePath, updated }, i) in files',
+      :key='i'
     ): a.list-group-item.list-group-item-action(
-      :key='i',
       :href='`https://localhost:5001/file/download/${guid}`'
     )
       span File Name:
@@ -19,7 +19,7 @@
 
   .row.mt-3: .col
     label.form-text(for='fileUploader') Upload files directly
-    vue-dropzone#fileUploader(:options='dropOptions')
+    vdrop#fileUploader(:options='otherOptions' :useCustomSlot="true")
 
   .row.mt-3
     .col-12
@@ -40,68 +40,95 @@
 </template>
 
 <script>
-import vue2Dropzone from 'vue2-dropzone'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
-import CKEditor from '@ckeditor/ckeditor5-vue2'
 
-import { uploadFile, fetchFiles as _fetchFiles } from '../api'
+import {
+  defineComponent,
+  defineAsyncComponent,
+  reactive,
+  onMounted,
+  ref
+} from 'vue'
 
-export const FileReaderView = {
+import { uploadFiles, fetchFiles } from '../api'
+
+/**
+ * @param {File[]} acceptFiles
+ * @param {object[]} rejectFiles
+ * @param {File} rejectFiles.file
+ * @param {object[]} rejectFiles.errors
+ * @param {string} rejectFiles.errors.code
+ * @param {string} rejectFiles.errors.message
+ */
+const onDrop = (acceptFiles, rejectFiles) => {
+  if (acceptFiles.length > 0) uploadFiles(acceptFiles)
+
+  rejectFiles.map((rf) => console.error(['dropFileError', rf]))
+}
+
+export const FileReaderView = defineComponent({
   components: {
-    vueDropzone: vue2Dropzone,
-    ckeditor: CKEditor.component
+    vdrop: defineAsyncComponent(() => import('@/components/VueDropZone.vue')),
+    ckeditor: defineAsyncComponent(() =>
+      import('@ckeditor/ckeditor5-vue').then((module) => module.component)
+    )
   },
-  data: () => ({
-    editor: ClassicEditor,
-    editorData: '',
-    files: [],
-    currentFile: {},
-    editorConfig: {},
-    dropOptions: {
-      url: 'https://localhost:5001/File/upload'
-    }
-  }),
-  mounted() {
-    this.fetchFiles()
+  setup: () => {
+    const files = ref([])
+    const editorData = ref('')
+    const editorConfig = ref({})
+    const currentFile = ref(new File([], ''))
+    const otherOptions = ref({ url: 'https://localhost:5001/File' })
 
-    setInterval(() => {
-      this.fetchFiles()
-    }, 5000)
-  },
-  methods: {
-    onSave() {
-      return uploadFile(
-        new File(
-          [
-            new Blob([this.editorData], {
-              type: this.currentFile.type
-            })
-          ],
-          this.currentFile.name,
-          {
-            type: this.currentFile.type
-          }
-        )
-      ).catch((reason) => console.error(['fileUploadError', reason]))
-    },
-    onPickFile({ target: { files } }) {
-      this.currentFile = files[0]
+    const onOpen = () => _open()
+
+    /**
+     * @param {object} param
+     * @param {HTMLInputElement} param.target
+     */
+    const onPickFile = ({ target: { files } }) => {
+      currentFile.value = files[0]
+
       files[0]
         .text()
-        .then((text) => (this.editorData = text))
-        .catch((reason) => console.error(['readFileError', reason]))
-    },
-    fetchFiles() {
-      return _fetchFiles()
-        .then(({ data }) => (this.files = data))
-        .catch((reason) => console.log(['fetcFilesError', reason]))
+        .then((text) => (editorData.value = text))
+        .catch((reason) => console.error(['filePickerError', reason]))
+    }
+
+    const onSave = () => {
+      const options = { type: currentFile.value.type }
+
+      return uploadFiles([
+        new File(
+          [new Blob([editorData.value], options)],
+          currentFile.value.name,
+          options
+        )
+      ])
+    }
+
+    const updateFileList = () =>
+      fetchFiles().then(({ data }) => (files.value = data))
+
+    setInterval(() => {
+      updateFileList()
+    }, 5000)
+
+    onMounted(() => {
+      updateFileList()
+    })
+
+    return {
+      editor: ClassicEditor,
+      editorConfig,
+      editorData,
+      files,
+      onPickFile,
+      onSave,
+      otherOptions
     }
   }
-}
+})
 
 export { FileReaderView as default }
 </script>
-
-<style lang="scss" scoped>
-@import '~vue2-dropzone/dist/vue2Dropzone.min.css';
-</style>

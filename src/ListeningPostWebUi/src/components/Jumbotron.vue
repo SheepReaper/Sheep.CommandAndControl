@@ -6,7 +6,8 @@
 </template>
 
 <script>
-export const Jumbotron = {
+import { defineComponent } from 'vue'
+export const Jumbotron = defineComponent({
   props: {
     header: {
       type: String,
@@ -19,7 +20,7 @@ export const Jumbotron = {
       default: ''
     }
   }
-}
+})
 
 export { Jumbotron as default }
 </script>

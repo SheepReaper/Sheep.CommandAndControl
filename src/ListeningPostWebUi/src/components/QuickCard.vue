@@ -7,7 +7,8 @@
 </template>
 
 <script>
-export const QuickCard = {
+import { defineComponent } from 'vue'
+export const QuickCard = defineComponent({
   props: {
     header: {
       type: String,
@@ -20,7 +21,7 @@ export const QuickCard = {
       default: ''
     }
   }
-}
+})
 
 export { QuickCard as default }
 </script>

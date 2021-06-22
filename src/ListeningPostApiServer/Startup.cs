@@ -14,16 +14,6 @@ namespace ListeningPostApiServer
     /// </summary>
     public class Startup
     {
-        #region Fields
-
-        /// <summary>
-        ///     This is the "Name" of the CORS policy. Arbitrary, but required.
-        /// </summary>
-        /// <remarks>I've yet to see it actually referenced anywhere besides the constructor.</remarks>
-        private const string MyAllowSpecificOrigins = "AllowAll";
-
-        #endregion Fields
-
         #region Constructors
 
         /// <summary>
@@ -64,7 +54,7 @@ namespace ListeningPostApiServer
                 .ConfigureRepositoryInjection()
                 .ConfigureSwagger()
                 //.ConfigureHttps()
-                .ConfigureCors(MyAllowSpecificOrigins);
+                .ConfigureCors(Configuration);
 
             services
                 .ConfigureMvc().AddJsonOptions(options =>
@@ -95,7 +85,7 @@ namespace ListeningPostApiServer
                 .UseHttpsRedirection()
                 .UseStaticFiles()
                 .UseRouting()
-                .UseCors(MyAllowSpecificOrigins)
+                .UseCors()
                 .UseSwagger()
                 .UseSwaggerUI(options =>
                     options.SwaggerEndpoint("/swagger/v1/swagger.json", "Listening Post API v1"))

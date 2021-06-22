@@ -10,7 +10,8 @@
         role='group',
         aria-label='Command mode options'
       ): template(
-        v-for='(option, i) in commandOptions'
+        v-for='(option, i) in commandOptions',
+        :key='i'
       )
         input.btn-check(
           type='radio',
@@ -51,10 +52,9 @@
       header='Active Agents (Implants)',
       title='Select which agents will receive commands:'
     ): ul.list-group.mt-3: template(
-      v-for='({ id, tasks }, i) in agents'
-    ): li.list-group-item(
+      v-for='({ id, tasks }, i) in agents',
       :key='i'
-    ): .form-check.form-switch
+    ): li.list-group-item: .form-check.form-switch
       input.form-check-input(
         type='checkbox',
         :checked='selectedAgents.includes(id)',
@@ -69,17 +69,17 @@
 
     //- right pane
     .col-6: QuickCard(header='Monitor', title='Command History'): ul.list-group.mt-3
-      template(v-for='(task, i) in tasksSorted'): li.list-group-item(:key='i') TaskId: {{ task.id }} Command: {{ task.command }}
+      template(v-for='(task, i) in tasksSorted', :key='i'): li.list-group-item TaskId: {{ task.id }} Command: {{ task.command }}
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import { QuickCard } from '../components/QuickCard.vue'
+import { defineComponent, defineAsyncComponent } from 'vue'
 
-import { sendCommand, pullCommand, pushCommand, createAgent } from '../api'
+import { sendCommand, pullCommand, pushCommand, createAgent } from '@/api'
 
 const actionMap = {
-  'Debug: Create Agent': createAgent,
+  'Debug: Create Agent': (commandParam, _) => createAgent(commandParam),
   'Direct Bash Command': sendCommand,
   'Special PUSH': pushCommand,
   'Special PULL': pullCommand
@@ -112,9 +112,9 @@ const createComparator =
     return order === 'desc' ? comparison * -1 : comparison
   }
 
-export const CommandView = {
+export const CommandView = defineComponent({
   components: {
-    QuickCard
+    QuickCard: defineAsyncComponent(() => import('../components/QuickCard.vue'))
   },
   data: () => ({
     commandParameter: '',
@@ -137,8 +137,6 @@ export const CommandView = {
     tryCallApi() {
       if (this.formIsValid && this.commandMode in actionMap) {
         actionMap[this.commandMode](this.commandParameter, this.selectedAgents)
-          .then((response) => console.log(response))
-          .catch((reason) => console.error(['apiError', reason]))
       } else {
         console.error('Invalid commandMode value:', this.commandMode)
       }
@@ -156,7 +154,7 @@ export const CommandView = {
       this.formIsValid = this.commandParameter.length > 0
     }
   }
-}
+})
 
 export { CommandView as default }
 </script>

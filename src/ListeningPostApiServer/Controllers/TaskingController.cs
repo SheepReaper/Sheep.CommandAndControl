@@ -23,7 +23,6 @@ namespace ListeningPostApiServer.Controllers
     /// <remarks>This controller provides both agent access and UI access.</remarks>
     [Produces("application/json")]
     [Route("[controller]")]
-    [EnableCors("AllowAll")]
     [ApiController]
     [ProducesErrorResponseType(typeof(NotFoundResult))]
     public class TaskingController : ControllerBase
@@ -80,6 +79,7 @@ namespace ListeningPostApiServer.Controllers
         /// </summary>
         //[HttpGet("/Tasking")]
         //[HttpGet("/Tasking/{id}")]
+        [EnableCors(CorsPolicyType.MinimalGet)]
         [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
         {
@@ -126,7 +126,9 @@ namespace ListeningPostApiServer.Controllers
         ///     This controller is a bit unstable due to the specifications of this project
         ///     (behavior/responses are inconsistent between agent, UI, and Postman for example.).
         /// </remarks>
+        [EnableCors(CorsPolicyType.MinimalPost)]
         [HttpPost]
+        [HttpOptions]
         public async Task<IActionResult> Post([FromBody] TaskRequest taskRequest)
         {
             IList<TaskBase> newTasks = new List<TaskBase>();
