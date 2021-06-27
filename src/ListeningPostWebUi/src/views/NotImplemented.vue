@@ -5,7 +5,6 @@ div
 </template>
 
 <script>
-// import Jumbotron from '../components/Jumbotron.vue'
 import { defineComponent, defineAsyncComponent } from 'vue'
 
 export const NotImplementedView = defineComponent({
