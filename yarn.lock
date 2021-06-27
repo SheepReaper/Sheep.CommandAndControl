@@ -45,6 +45,25 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@types/dropzone@^5.7.3":
+  version "5.7.3"
+  resolved "https://registry.yarnpkg.com/@types/dropzone/-/dropzone-5.7.3.tgz#fdb4a057114a4f02d26461d2ab212032b4e15554"
+  integrity sha512-UQ6HPqpyQ6WTK75WwMhUZaZaQUw7v/hkcRJa0T/3WAXIKaYpQq+FcuTV2kQweebl/c6vWzK9hIe06eK55crwfg==
+  dependencies:
+    "@types/jquery" "*"
+
+"@types/jquery@*":
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.5.tgz#2c63f47c9c8d96693d272f5453602afd8338c903"
+  integrity sha512-6RXU9Xzpc6vxNrS6FPPapN1SxSHgQ336WC6Jj/N8q30OiaBZ00l1GBgeP7usjVZPivSkGUfL1z/WW6TX989M+w==
+  dependencies:
+    "@types/sizzle" "*"
+
+"@types/sizzle@*":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.3.tgz#ff5e2f1902969d305225a047c8a0fd5c915cebef"
+  integrity sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==
+
 acorn-jsx@^5.2.0, acorn-jsx@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.1.tgz#fc8661e11b7ac1539c47dbfea2e72b3af34d267b"
@@ -858,7 +877,7 @@ v8-compile-cache@^2.0.3:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
 
-vls@^0.7.4:
+vls@0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/vls/-/vls-0.7.4.tgz#c0926c87736bc8e0741d814437f710a6d505114d"
   integrity sha512-uU5HCIK5vX096eMA5fBwyR7tv36m1Ssy910w5ILT5OvCUTXgBR58gZRJWrL2HxCyG8oYXC+oFWjhJc7+ExBUgQ==

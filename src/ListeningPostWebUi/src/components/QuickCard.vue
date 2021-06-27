@@ -1,8 +1,8 @@
 <template lang="pug">
 .card
-  h2.card-header {{ header }}
+  h2.card-header(v-if="header") {{ header }}
   .card-body
-    h5.card-title {{ title }}
+    h5.card-title(v-if="title") {{ title }}
     slot
 </template>
 

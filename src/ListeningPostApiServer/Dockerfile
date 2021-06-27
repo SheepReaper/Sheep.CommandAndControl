@@ -3,14 +3,18 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
-WORKDIR /app
-COPY ListeningPostApiServer.csproj ./
-RUN dotnet restore
-COPY . ./
-RUN dotnet publish -c Release -o out
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY ["ListeningPostApiServer/ListeningPostApiServer.csproj" "ListeningPostApiServer/"]
+RUN dotnet restore "ListeningPostApiServer/ListeningPostApiServer.csproj"
+COPY . .
+WORKDIR "/src/ListeningPostApiServer"
+RUN dotnet build "ListeningPostApiServer.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "ListeningPostApiServer.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=build-env /app/out .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "ListeningPostApiServer.dll"]

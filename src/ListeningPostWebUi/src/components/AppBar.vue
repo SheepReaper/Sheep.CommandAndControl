@@ -33,21 +33,24 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary: .container-fluid
 
 <script>
 import { defineComponent } from 'vue'
+import { useRoute } from 'vue-router'
 
 export const AppBar = defineComponent({
-  data: () => ({
-    logo: { text: 'C & C', route: { path: '/' } },
-    links: [
-      { text: 'Home', route: { path: '/' } },
-      { text: 'Command', route: { path: '/command' } },
-      { text: 'Manage Queues', route: { path: '/queues' } },
-      { text: 'File Manager', route: { path: '/fileManager' } },
-      { text: 'Api Docs', route: { path: '/docs' } }
-    ]
-  }),
-  methods: {
-    isCurrentRoute(route) {
-      return route.name === this.$route.name || route.path === this.$route.path
+  setup: () => {
+    const { name, path } = useRoute()
+
+    return {
+      isCurrentRoute: (
+        /** @type {{ name: import("vue-router").RouteRecordName; path: string; }} */ checkRoute
+      ) => checkRoute.name === name || checkRoute.path === path,
+      links: [
+        { text: 'Home', route: { path: '/' } },
+        { text: 'Command', route: { path: '/command' } },
+        { text: 'Manage Queues', route: { path: '/queues' } },
+        { text: 'File Manager', route: { path: '/fileManager' } },
+        { text: 'Api Docs', route: { path: '/docs' } }
+      ],
+      logo: { text: 'C & C', route: { path: '/' } }
     }
   }
 })

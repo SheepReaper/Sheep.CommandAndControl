@@ -15,11 +15,6 @@ export const router = createRouter({
       component: () => import('./views/Command.vue')
     },
     {
-      path: '/queues',
-      name: 'Queues',
-      component: () => import('./views/NotImplemented.vue')
-    },
-    {
       path: '/fileManager',
       name: 'FileManager',
       component: () => import('./views/FileReader.vue')
@@ -28,6 +23,11 @@ export const router = createRouter({
       path: '/docs',
       name: 'Docs',
       component: () => import('./views/ApiDocs.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('./views/NotImplemented.vue')
     }
   ]
 })
