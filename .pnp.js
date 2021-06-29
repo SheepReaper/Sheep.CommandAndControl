@@ -4291,14 +4291,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:2.6.12", {
-          "packageLocation": "./.yarn/unplugged/core-js-npm-2.6.12-0b93d77d31/node_modules/core-js/",
+          "packageLocation": "./.yarn/cache/core-js-npm-2.6.12-0b93d77d31-b865823ce9.zip/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:2.6.12"]
           ],
           "linkType": "HARD",
         }],
         ["npm:3.15.1", {
-          "packageLocation": "./.yarn/unplugged/core-js-npm-3.15.1-34114c2fbc/node_modules/core-js/",
+          "packageLocation": "./.yarn/cache/core-js-npm-3.15.1-34114c2fbc-162cc45631.zip/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.15.1"]
           ],
@@ -4536,7 +4536,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["esbuild", [
         ["npm:0.12.12", {
-          "packageLocation": "./.yarn/unplugged/esbuild-npm-0.12.12-3705093b39/node_modules/esbuild/",
+          "packageLocation": "./.yarn/cache/esbuild-npm-0.12.12-3705093b39-a5b0f1cd14.zip/node_modules/esbuild/",
           "packageDependencies": [
             ["esbuild", "npm:0.12.12"]
           ],
@@ -6960,14 +6960,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["rollup-plugin-pug", [
         ["npm:1.1.1", {
-          "packageLocation": "./.yarn/unplugged/rollup-plugin-pug-virtual-1d1c0bea2b/node_modules/rollup-plugin-pug/",
+          "packageLocation": "./.yarn/cache/rollup-plugin-pug-npm-1.1.1-95fae810a2-89410bff47.zip/node_modules/rollup-plugin-pug/",
           "packageDependencies": [
             ["rollup-plugin-pug", "npm:1.1.1"]
           ],
           "linkType": "SOFT",
         }],
         ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1", {
-          "packageLocation": "./.yarn/unplugged/rollup-plugin-pug-virtual-1d1c0bea2b/node_modules/rollup-plugin-pug/",
+          "packageLocation": "./.yarn/$$virtual/rollup-plugin-pug-virtual-1d1c0bea2b/0/cache/rollup-plugin-pug-npm-1.1.1-95fae810a2-89410bff47.zip/node_modules/rollup-plugin-pug/",
           "packageDependencies": [
             ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],
             ["@types/rollup", null],
