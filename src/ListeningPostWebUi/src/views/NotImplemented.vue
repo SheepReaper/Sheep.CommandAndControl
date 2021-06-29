@@ -4,7 +4,7 @@ div
   p Try one of the other areas...
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, defineAsyncComponent } from 'vue'
 
 export const NotImplementedView = defineComponent({

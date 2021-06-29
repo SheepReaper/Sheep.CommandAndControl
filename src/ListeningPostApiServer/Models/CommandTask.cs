@@ -6,15 +6,12 @@
     ///     Implements the <see cref="T:ListeningPostApiServer.Models.TaskBase" />
     /// </summary>
     /// <seealso cref="T:ListeningPostApiServer.Models.TaskBase" />
+    // ReSharper disable once ClassNeverInstantiated.Global
     public class CommandTask : TaskBase
     {
-        #region Constructors
-
         /// <summary>
         ///     Initializes a new instance of the <see cref="CommandTask" /> class.
         /// </summary>
         public CommandTask() => TaskType = TaskType.Command;
-
-        #endregion Constructors
     }
 }

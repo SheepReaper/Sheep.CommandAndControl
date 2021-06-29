@@ -1,21 +1,60 @@
-function findReferences(obj, catalog) {
+// Modified from Douglas Crockford's cycle.js (https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)
+// Ported over to TypeScript, and modified to handle the reference schema that Json.NET uses.
+
+//https://bitbucket.org/smithkl42/jsonnetdecycle/raw/9029203b24f124171cf336c3fc6aa86425adec5f/JsonNetDecycle/JsonNetDecycle.ts
+
+// type primitive = string | number
+
+// type sequence = primitive[]
+
+// type serializable = sequence | primitive | object
+
+// interface STJobj {
+//   $values: STJobj[] | number[] | string[]
+// }
+// const me = {} as STJobj
+
+interface STJNode {
+  $id: string
+  $ref?: string
+}
+
+interface STJArray extends STJNode {
+  $values: STJNode[]
+}
+
+type STJValue =
+  | STJNode
+  | boolean
+  | Date
+  | number
+  | RegExp
+  | string
+  | number
+  | string
+  | boolean
+
+function findReferences(obj: STJNode | STJNode[], catalog: STJNode[]): void {
   // The catalogObject function walks recursively through an object graph
   // looking for $id properties. When it finds an object with that property, then
   // it adds it to the catalog under that key.
 
-  var i
+  const objAsNode = obj as STJNode
+  const objAsNodeArr = obj as STJNode[]
+
+  let i: number
   if (obj && typeof obj === 'object') {
-    var id = obj.$id
+    const id: string = objAsNode.$id
     if (typeof id === 'string') {
       catalog[id] = obj
     }
 
     if (Object.prototype.toString.apply(obj) === '[object Array]') {
-      for (i = 0; i < obj.length; i += 1) {
+      for (i = 0; i < objAsNodeArr.length; i += 1) {
         findReferences(obj[i], catalog)
       }
     } else {
-      for (let name in obj) {
+      for (const name in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, name)) {
           if (typeof obj[name] === 'object') {
             findReferences(obj[name], catalog)
@@ -26,12 +65,14 @@ function findReferences(obj, catalog) {
   }
 }
 
-function resolveReferences(obj, catalog) {
-  var i, item, name, id
+function resolveReferences(obj: STJNode | STJNode[], catalog: STJNode[]) {
+  let i: number, item: STJNode, name: string, id: string
+  const objAsNodeArr = obj as STJNode[]
+  const objAsSTJArr = obj as STJArray
 
   if (obj && typeof obj === 'object') {
     if (Object.prototype.toString.apply(obj) === '[object Array]') {
-      for (i = 0; i < obj.length; i += 1) {
+      for (i = 0; i < objAsNodeArr.length; i += 1) {
         item = obj[i]
         if (item && typeof item === 'object') {
           id = item.$ref
@@ -43,12 +84,12 @@ function resolveReferences(obj, catalog) {
         }
       }
     } else if (
-      obj.$values &&
-      Object.prototype.toString.apply(obj.$values) === '[object Array]'
+      objAsSTJArr.$values &&
+      Object.prototype.toString.apply(objAsSTJArr.$values) === '[object Array]'
     ) {
-      var arr = new Array()
-      for (i = 0; i < obj.$values.length; i += 1) {
-        item = obj.$values[i]
+      const arr = []
+      for (i = 0; i < objAsSTJArr.$values.length; i += 1) {
+        item = objAsSTJArr.$values[i]
         if (item && typeof item === 'object') {
           id = item.$ref
           if (typeof id === 'string') {
@@ -82,11 +123,17 @@ function resolveReferences(obj, catalog) {
   return obj
 }
 
-function getDecycledCopy(obj, catalog) {
+function getDecycledCopy(
+  obj: STJValue | STJValue[],
+  catalog: STJNode[]
+): STJValue[] | STJValue | RegExp | STJNode | Date {
   // The createReferences function recurses through the object, producing the deep copy.
-  var i // The loop counter
-  var name // Property name
-  var nu // The new object or array
+  let i: number // The loop counter
+  let name: string // Property name
+  let nu: STJValue[] | STJValue // The new object or array
+
+  const objAsNode = obj as STJNode
+  const objAsNodeArr = obj as STJNode[]
 
   switch (typeof obj) {
     case 'object':
@@ -110,23 +157,23 @@ function getDecycledCopy(obj, catalog) {
       // JavaScript really should have a decent dictionary or map class.
       for (i = 0; i < catalog.length; i += 1) {
         if (catalog[i] === obj) {
-          return { $ref: i.toString() }
+          return { $ref: i.toString() } as STJNode
         }
       }
 
       // Otherwise, accumulate the unique value and its id.
-      obj.$id = catalog.length.toString()
-      catalog.push(obj)
+      objAsNode.$id = catalog.length.toString()
+      catalog.push(objAsNode)
 
       // If it is an array, replicate the array.
       if (Object.prototype.toString.apply(obj) === '[object Array]') {
         nu = []
-        for (i = 0; i < obj.length; i += 1) {
-          nu[i] = getDecycledCopy(obj[i], catalog)
+        for (i = 0; i < objAsNodeArr.length; i += 1) {
+          nu[i] = getDecycledCopy(obj[i], catalog) as STJValue
         }
       } else {
         // If it is an object, replicate the object.
-        nu = {}
+        nu = {} as STJValue
         for (name in obj) {
           if (Object.prototype.hasOwnProperty.call(obj, name)) {
             nu[name] = getDecycledCopy(obj[name], catalog)
@@ -143,31 +190,38 @@ function getDecycledCopy(obj, catalog) {
 }
 
 /** Make a deep copy of an object or array, assuring that there is at most
-    one instance of each object or array in the resulting structure. The
-    duplicate references (which might be forming cycles) are replaced with
-    an object of the form
-      {$id: id}
-    where the id is a simple string
-Modified from Douglas Crockford's cycle.js (https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)
-Ported over to TypeScript, and modified to handle the reference schema that Json.NET uses.
+      one instance of each object or array in the resulting structure. The
+      duplicate references (which might be forming cycles) are replaced with
+      an object of the form
+        {$id: id}
+      where the id is a simple string
+  Modified from Douglas Crockford's cycle.js (https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)
+  Ported over to TypeScript, and modified to handle the reference schema that Json.NET uses.
 */
-export function decycle(obj) {
-  var catalog = [] // Keep a reference to each unique object or array
-  var newObj = getDecycledCopy(obj, catalog)
+function decycle(obj: STJValue): STJValue | STJValue[] {
+  const catalog: STJNode[] = [] // Keep a reference to each unique object or array
+  const newObj = getDecycledCopy(obj, catalog)
   return newObj
 }
 
 /** Restore an object that was reduced by decycle. Members whose values are objects of the form
-     {$ref: id}
-are replaced with references to the value found by the id. This will
-restore cycles. The object will be mutated.
-So,
-     var s = '{$id:1, members: [{$ref:"1"}]';
-     return retrocycle(JSON.parse(s));
-produces an object containing an array which holds the object itself.
-*/
-export function retrocycle(obj) {
-  var catalog = []
+       {$ref: id}
+  are replaced with references to the value found by the id. This will
+  restore cycles. The object will be mutated.
+  So,
+       var s = '{$id:1, members: [{$ref:"1"}]';
+       return retrocycle(JSON.parse(s));
+  produces an object containing an array which holds the object itself.
+  */
+function retrocycle(obj: STJNode): STJNode | STJNode[] {
+  const catalog: STJNode[] = []
   findReferences(obj, catalog)
   return resolveReferences(obj, catalog)
 }
+
+const JsonNetDecycle = {
+  decycle,
+  retrocycle
+}
+
+export { JsonNetDecycle, JsonNetDecycle as default }

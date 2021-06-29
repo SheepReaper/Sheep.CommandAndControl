@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+// ReSharper disable PropertyCanBeMadeInitOnly.Global
 
 namespace ListeningPostApiServer.Models
 {
@@ -10,10 +12,9 @@ namespace ListeningPostApiServer.Models
     ///         cref="T:ListeningPostApiServer.Models.EntityBase" />
     /// </summary>
     /// <seealso cref="T:ListeningPostApiServer.Models.EntityBase" />
+    // ReSharper disable once ClassWithVirtualMembersNeverInherited.Global
     public class Result : EntityBase
     {
-        #region Properties
-
         /// <summary>
         ///     Gets or sets the error message returned by the agent.
         /// </summary>
@@ -47,7 +48,5 @@ namespace ListeningPostApiServer.Models
         /// <value>The task identifier.</value>
         [JsonPropertyName("task_id")]
         public int TaskId { get; set; }
-
-        #endregion Properties
     }
 }

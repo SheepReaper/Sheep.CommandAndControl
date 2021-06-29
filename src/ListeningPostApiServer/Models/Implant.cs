@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-// ReSharper disable UnusedMember.Global
+﻿using System.Collections.Generic;
 
 namespace ListeningPostApiServer.Models
 {
@@ -16,32 +11,6 @@ namespace ListeningPostApiServer.Models
     /// <seealso cref="T:ListeningPostApiServer.Models.EntityBase" />
     public class Implant : EntityBase
     {
-        #region Methods
-
-        /// <summary>
-        ///     Helper method to handle directly assigning a Command task to an agent. (No longer used).
-        /// </summary>
-        /// <param name="command">The command.</param>
-        /// <returns>Task&lt;TaskBase&gt;.</returns>
-        [Obsolete]
-        public async Task<TaskBase> AssignNewTask(string command)
-        {
-            await Task.CompletedTask;
-
-            var newTask = new TaskBase
-            {
-                Command = command
-            };
-
-            Tasks.Append(newTask);
-
-            return newTask;
-        }
-
-        #endregion Methods
-
-        #region Properties
-
         /// <summary>
         ///     Gets or sets the associated exfiltrated files.
         /// </summary>
@@ -59,7 +28,5 @@ namespace ListeningPostApiServer.Models
         /// </summary>
         /// <value>The tasks.</value>
         public virtual List<TaskBase> Tasks { get; set; } = new();
-
-        #endregion Properties
     }
 }

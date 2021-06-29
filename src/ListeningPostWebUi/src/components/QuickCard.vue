@@ -1,12 +1,12 @@
 <template lang="pug">
 .card
-  h2.card-header(v-if="header") {{ header }}
+  h2.card-header(v-if='header') {{ header }}
   .card-body
-    h5.card-title(v-if="title") {{ title }}
+    h5.card-title(v-if='title') {{ title }}
     slot
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 export const QuickCard = defineComponent({
   props: {

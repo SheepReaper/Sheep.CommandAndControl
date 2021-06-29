@@ -10,7 +10,7 @@
   )
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
 
 export const ApiDocsView = defineComponent({

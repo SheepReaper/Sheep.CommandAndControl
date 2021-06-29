@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using ListeningPostApiServer.Extensions;
 using ListeningPostApiServer.Interfaces;
@@ -77,8 +78,6 @@ namespace ListeningPostApiServer.Controllers
         /// <summary>
         ///     Gets the current task for the specified <see cref="Implant">implant.</see>
         /// </summary>
-        //[HttpGet("/Tasking")]
-        //[HttpGet("/Tasking/{id}")]
         [EnableCors(CorsPolicyType.MinimalGet)]
         [HttpGet("{id:int}")]
         public async Task<IActionResult> Get(int id)
@@ -97,7 +96,6 @@ namespace ListeningPostApiServer.Controllers
             return Ok(task);
         }
 
-        // List
         /// <summary>
         ///     Lists all of the tasks associated with a particular agent, or all tasks if an id is not provided.
         /// </summary>
@@ -116,11 +114,11 @@ namespace ListeningPostApiServer.Controllers
             return Ok(results);
         }
 
-        // POST: tasking/
         /// <summary>
         ///     Assigns a new to ask to specific agents, or all agents if an id is not specified
         /// </summary>
         /// <param name="taskRequest">A task Request.</param>
+        /// <param name="cancellationToken"></param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
         /// <remarks>
         ///     This controller is a bit unstable due to the specifications of this project
@@ -129,32 +127,30 @@ namespace ListeningPostApiServer.Controllers
         [EnableCors(CorsPolicyType.MinimalPost)]
         [HttpPost]
         [HttpOptions]
-        public async Task<IActionResult> Post([FromBody] TaskRequest taskRequest)
+        public async Task<IActionResult> Post([FromBody] TaskRequest taskRequest, CancellationToken cancellationToken)
         {
             IList<TaskBase> newTasks = new List<TaskBase>();
 
-            if (taskRequest.Task != null)
+            if (taskRequest.Task == null) return BadRequest(new {message = "you need at least a task definition"});
+            
+            if (taskRequest.Ids != null && taskRequest.Ids.Any())
             {
-                if (taskRequest.Ids != null && taskRequest.Ids.Count() > 0)
+                foreach (var id in taskRequest.Ids)
                 {
-                    foreach (var id in taskRequest.Ids)
-                    {
-                        var implant = await _implantRepository.GetAsync(id);
+                    var implant = await _implantRepository.GetAsync(id, cancellationToken);
 
-                        if (implant != null)
-                            newTasks.Add(await AssignTaskAsync(implant, taskRequest.Task));
-                    }
-
-                    return Ok(newTasks.AsEnumerable());
+                    if (implant != null)
+                        newTasks.Add(await AssignTaskAsync(implant, taskRequest.Task, cancellationToken));
                 }
-
-                foreach (var implant in await _implantRepository.GetAsync())
-                    newTasks.Add(await AssignTaskAsync(implant, taskRequest.Task));
 
                 return Ok(newTasks.AsEnumerable());
             }
 
-            return BadRequest(new {message = "you need at least a task definition"});
+            foreach (var implant in await _implantRepository.GetAsync(cancellationToken))
+                newTasks.Add(await AssignTaskAsync(implant, taskRequest.Task, cancellationToken));
+
+            return Ok(newTasks.AsEnumerable());
+
         }
 
         /// <summary>
@@ -172,8 +168,10 @@ namespace ListeningPostApiServer.Controllers
         /// </summary>
         /// <param name="implant">The implant.</param>
         /// <param name="task">   The task.</param>
+        /// <param name="cancellationToken"></param>
         /// <returns>Task&lt;TaskBase&gt;.</returns>
-        private async Task<TaskBase> AssignTaskAsync(Implant implant, TaskBase task)
+        private async Task<TaskBase> AssignTaskAsync(Implant implant, TaskBase task,
+            CancellationToken cancellationToken = default)
         {
             var newTask = new TaskBase
             {
@@ -182,7 +180,7 @@ namespace ListeningPostApiServer.Controllers
                 TaskType = TaskType.Command
             };
 
-            await _taskRepository.AddAsync(newTask);
+            await _taskRepository.AddAsync(newTask, true, cancellationToken);
 
             return task;
         }
@@ -237,10 +235,5 @@ namespace ListeningPostApiServer.Controllers
         }
 
         #endregion Methods
-
-        //private async Task<Implant> GetImplantAsync(int implantId)
-        //{
-        //    return await ((ImplantRepository)_implantRepository).GetById(implantId);
-        //}
     }
 }

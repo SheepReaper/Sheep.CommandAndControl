@@ -1,4 +1,6 @@
-﻿namespace ListeningPostApiServer.Models
+﻿// ReSharper disable PropertyCanBeMadeInitOnly.Global
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+namespace ListeningPostApiServer.Models
 {
     /// <inheritdoc />
     /// <summary>
@@ -9,8 +11,6 @@
     /// <seealso cref="T:ListeningPostApiServer.Models.EntityBase" />
     public class TaskBase : EntityBase
     {
-        #region Properties
-
         /// <summary>
         ///     Gets or sets the command string.
         /// </summary>
@@ -46,7 +46,5 @@
         /// </summary>
         /// <value>The type of the task.</value>
         public TaskType TaskType { get; set; }
-
-        #endregion Properties
     }
 }

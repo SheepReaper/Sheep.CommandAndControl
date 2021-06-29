@@ -2,18 +2,22 @@
 nav.navbar.fixed-bottom.navbar-expand.navbar-dark.bg-primary: .container-fluid
   .navbar-brand Listening Station 1.0
 
-  .navbar-nav.me-auto.mb-0: template(v-for='(item, i) in statusItems', :key='i'): .nav-link
-    span {{ item.text }}
-    span.badge.bg-secondary.ms-1 {{ item.value }}
+  .navbar-nav.me-auto.mb-0: template(
+    v-for='({ text, value }, i) in statusItems',
+    :key='i'
+  ): .nav-link
+    span(v-text='text')
+    span.badge.bg-secondary.ms-1(v-text='value')
 </template>
 
-<script>
+<script lang="ts">
 import { useStore } from 'vuex'
 import { computed, defineComponent } from 'vue'
+import { RootState } from '@/store'
 
 export const AppFooter = defineComponent({
   setup: () => {
-    const { state } = useStore()
+    const { state } = useStore<RootState>()
 
     return {
       statusItems: computed(() => [

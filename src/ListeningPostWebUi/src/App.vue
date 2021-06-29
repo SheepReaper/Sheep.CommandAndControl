@@ -5,7 +5,7 @@
   AppFooter
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, defineAsyncComponent } from 'vue'
 import { mapActions } from 'vuex'
 

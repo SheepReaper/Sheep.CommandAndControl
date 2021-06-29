@@ -1,4 +1,8 @@
-const makeRequest = (method, url, params) =>
+const makeRequest = (
+  method: string,
+  url: string,
+  params?: Document | BodyInit
+): Promise<{ signature: string }> =>
   new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest()
     xhr.responseType = 'json'
@@ -20,19 +24,11 @@ const makeRequest = (method, url, params) =>
     xhr.send(params)
   })
 
-/**
- * @promise SignedUrlPromise
- * @fulfill {{signature: string}}
- * @reject {{status: number, statusText: string}}
- */
-
-/**
- * @param {string} signingURL
- * @param {File} file
- * @param {boolean} includeFile
- * @returns {SignedUrlPromise}
- */
-export const generateSignedUrl = (signingURL, file, includeFile) => {
+export const generateSignedUrl = (
+  signingURL: string,
+  file: File,
+  includeFile: boolean
+): Promise<{ signature: string }> => {
   const fd = new FormData()
   fd.append('name', file.name)
   fd.append('type', file.type)

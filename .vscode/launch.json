@@ -15,6 +15,27 @@
                 "--project",
                 "${workspaceFolder}/src/ListeningPostApiServer"
             ],
+            // "cwd": "${workspaceFolder}/src/ListeningPostApiServer",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+        },
+        {
+            "name": ".NET Core debug (development)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/ListeningPostApiServer/bin/Debug/net5.0/ListeningPostApiServer.dll",
+            // "args": [
+            //     "watch",
+            //     "run",
+            //     "--project",
+            //     "${workspaceFolder}/src/ListeningPostApiServer"
+            // ],
+            "cwd": "${workspaceFolder}/src/ListeningPostApiServer",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "internalConsole",
             "stopAtEntry": false,

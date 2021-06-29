@@ -145,21 +145,21 @@ namespace ListeningPostApiServer.Controllers
 
             var newFiles = new List<PayloadFile>();
 
-            foreach (var _file in file)
+            foreach (var formFile in file)
             {
-                if (_file.Length <= 0) continue;
+                if (formFile.Length <= 0) continue;
 
                 var filePath = Path.GetTempFileName();
 
                 await using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    await _file.CopyToAsync(stream);
+                    await formFile.CopyToAsync(stream);
                 }
 
                 newFiles.Add(await _payload.AddAsync(new PayloadFile
                 {
                     TempFilePath = filePath,
-                    ActualFileName = _file.FileName
+                    ActualFileName = formFile.FileName
                 }));
             }
 

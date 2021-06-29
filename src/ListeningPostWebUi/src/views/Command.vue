@@ -21,7 +21,10 @@
           :id='`commandModeInput${i}`',
           @change='onCommandModeSelect(option)'
         )
-        label.btn.btn-outline-primary(:for='`commandModeInput${i}`') {{ option }}
+        label.btn.btn-outline-primary(
+          :for='`commandModeInput${i}`',
+          v-text='option'
+        )
     .mt-3
       label.form-label(for='commandParameterInput') Command / Special Command Arguments
       input#commandParameterInput.form-control(
@@ -63,23 +66,25 @@
       )
       label.form-check-label(:for='`agentSelectInput${i}`')
         b Agent Id:
-        span.ms-1 {{ id }}
+        span.ms-1(v-text='id')
         b.ms-2 Tasks:
         span.badge.bg-secondary.ms-1 {{ tasks.length }}
 
     //- right pane
     .col-6: QuickCard(header='Monitor', title='Command History'): ul.list-group.mt-3
-      template(v-for='(task, i) in tasksSorted', :key='i'): li.list-group-item TaskId: {{ task.id }} Command: {{ task.command }}
+      template(v-for='({ id, command }, i) in tasksSorted', :key='i'): li.list-group-item(
+        v-text='`TaskId: ${id} Command: ${command}`'
+      )
 </template>
 
-<script>
+<script lang="ts">
 import { mapGetters } from 'vuex'
 import { defineComponent, defineAsyncComponent } from 'vue'
 
 import { sendCommand, pullCommand, pushCommand, createAgent } from '@/api'
 
 const actionMap = {
-  'Debug: Create Agent': (commandParam, _) => createAgent(commandParam),
+  'Debug: Create Agent': (commandParam) => createAgent(commandParam),
   'Direct Bash Command': sendCommand,
   'Special PUSH': pushCommand,
   'Special PULL': pullCommand
@@ -130,7 +135,7 @@ export const CommandView = defineComponent({
       return this.agents.flatMap((a) => a.tasks)
     },
     tasksSorted() {
-      return this.tasks.sort(createComparator('id', 'desc'))
+      return [...this.tasks].sort(createComparator('id', 'desc'))
     }
   },
   methods: {

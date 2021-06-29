@@ -17,7 +17,7 @@ namespace ListeningPostApiServer.Models
         /// <summary>
         ///     Initializes a new instance of the <see cref="EntityBase" /> class.
         /// </summary>
-        public EntityBase() => Guid = Guid.NewGuid();
+        protected EntityBase() => Guid = Guid.NewGuid();
 
         #endregion Constructors
 

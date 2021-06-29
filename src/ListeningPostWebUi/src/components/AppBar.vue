@@ -13,13 +13,14 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary: .container-fluid
 
   #collapseTarget.collapse.navbar-collapse
     .navbar-nav.me-auto.mb-2.mb-lg-0: template(
-      v-for='(link, i) in links',
+      v-for='({ route, text }, i) in links',
       :key='i'
     ): router-link.nav-link(
-      :class='{ active: isCurrentRoute(link.route) }',
-      :to='link.route',
-      :aria-current='isCurrentRoute(link.route) ? "page" : false'
-    ) {{ link.text }}
+      :class='{ active: isCurrentRoute(route) }',
+      :to='route',
+      :aria-current='isCurrentRoute(route) ? "page" : false',
+      v-text='text'
+    )
 
     form.d-flex
       input.form-control.me-2(
@@ -31,18 +32,17 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-primary: .container-fluid
       button.btn.btn-outline-light(type='submit') Search
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue'
-import { useRoute } from 'vue-router'
+import { RouteRecordName, useRoute } from 'vue-router'
 
 export const AppBar = defineComponent({
   setup: () => {
     const { name, path } = useRoute()
 
     return {
-      isCurrentRoute: (
-        /** @type {{ name: import("vue-router").RouteRecordName; path: string; }} */ checkRoute
-      ) => checkRoute.name === name || checkRoute.path === path,
+      isCurrentRoute: (checkRoute: { name: RouteRecordName; path: string }) =>
+        checkRoute.name === name || checkRoute.path === path,
       links: [
         { text: 'Home', route: { path: '/' } },
         { text: 'Command', route: { path: '/command' } },
