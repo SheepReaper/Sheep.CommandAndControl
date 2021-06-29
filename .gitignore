@@ -329,5 +329,14 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 
+# Yarn Integrity file
+.yarn-integrity
 
+# Yarn 2 files
+.yarn/*
 !.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+
+!.yarn/cache
+# .pnp.*
