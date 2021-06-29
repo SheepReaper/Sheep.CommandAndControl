@@ -35,7 +35,7 @@
     "dropzone": "5.9.2",
     "eslint": "7.29.0",
     "eslint-plugin-prettier": "3.4.0",
-    "eslint-plugin-vue": "7.11.1",
+    "eslint-plugin-vue": "7.12.1",
     "prettier": "2.3.1",
     "pug": "3.0.2",
     "rollup": "2.52.2",
