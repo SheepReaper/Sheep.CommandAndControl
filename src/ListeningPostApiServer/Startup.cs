@@ -53,14 +53,12 @@ namespace ListeningPostApiServer
                 .ConfigureAppDbContext()
                 .ConfigureRepositoryInjection()
                 .ConfigureSwagger()
-                //.ConfigureHttps()
+                .ConfigureHttps()
                 .ConfigureCors(Configuration);
 
             services
                 .ConfigureMvc().AddJsonOptions(options =>
                     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
-            // .AddNewtonsoftJson(options =>
-            //     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
         }
 
         /// <summary>

@@ -9,7 +9,7 @@ div
   router-link.btn.btn-primary.btn-lg(:to='{ path: "/command" }') Begin!
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, defineAsyncComponent } from 'vue'
 
 export const HomeView = defineComponent({

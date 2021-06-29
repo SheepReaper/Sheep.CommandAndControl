@@ -1,8 +1,6 @@
 ﻿using ListeningPostApiServer.Models;
 using Microsoft.EntityFrameworkCore;
 
-// ReSharper disable UnusedMember.Global
-
 namespace ListeningPostApiServer.Data
 {
     /// <inheritdoc />

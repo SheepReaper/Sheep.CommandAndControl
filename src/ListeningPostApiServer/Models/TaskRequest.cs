@@ -1,12 +1,15 @@
 using System.Collections.Generic;
-using ListeningPostApiServer.Models;
+// ReSharper disable UnusedAutoPropertyAccessor.Global
 
-///
-public class TaskRequest
+namespace ListeningPostApiServer.Models
 {
     ///
-    public IEnumerable<int>? Ids { get; set; }
+    public class TaskRequest
+    {
+        ///
+        public IEnumerable<int>? Ids { get; set; }
 
-    ///
-    public TaskBase? Task { get; set; }
+        ///
+        public TaskBase? Task { get; set; }
+    }
 }

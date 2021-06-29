@@ -117,20 +117,6 @@ namespace ListeningPostApiServer.Data
         /// <inheritdoc />
         public Task SaveChangesAsync(CancellationToken cancellationToken) => _ctx.SaveChangesAsync(cancellationToken);
 
-        // private async Task<bool> _keyExistsAsync(object key, CancellationToken cancellationToken = default) =>
-        //     await _entities.FindByIdAsync(cancellationToken, key) != null;
-
-        // private Task<bool> KeyExistsAsync(int id, CancellationToken cancellationToken = default) => _keyExistsAsync(id, cancellationToken);
-        // private Task<bool> KeyExistsAsync(Guid id, CancellationToken cancellationToken = default) => _keyExistsAsync(id, cancellationToken);
-
-        // private async Task<(bool parsed, bool exists)> TryParseKeyExistsAsync(string id, CancellationToken cancellationToken = default)
-        // {
-        //     if (Guid.TryParse(id, out var guid))
-        //         return (true, await KeyExistsAsync(guid, cancellationToken));
-        //
-        //     return int.TryParse(id, out var intId) ? (true, await KeyExistsAsync(intId, cancellationToken)) : (false, false);
-        // }
-
         #endregion Methods
     }
 }

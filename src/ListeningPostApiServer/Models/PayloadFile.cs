@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 
-// ReSharper disable UnusedMember.Global
-
 namespace ListeningPostApiServer.Models
 {
     /// <inheritdoc />
@@ -10,6 +8,7 @@ namespace ListeningPostApiServer.Models
     ///     execute on an agent Implements the <see cref="T:ListeningPostApiServer.Models.FileBase" />
     /// </summary>
     /// <seealso cref="T:ListeningPostApiServer.Models.FileBase" />
+    // ReSharper disable once ClassWithVirtualMembersNeverInherited.Global
     public class PayloadFile : FileBase
     {
         #region Constructors
@@ -45,6 +44,7 @@ namespace ListeningPostApiServer.Models
         ///     Payload file).
         /// </summary>
         /// <value>The version.</value>
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public int Version { get; set; }
 
         #endregion Properties

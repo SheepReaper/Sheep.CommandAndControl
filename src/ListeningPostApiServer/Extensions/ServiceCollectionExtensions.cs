@@ -52,7 +52,8 @@ namespace ListeningPostApiServer.Extensions
                                 .WithSmartOrigin(services, appSettings)
                                 .WithHeaders(
                                     "cache-control",
-                                    "x-requested-with");
+                                    "x-requested-with"
+                                );
                         }
                     );
 
@@ -67,7 +68,11 @@ namespace ListeningPostApiServer.Extensions
                     );
 
                     options.AddPolicy(CorsPolicyType.MinimalGet,
-                        builder => { builder.WithSmartOrigin(services, appSettings); }
+                        builder =>
+                        {
+                            builder
+                                .WithSmartOrigin(services, appSettings);
+                        }
                     );
                 }
             );

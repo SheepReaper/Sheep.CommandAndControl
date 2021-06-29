@@ -6,15 +6,12 @@
     ///     to the agent. Implements the <see cref="T:ListeningPostApiServer.Models.TaskBase" />
     /// </summary>
     /// <seealso cref="T:ListeningPostApiServer.Models.TaskBase" />
+    // ReSharper disable once ClassNeverInstantiated.Global
     public class DeployTask : TaskBase
     {
-        #region Constructors
-
         /// <summary>
         ///     Initializes a new instance of the <see cref="DeployTask" /> class.
         /// </summary>
         public DeployTask() => TaskType = TaskType.Deploy;
-
-        #endregion Constructors
     }
 }
