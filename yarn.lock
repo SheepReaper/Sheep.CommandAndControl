@@ -1713,7 +1713,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:^7":
+"@types/eslint@npm:7.2.13":
   version: 7.2.13
   resolution: "@types/eslint@npm:7.2.13"
   dependencies:
@@ -1753,7 +1753,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2":
+"@types/prettier@npm:2.3.0":
   version: 2.3.0
   resolution: "@types/prettier@npm:2.3.0"
   checksum: 7c1ef16234220519d52b8a154723caf5c5dc9d5eaa85bfe06e367ba57472dab7f7fdac1ca7c29d9010d58f74f3b5235a9f8bad0111d9bad74018eb8141371e7e
@@ -3195,7 +3195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.29.0, eslint@npm:^7.27.0, eslint@npm:^7.29.0":
+"eslint@npm:7.29.0, eslint@npm:^7.27.0":
   version: 7.29.0
   resolution: "eslint@npm:7.29.0"
   dependencies:
@@ -4628,7 +4628,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.3.2, prettier@npm:^2.3.2":
+"prettier@npm:2.3.2":
   version: 2.3.2
   resolution: "prettier@npm:2.3.2"
   bin:
@@ -5175,11 +5175,11 @@ fsevents@~2.3.2:
   resolution: "root@workspace:."
   dependencies:
     "@types/dropzone": 5.7.3
-    "@types/eslint": ^7
-    "@types/prettier": ^2
-    eslint: ^7.29.0
-    prettier: ^2.3.2
-    typescript: ^4.3.4
+    "@types/eslint": 7.2.13
+    "@types/prettier": 2.3.0
+    eslint: 7.29.0
+    prettier: 2.3.2
+    typescript: 4.3.4
     vls: 0.7.4
   languageName: unknown
   linkType: soft
@@ -5632,7 +5632,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"typescript@4.3.4, typescript@^4.3.2, typescript@^4.3.4":
+"typescript@4.3.4, typescript@^4.3.2":
   version: 4.3.4
   resolution: "typescript@npm:4.3.4"
   bin:
@@ -5642,7 +5642,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.3.4#builtin<compat/typescript>, typescript@patch:typescript@^4.3.2#builtin<compat/typescript>, typescript@patch:typescript@^4.3.4#builtin<compat/typescript>":
+"typescript@patch:typescript@4.3.4#builtin<compat/typescript>, typescript@patch:typescript@^4.3.2#builtin<compat/typescript>":
   version: 4.3.4
   resolution: "typescript@patch:typescript@npm%3A4.3.4#builtin<compat/typescript>::version=4.3.4&hash=ddfc1b"
   bin:
