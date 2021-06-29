@@ -7,6 +7,11 @@
   "private": true,
   "devDependencies": {
     "@types/dropzone": "5.7.3",
+    "@types/eslint": "^7",
+    "@types/prettier": "^2",
+    "eslint": "^7.29.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.4",
     "vls": "0.7.4"
   },
   "workspaces": [

@@ -1713,7 +1713,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/estree@npm:^0.0.48":
+"@types/eslint@npm:^7":
+  version: 7.2.13
+  resolution: "@types/eslint@npm:7.2.13"
+  dependencies:
+    "@types/estree": "*"
+    "@types/json-schema": "*"
+  checksum: e55906fa72e6288bd129652c4b3aa992d7219481265e1651564ba0d5fbacf41e39f97252a9001549eac544e5465f7f93ae81844b1e291f6cbf17c17ec048f729
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:*, @types/estree@npm:^0.0.48":
   version: 0.0.48
   resolution: "@types/estree@npm:0.0.48"
   checksum: 1f948e0a7730254ec77f543e4ac2c101f90147d21202d16b22b524e6e3e5d5a770d003fac3e218499d25f5db126f12c774bb16d8993114c7883496d358e1b7af
@@ -1729,17 +1739,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:^7.0.7":
+"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.7":
   version: 7.0.7
   resolution: "@types/json-schema@npm:7.0.7"
   checksum: b9d2c509fa4e0b82f58e73f5e6ab76c60ff1884ba41bb82f37fb1cece226d4a3e5a62fedf78a43da0005373a6713d9abe61c1e592906402c41c08ad6ab26d52b
   languageName: node
   linkType: hard
 
-"@types/node@npm:15.12.2":
-  version: 15.12.2
-  resolution: "@types/node@npm:15.12.2"
-  checksum: 26b9170eb825656751955e919dcea7963d1be4d1eba361c67e41b51a55436c51d69d63f49ee98aaf4fe2e0e5eb3c0038408a8f542316b7583e9badf4fdd10024
+"@types/node@npm:15.12.5":
+  version: 15.12.5
+  resolution: "@types/node@npm:15.12.5"
+  checksum: 42485de7a0b7277ddaae25b36ab4174fc8f23e8a5de9ccaedd002ecec17135c48227a5e09088d181c2bc34fe6b2064feb4a468954372076fd8addac2f72dad7e
+  languageName: node
+  linkType: hard
+
+"@types/prettier@npm:^2":
+  version: 2.3.0
+  resolution: "@types/prettier@npm:2.3.0"
+  checksum: 7c1ef16234220519d52b8a154723caf5c5dc9d5eaa85bfe06e367ba57472dab7f7fdac1ca7c29d9010d58f74f3b5235a9f8bad0111d9bad74018eb8141371e7e
   languageName: node
   linkType: hard
 
@@ -1849,12 +1866,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@vitejs/plugin-vue@npm:1.2.3"
+"@vitejs/plugin-vue@npm:1.2.4":
+  version: 1.2.4
+  resolution: "@vitejs/plugin-vue@npm:1.2.4"
   peerDependencies:
     "@vue/compiler-sfc": ^3.0.8
-  checksum: b57ceb41044ca291ebbf1ee258bea806a8deded0174c779d57edf7a9982e7e66ec38e2dadfd21202104a21c2b3fde06a3eb6499b6693a74ff230924b70a43473
+  checksum: e3a2a9e18369ef42da441027468e2d30544273fd5167774b46e6952bc0c559a70fefc8288d00d6296fe872a7f8233ae5b06e03c51c583bbc70c1b1197acb8bd1
   languageName: node
   linkType: hard
 
@@ -3106,7 +3123,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:7.11.1, eslint-plugin-vue@npm:^7.10.0":
+"eslint-plugin-vue@npm:7.12.1":
+  version: 7.12.1
+  resolution: "eslint-plugin-vue@npm:7.12.1"
+  dependencies:
+    eslint-utils: ^2.1.0
+    natural-compare: ^1.4.0
+    semver: ^7.3.2
+    vue-eslint-parser: ^7.6.0
+  peerDependencies:
+    eslint: ^6.2.0 || ^7.0.0
+  checksum: 4fcf61f24fc35e3f017e0924ef5cac3ac6f5188be88f5b1edab036f5d25e52a0f05e0a73f632e55da77352ad96b3af492e911dc5f6e1b6da8d4fe9f29e400d02
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-vue@npm:^7.10.0":
   version: 7.11.1
   resolution: "eslint-plugin-vue@npm:7.11.1"
   dependencies:
@@ -3164,7 +3195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.29.0, eslint@npm:^7.27.0":
+"eslint@npm:7.29.0, eslint@npm:^7.27.0, eslint@npm:^7.29.0":
   version: 7.29.0
   resolution: "eslint@npm:7.29.0"
   dependencies:
@@ -4011,10 +4042,10 @@ fsevents@~2.3.2:
     "@ckeditor/ckeditor5-vue": 2.0.1
     "@popperjs/core": 2.9.2
     "@prettier/plugin-pug": 1.15.3
-    "@types/node": 15.12.2
+    "@types/node": 15.12.5
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
-    "@vitejs/plugin-vue": 1.2.3
+    "@vitejs/plugin-vue": 1.2.4
     "@vue/babel-preset-app": 4.5.13
     "@vue/compiler-sfc": 3.1.2
     "@vue/eslint-config-prettier": 6.0.0
@@ -4024,10 +4055,10 @@ fsevents@~2.3.2:
     dropzone: 5.9.2
     eslint: 7.29.0
     eslint-plugin-prettier: 3.4.0
-    eslint-plugin-vue: 7.11.1
-    prettier: 2.3.1
+    eslint-plugin-vue: 7.12.1
+    prettier: 2.3.2
     pug: 3.0.2
-    rollup: 2.52.2
+    rollup: 2.52.3
     rollup-plugin-pug: 1.1.1
     sass: 1.35.1
     typescript: 4.3.4
@@ -4597,7 +4628,16 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.3.1, prettier@npm:^2.3.0":
+"prettier@npm:2.3.2, prettier@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "prettier@npm:2.3.2"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 4fd89a7f6a12b13456d359fba2b1dd0fc0a17cf33f8f15953ab9f43b21ea9b09b5a2861d63b558ca0577274ce606d390e70628cf93e26d19d6cb7f19c9eebc31
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.3.0":
   version: 2.3.1
   resolution: "prettier@npm:2.3.1"
   bin:
@@ -5116,21 +5156,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"rollup@npm:2.52.2":
-  version: 2.52.2
-  resolution: "rollup@npm:2.52.2"
-  dependencies:
-    fsevents: ~2.3.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    rollup: dist/bin/rollup
-  checksum: b08f33d8e8813d99a223658d951395be939d187afbc7af079afb3e695d47dd7664514a8379380953903683fe59a0133ee2c595e5ed680947e40c110c0641a6f3
-  languageName: node
-  linkType: hard
-
-"rollup@npm:^2.38.5":
+"rollup@npm:2.52.3, rollup@npm:^2.38.5":
   version: 2.52.3
   resolution: "rollup@npm:2.52.3"
   dependencies:
@@ -5149,6 +5175,11 @@ fsevents@~2.3.2:
   resolution: "root@workspace:."
   dependencies:
     "@types/dropzone": 5.7.3
+    "@types/eslint": ^7
+    "@types/prettier": ^2
+    eslint: ^7.29.0
+    prettier: ^2.3.2
+    typescript: ^4.3.4
     vls: 0.7.4
   languageName: unknown
   linkType: soft
@@ -5601,7 +5632,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"typescript@4.3.4, typescript@^4.3.2":
+"typescript@4.3.4, typescript@^4.3.2, typescript@^4.3.4":
   version: 4.3.4
   resolution: "typescript@npm:4.3.4"
   bin:
@@ -5611,7 +5642,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.3.4#builtin<compat/typescript>, typescript@patch:typescript@^4.3.2#builtin<compat/typescript>":
+"typescript@patch:typescript@4.3.4#builtin<compat/typescript>, typescript@patch:typescript@^4.3.2#builtin<compat/typescript>, typescript@patch:typescript@^4.3.4#builtin<compat/typescript>":
   version: 4.3.4
   resolution: "typescript@patch:typescript@npm%3A4.3.4#builtin<compat/typescript>::version=4.3.4&hash=ddfc1b"
   bin:
