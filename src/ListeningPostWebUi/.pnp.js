@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ckeditor/ckeditor5-vue", "npm:2.0.1"],
             ["@popperjs/core", "npm:2.9.2"],
             ["@prettier/plugin-pug", "virtual:01d4b7e5a3c74926c62fa662c25f49913edd425511bb7078c56946506ce062bf785a3eb39cda70f04cbb5098b9df56208d734497a229424fec518115c69d8601#npm:1.15.3"],
-            ["@types/node", "npm:15.12.2"],
+            ["@types/node", "npm:15.12.5"],
             ["@typescript-eslint/eslint-plugin", "virtual:01d4b7e5a3c74926c62fa662c25f49913edd425511bb7078c56946506ce062bf785a3eb39cda70f04cbb5098b9df56208d734497a229424fec518115c69d8601#npm:4.28.1"],
             ["@typescript-eslint/parser", "virtual:01d4b7e5a3c74926c62fa662c25f49913edd425511bb7078c56946506ce062bf785a3eb39cda70f04cbb5098b9df56208d734497a229424fec518115c69d8601#npm:4.28.1"],
             ["@vitejs/plugin-vue", "virtual:01d4b7e5a3c74926c62fa662c25f49913edd425511bb7078c56946506ce062bf785a3eb39cda70f04cbb5098b9df56208d734497a229424fec518115c69d8601#npm:1.2.4"],
@@ -2759,10 +2759,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/node", [
-        ["npm:15.12.2", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-15.12.2-0d3ff66ec0-26b9170eb8.zip/node_modules/@types/node/",
+        ["npm:15.12.5", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-15.12.5-bfb1f4b853-42485de7a0.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:15.12.2"]
+            ["@types/node", "npm:15.12.5"]
           ],
           "linkType": "HARD",
         }]
@@ -5610,7 +5610,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ckeditor/ckeditor5-vue", "npm:2.0.1"],
             ["@popperjs/core", "npm:2.9.2"],
             ["@prettier/plugin-pug", "virtual:01d4b7e5a3c74926c62fa662c25f49913edd425511bb7078c56946506ce062bf785a3eb39cda70f04cbb5098b9df56208d734497a229424fec518115c69d8601#npm:1.15.3"],
-            ["@types/node", "npm:15.12.2"],
+            ["@types/node", "npm:15.12.5"],
             ["@typescript-eslint/eslint-plugin", "virtual:01d4b7e5a3c74926c62fa662c25f49913edd425511bb7078c56946506ce062bf785a3eb39cda70f04cbb5098b9df56208d734497a229424fec518115c69d8601#npm:4.28.1"],
             ["@typescript-eslint/parser", "virtual:01d4b7e5a3c74926c62fa662c25f49913edd425511bb7078c56946506ce062bf785a3eb39cda70f04cbb5098b9df56208d734497a229424fec518115c69d8601#npm:4.28.1"],
             ["@vitejs/plugin-vue", "virtual:01d4b7e5a3c74926c62fa662c25f49913edd425511bb7078c56946506ce062bf785a3eb39cda70f04cbb5098b9df56208d734497a229424fec518115c69d8601#npm:1.2.4"],
