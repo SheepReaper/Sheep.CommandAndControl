@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -156,11 +157,11 @@ namespace ListeningPostApiServer.Controllers
         /// <summary>
         /// </summary>
         /// <param name="taskBase"></param>
-        /// <param name="id"></param>
-        [HttpPut("{id}")]
-        public async void Put([FromBody] TaskBase taskBase, string id)
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] TaskBase taskBase)
         {
             await _taskRepository.EditAsync(taskBase);
+            return NoContent();
         }
 
         /// <summary>
@@ -192,6 +193,7 @@ namespace ListeningPostApiServer.Controllers
         /// </summary>
         /// <returns>A Task.</returns>
         [Obsolete]
+        [SuppressMessage("CodeQuality", "IDE0051: Remove unused private members", Justification = "Intentionally left here for posterity")]
         // ReSharper disable once UnusedMember.Local
         private async Task LoadFile()
         {

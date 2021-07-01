@@ -48,7 +48,7 @@ namespace ListeningPostApiServer.Data
             return entity;
         }
 
-        private async Task<TEntity?> _deleteAsync(TEntity? entity, bool saveImmediately,
+        private async Task<TEntity?> DeleteAsync(TEntity? entity, bool saveImmediately,
             CancellationToken cancellationToken)
         {
             if (entity == null)
@@ -65,12 +65,12 @@ namespace ListeningPostApiServer.Data
         /// <inheritdoc />
         public async Task<TEntity?> DeleteAsync(int id, bool saveImmediately,
             CancellationToken cancellationToken) =>
-            await _deleteAsync(await GetAsync(id, cancellationToken), saveImmediately, cancellationToken);
+            await DeleteAsync(await GetAsync(id, cancellationToken), saveImmediately, cancellationToken);
 
         /// <inheritdoc />
         public async Task<TEntity?>
             DeleteAsync(Guid id, bool saveImmediately, CancellationToken cancellationToken) =>
-            await _deleteAsync(await GetAsync(id, cancellationToken), saveImmediately, cancellationToken);
+            await DeleteAsync(await GetAsync(id, cancellationToken), saveImmediately, cancellationToken);
 
         /// <inheritdoc />
         public async Task<TEntity> EditAsync(TEntity entity, bool saveImmediately, CancellationToken cancellationToken)

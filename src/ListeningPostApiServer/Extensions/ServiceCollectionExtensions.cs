@@ -101,8 +101,7 @@ namespace ListeningPostApiServer.Extensions
         /// </remarks>
         public static IMvcBuilder ConfigureMvc(this IServiceCollection services) =>
             services
-                .AddMvc(options => options.EnableEndpointRouting = false)
-                .SetCompatibilityVersion(CompatibilityVersion.Latest);
+                .AddMvc(options => options.EnableEndpointRouting = false);
 
         /// <summary>
         ///     Configures the repository injection.
