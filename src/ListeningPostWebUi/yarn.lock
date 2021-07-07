@@ -3061,17 +3061,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:7.12.1":
-  version: 7.12.1
-  resolution: "eslint-plugin-vue@npm:7.12.1"
+"eslint-plugin-vue@npm:7.13.0":
+  version: 7.13.0
+  resolution: "eslint-plugin-vue@npm:7.13.0"
   dependencies:
     eslint-utils: ^2.1.0
     natural-compare: ^1.4.0
     semver: ^7.3.2
-    vue-eslint-parser: ^7.6.0
+    vue-eslint-parser: ^7.8.0
   peerDependencies:
     eslint: ^6.2.0 || ^7.0.0
-  checksum: 4fcf61f24fc35e3f017e0924ef5cac3ac6f5188be88f5b1edab036f5d25e52a0f05e0a73f632e55da77352ad96b3af492e911dc5f6e1b6da8d4fe9f29e400d02
+  checksum: 13bcf7d486516a821a45b4e3336e5f17010a195f751cda1a1f7c4efe8cfaf27edb95772356ec5546e9068b4e5efeaed598292d7b5e3baf45721f77a0bbeffd31
   languageName: node
   linkType: hard
 
@@ -3979,7 +3979,7 @@ fsevents@~2.3.2:
     dropzone: 5.9.2
     eslint: 7.29.0
     eslint-plugin-prettier: 3.4.0
-    eslint-plugin-vue: 7.12.1
+    eslint-plugin-vue: 7.13.0
     prettier: 2.3.2
     pug: 3.0.2
     rollup: 2.52.4
@@ -4054,7 +4054,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.4":
+"lodash@npm:^4.17.15, lodash@npm:^4.17.21, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 4983720b9abca930a4a46f18db163d7dad8dd00dbed6db0cc7b499b33b717cce69f80928b27bbb1ff2cbd3b19d251ee90669a8b5ea466072ca81c2ebe91e7468
@@ -5649,7 +5649,7 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"vue-eslint-parser@npm:^7.0.0, vue-eslint-parser@npm:^7.6.0":
+"vue-eslint-parser@npm:^7.0.0":
   version: 7.6.0
   resolution: "vue-eslint-parser@npm:7.6.0"
   dependencies:
@@ -5662,6 +5662,23 @@ typescript@4.3.4:
   peerDependencies:
     eslint: ">=5.0.0"
   checksum: 27d6bc4acaafe897af8eee41512d0cd2812b533883d7ecbfda30c263533ebf486fdd76cb65f546f3c3737df383fb4bc33ecb358d7397b8b731c161c89db72bcd
+  languageName: node
+  linkType: hard
+
+"vue-eslint-parser@npm:^7.8.0":
+  version: 7.8.0
+  resolution: "vue-eslint-parser@npm:7.8.0"
+  dependencies:
+    debug: ^4.1.1
+    eslint-scope: ^5.1.1
+    eslint-visitor-keys: ^1.1.0
+    espree: ^6.2.1
+    esquery: ^1.4.0
+    lodash: ^4.17.21
+    semver: ^6.3.0
+  peerDependencies:
+    eslint: ">=5.0.0"
+  checksum: 6b9eeb275d1866548d0f4b161a8f037aed6a10f8eaca26a0b8545bf0ff56e55cfb90b1cefadeb19b3369ec8206e0be513ce2b5029d2be325df386a457528d5ff
   languageName: node
   linkType: hard
 
