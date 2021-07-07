@@ -7,7 +7,7 @@
   "private": true,
   "devDependencies": {
     "@types/dropzone": "5.7.3",
-    "@types/eslint": "7.2.13",
+    "@types/eslint": "7.2.14",
     "@types/prettier": "2.3.0",
     "eslint": "7.29.0",
     "prettier": "2.3.2",
