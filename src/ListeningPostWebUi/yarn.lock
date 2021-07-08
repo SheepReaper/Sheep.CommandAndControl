@@ -4005,7 +4005,7 @@ fsevents@~2.3.2:
     rollup-plugin-pug: 1.1.1
     sass: 1.35.2
     typescript: 4.3.5
-    vite: 2.3.8
+    vite: 2.4.1
     vite-plugin-pug: 0.3.0
     vue: 3.1.4
     vue-router: 4.0.10
@@ -4533,7 +4533,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.1.10, postcss@npm:^8.3.4":
+"postcss@npm:^8.1.10, postcss@npm:^8.3.5":
   version: 8.3.5
   resolution: "postcss@npm:8.3.5"
   dependencies:
@@ -5622,13 +5622,13 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"vite@npm:2.3.8":
-  version: 2.3.8
-  resolution: "vite@npm:2.3.8"
+"vite@npm:2.4.1":
+  version: 2.4.1
+  resolution: "vite@npm:2.4.1"
   dependencies:
     esbuild: ^0.12.8
     fsevents: ~2.3.2
-    postcss: ^8.3.4
+    postcss: ^8.3.5
     resolve: ^1.20.0
     rollup: ^2.38.5
   dependenciesMeta:
@@ -5636,7 +5636,7 @@ typescript@4.3.5:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: acbf893f19d9d3f544506bee3869f8ce355e7fb86c7dacedcb3fc7740328f25cb2007b0266ebab75180909dc435be0d18a48c7c320987f8a2aa2f837bbaea521
+  checksum: e982cc3b84677f2e6ee08cd19003bb938209e1081f169d9c62370e45f8bd8d1fd8e5b851d8f8d04167a7eb04aa8924221f8f98d6f99583df6dcee9b48461d153
   languageName: node
   linkType: hard
 
