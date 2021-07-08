@@ -6,12 +6,12 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@types/dropzone": "5.7.3",
-    "@types/eslint": "7.2.13",
-    "@types/prettier": "2.3.0",
-    "eslint": "7.29.0",
+    "@types/dropzone": "5.7.4",
+    "@types/eslint": "7.2.14",
+    "@types/prettier": "2.3.2",
+    "eslint": "7.30.0",
     "prettier": "2.3.2",
-    "typescript": "4.3.4",
+    "typescript": "4.3.5",
     "vls": "0.7.4"
   },
   "workspaces": [
