@@ -4075,7 +4075,7 @@ fsevents@~2.3.2:
     rollup-plugin-pug: 1.1.1
     sass: 1.35.2
     typescript: 4.3.5
-    vite: 2.4.1
+    vite: 2.4.2
     vite-plugin-pug: 0.3.0
     vue: 3.1.4
     vue-router: 4.0.10
@@ -5776,9 +5776,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"vite@npm:2.4.1":
-  version: 2.4.1
-  resolution: "vite@npm:2.4.1"
+"vite@npm:2.4.2":
+  version: 2.4.2
+  resolution: "vite@npm:2.4.2"
   dependencies:
     esbuild: ^0.12.8
     fsevents: ~2.3.2
@@ -5790,7 +5790,7 @@ fsevents@~2.3.2:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: e982cc3b84677f2e6ee08cd19003bb938209e1081f169d9c62370e45f8bd8d1fd8e5b851d8f8d04167a7eb04aa8924221f8f98d6f99583df6dcee9b48461d153
+  checksum: 59949bfcc490ffcc499dcd4a93cb56b2d8aa0b2063cf1f1e83aaa9a38cd11de59e1acd987bfec2542c68da886bd82d63b7539f538824b16260875178e260b8b7
   languageName: node
   linkType: hard
 
