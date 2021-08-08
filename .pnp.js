@@ -2776,10 +2776,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@popperjs/core", [
-        ["npm:2.9.2", {
-          "packageLocation": "./.yarn/cache/@popperjs-core-npm-2.9.2-b658241f4a-cc4de8b46f.zip/node_modules/@popperjs/core/",
+        ["npm:2.9.3", {
+          "packageLocation": "./.yarn/cache/@popperjs-core-npm-2.9.3-e135257c62-cf73816868.zip/node_modules/@popperjs/core/",
           "packageDependencies": [
-            ["@popperjs/core", "npm:2.9.2"]
+            ["@popperjs/core", "npm:2.9.3"]
           ],
           "linkType": "HARD",
         }]
@@ -4037,7 +4037,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/$$virtual/bootstrap-virtual-1ea43d282b/0/cache/bootstrap-npm-5.0.2-6328a75b31-5074006f6b.zip/node_modules/bootstrap/",
           "packageDependencies": [
             ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.0.2"],
-            ["@popperjs/core", "npm:2.9.2"],
+            ["@popperjs/core", "npm:2.9.3"],
             ["@types/popperjs__core", null]
           ],
           "packagePeers": [
@@ -5812,7 +5812,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/eslint-parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.14.9"],
             ["@ckeditor/ckeditor5-build-classic", "npm:29.0.0"],
             ["@ckeditor/ckeditor5-vue", "npm:2.0.1"],
-            ["@popperjs/core", "npm:2.9.2"],
+            ["@popperjs/core", "npm:2.9.3"],
             ["@prettier/plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.16.1"],
             ["@types/node", "npm:15.14.1"],
             ["@typescript-eslint/eslint-plugin", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.29.0"],
