@@ -28,7 +28,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/ListeningPostApiServer/bin/Debug/net5.0/ListeningPostApiServer.dll",
+            "program": "${workspaceFolder}/src/ListeningPostApiServer/bin/Debug/net6.0/ListeningPostApiServer.dll",
             // "args": [
             //     "watch",
             //     "run",
