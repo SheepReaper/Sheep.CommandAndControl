@@ -30,26 +30,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.14.8":
-  version: 7.14.8
-  resolution: "@babel/core@npm:7.14.8"
+"@babel/compat-data@npm:^7.15.0":
+  version: 7.15.0
+  resolution: "@babel/compat-data@npm:7.15.0"
+  checksum: 76db9ec4fb897b6a1de1057411a65b134bc2016b156ebf7ce39fbe97b4f1eeaf661b81d457126a71164cbc2de31a06c68f74d0ebbdce3720a000139683f787d0
+  languageName: node
+  linkType: hard
+
+"@babel/core@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@babel/core@npm:7.15.0"
   dependencies:
     "@babel/code-frame": ^7.14.5
-    "@babel/generator": ^7.14.8
-    "@babel/helper-compilation-targets": ^7.14.5
-    "@babel/helper-module-transforms": ^7.14.8
+    "@babel/generator": ^7.15.0
+    "@babel/helper-compilation-targets": ^7.15.0
+    "@babel/helper-module-transforms": ^7.15.0
     "@babel/helpers": ^7.14.8
-    "@babel/parser": ^7.14.8
+    "@babel/parser": ^7.15.0
     "@babel/template": ^7.14.5
-    "@babel/traverse": ^7.14.8
-    "@babel/types": ^7.14.8
+    "@babel/traverse": ^7.15.0
+    "@babel/types": ^7.15.0
     convert-source-map: ^1.7.0
     debug: ^4.1.0
     gensync: ^1.0.0-beta.2
     json5: ^2.1.2
     semver: ^6.3.0
     source-map: ^0.5.0
-  checksum: cfb715d659b9e1ebaf9f11d87363171121d6e363b8b82766cbd4a723c04066d65d0f1ce12d6ef569a83dc5ee88efa3da0e5e6fac6945c5d627d8dc387a027b26
+  checksum: 014611573c66a84c97eb20e4536e8d359bdeac86c3e23ab127a2852b9d4c1c28c3f6dfd1c4938402029a90ed75dad661b63e3bf6d26ac9f4866b17e727a46bd0
   languageName: node
   linkType: hard
 
@@ -76,9 +83,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-parser@npm:7.14.9":
-  version: 7.14.9
-  resolution: "@babel/eslint-parser@npm:7.14.9"
+"@babel/eslint-parser@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@babel/eslint-parser@npm:7.15.0"
   dependencies:
     eslint-scope: ^5.1.1
     eslint-visitor-keys: ^2.1.0
@@ -86,7 +93,7 @@ __metadata:
   peerDependencies:
     "@babel/core": ">=7.11.0"
     eslint: ">=7.5.0"
-  checksum: 25e6ed22967f92d3e2aa66dc384a1be817c57635a791460b2cefa075a3f5d462e069172c790eec78205c02f61a444be85248bc2473dca8d9ecb7b957fc50ad0f
+  checksum: 381c0136578ee86596e9cea25011ec786051746d9ee1d951079b57e6e22781aa6d598f1312fecfe592fd5594c819d1ad23b3fe6c1fb88578daa40e4384789175
   languageName: node
   linkType: hard
 
@@ -101,7 +108,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^7.14.8, @babel/generator@npm:^7.15.0":
+"@babel/generator@npm:^7.15.0":
   version: 7.15.0
   resolution: "@babel/generator@npm:7.15.0"
   dependencies:
@@ -142,6 +149,20 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0
   checksum: db7d58fc7309fcd925ee3cbf724fd796fc5779545de4da97badc772c7f05f087155538fb8ed503cf2e8075fb939c79a6e806fb5b7901c20dbe09c1d194a12ed2
+  languageName: node
+  linkType: hard
+
+"@babel/helper-compilation-targets@npm:^7.15.0":
+  version: 7.15.0
+  resolution: "@babel/helper-compilation-targets@npm:7.15.0"
+  dependencies:
+    "@babel/compat-data": ^7.15.0
+    "@babel/helper-validator-option": ^7.14.5
+    browserslist: ^4.16.6
+    semver: ^6.3.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  checksum: 9a0389fd608011650c99c6ab60bc638428cea33ae59ae4921d7c7ac3e800a1cb27d60f30cdfb5da2cc41f8de3ed405e0b893cc2e6ba659dfdffe6f933d7f40a5
   languageName: node
   linkType: hard
 
@@ -272,7 +293,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helper-module-transforms@npm:^7.14.8":
+"@babel/helper-module-transforms@npm:^7.15.0":
   version: 7.15.0
   resolution: "@babel/helper-module-transforms@npm:7.15.0"
   dependencies:
@@ -450,7 +471,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/parser@npm:^7.14.8, @babel/parser@npm:^7.15.0":
+"@babel/parser@npm:^7.15.0":
   version: 7.15.2
   resolution: "@babel/parser@npm:7.15.2"
   bin:
@@ -4247,8 +4268,8 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "listeningpostwebui@workspace:src/ListeningPostWebUi"
   dependencies:
-    "@babel/core": 7.14.8
-    "@babel/eslint-parser": 7.14.9
+    "@babel/core": 7.15.0
+    "@babel/eslint-parser": 7.15.0
     "@ckeditor/ckeditor5-build-classic": 29.1.0
     "@ckeditor/ckeditor5-vue": 2.0.1
     "@popperjs/core": 2.9.3
