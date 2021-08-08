@@ -5808,7 +5808,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pug", "npm:3.0.2"],
             ["rollup", "npm:2.53.3"],
             ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],
-            ["sass", "npm:1.35.2"],
+            ["sass", "npm:1.37.5"],
             ["typescript", "patch:typescript@npm%3A4.3.5#builtin<compat/typescript>::version=4.3.5&hash=ddfc1b"],
             ["vite", "npm:2.4.4"],
             ["vite-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:0.3.0"],
@@ -7149,10 +7149,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["sass", [
-        ["npm:1.35.2", {
-          "packageLocation": "./.yarn/cache/sass-npm-1.35.2-6df4e15d13-d102e3fd6e.zip/node_modules/sass/",
+        ["npm:1.37.5", {
+          "packageLocation": "./.yarn/cache/sass-npm-1.37.5-da34b42f12-f7751f481c.zip/node_modules/sass/",
           "packageDependencies": [
-            ["sass", "npm:1.35.2"],
+            ["sass", "npm:1.37.5"],
             ["chokidar", "npm:3.5.2"]
           ],
           "linkType": "HARD",
