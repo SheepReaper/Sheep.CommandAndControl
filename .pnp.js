@@ -5830,7 +5830,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.15.1"],
             ["prettier", "npm:2.3.2"],
             ["pug", "npm:3.0.2"],
-            ["rollup", "npm:2.53.3"],
+            ["rollup", "npm:2.56.1"],
             ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],
             ["sass", "npm:1.37.5"],
             ["typescript", "patch:typescript@npm%3A4.3.5#builtin<compat/typescript>::version=4.3.5&hash=ddfc1b"],
@@ -7083,10 +7083,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:2.53.3", {
-          "packageLocation": "./.yarn/cache/rollup-npm-2.53.3-9e04e7eb94-6734aa7958.zip/node_modules/rollup/",
+        ["npm:2.56.1", {
+          "packageLocation": "./.yarn/cache/rollup-npm-2.56.1-d2dbac02b3-7ba1b872bd.zip/node_modules/rollup/",
           "packageDependencies": [
-            ["rollup", "npm:2.53.3"],
+            ["rollup", "npm:2.56.1"],
             ["fsevents", "patch:fsevents@npm%3A2.3.2#builtin<compat/fsevents>::version=2.3.2&hash=11e9ea"]
           ],
           "linkType": "HARD",
@@ -7108,7 +7108,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gen-pug-source-map", "npm:1.0.0"],
             ["pug", "npm:2.0.4"],
             ["pug-runtime", "npm:2.0.5"],
-            ["rollup", "npm:2.53.3"],
+            ["rollup", "npm:2.56.1"],
             ["rollup-pluginutils", "npm:2.8.2"]
           ],
           "packagePeers": [
