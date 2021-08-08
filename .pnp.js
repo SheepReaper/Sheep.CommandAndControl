@@ -4026,17 +4026,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["bootstrap", [
-        ["npm:5.0.2", {
-          "packageLocation": "./.yarn/cache/bootstrap-npm-5.0.2-6328a75b31-5074006f6b.zip/node_modules/bootstrap/",
+        ["npm:5.1.0", {
+          "packageLocation": "./.yarn/cache/bootstrap-npm-5.1.0-315157d7ea-0400dfa3e0.zip/node_modules/bootstrap/",
           "packageDependencies": [
-            ["bootstrap", "npm:5.0.2"]
+            ["bootstrap", "npm:5.1.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.0.2", {
-          "packageLocation": "./.yarn/$$virtual/bootstrap-virtual-1ea43d282b/0/cache/bootstrap-npm-5.0.2-6328a75b31-5074006f6b.zip/node_modules/bootstrap/",
+        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.1.0", {
+          "packageLocation": "./.yarn/$$virtual/bootstrap-virtual-1920a1392d/0/cache/bootstrap-npm-5.1.0-315157d7ea-0400dfa3e0.zip/node_modules/bootstrap/",
           "packageDependencies": [
-            ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.0.2"],
+            ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.1.0"],
             ["@popperjs/core", "npm:2.9.3"],
             ["@types/popperjs__core", null]
           ],
@@ -5823,7 +5823,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vue/eslint-config-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.0.0"],
             ["@vue/eslint-config-typescript", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.0.0"],
             ["axios", "npm:0.21.1"],
-            ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.0.2"],
+            ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.1.0"],
             ["dropzone", "npm:5.9.2"],
             ["eslint", "npm:7.31.0"],
             ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.0"],
