@@ -2026,12 +2026,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:1.2.5":
-  version: 1.2.5
-  resolution: "@vitejs/plugin-vue@npm:1.2.5"
+"@vitejs/plugin-vue@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@vitejs/plugin-vue@npm:1.4.0"
   peerDependencies:
     "@vue/compiler-sfc": ^3.0.8
-  checksum: ae091e12a1cd937c95c2628c5bc4734eab9f700c1a1cd8cdad04dfcaae91bcb3d70e9b703134a6bf68954a138d59bff9229989318521c37ec89d6723443bf1cb
+  checksum: 2c4587722384c86dd791d7a068bde3eb05fae1f78fab63ecd304ac793b70f4b5587bfdf419367ab94911a70116bb411bd31f2ab038ad28398cd46acc2b385948
   languageName: node
   linkType: hard
 
@@ -4192,7 +4192,7 @@ fsevents@~2.3.2:
     "@types/node": 15.14.1
     "@typescript-eslint/eslint-plugin": 4.29.0
     "@typescript-eslint/parser": 4.29.0
-    "@vitejs/plugin-vue": 1.2.5
+    "@vitejs/plugin-vue": 1.4.0
     "@vue/babel-preset-app": 4.5.13
     "@vue/compiler-sfc": 3.1.5
     "@vue/eslint-config-prettier": 6.0.0
