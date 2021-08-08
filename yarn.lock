@@ -1823,14 +1823,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prettier/plugin-pug@npm:1.16.1":
-  version: 1.16.1
-  resolution: "@prettier/plugin-pug@npm:1.16.1"
+"@prettier/plugin-pug@npm:1.16.3":
+  version: 1.16.3
+  resolution: "@prettier/plugin-pug@npm:1.16.3"
   dependencies:
     pug-lexer: ^5.0.0
   peerDependencies:
     prettier: ^2.1.0
-  checksum: 2272c06103f314132588d2e319531ed977b65c4b09aa99980dae704c2f08729edd564987c760f9f6b6dfbc1cef74606bc510081233b6c2280c6081659e1480e5
+  checksum: fca9630aa887bbd99f75fee330b9785807ab6211f0a265cbbe4b8f4516a205d49f63abb7a79c4f5d911120b33e60452abadcff1c023e9b1ee3031ccde84284f4
   languageName: node
   linkType: hard
 
@@ -4252,7 +4252,7 @@ fsevents@~2.3.2:
     "@ckeditor/ckeditor5-build-classic": 29.1.0
     "@ckeditor/ckeditor5-vue": 2.0.1
     "@popperjs/core": 2.9.3
-    "@prettier/plugin-pug": 1.16.1
+    "@prettier/plugin-pug": 1.16.3
     "@types/node": 15.14.1
     "@typescript-eslint/eslint-plugin": 4.29.0
     "@typescript-eslint/parser": 4.29.0
