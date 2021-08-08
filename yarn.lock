@@ -4219,7 +4219,7 @@ fsevents@~2.3.2:
     eslint-plugin-vue: 7.15.1
     prettier: 2.3.2
     pug: 3.0.2
-    rollup: 2.53.3
+    rollup: 2.56.1
     rollup-plugin-pug: 1.1.1
     sass: 1.37.5
     typescript: 4.3.5
@@ -5319,9 +5319,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"rollup@npm:2.53.3":
-  version: 2.53.3
-  resolution: "rollup@npm:2.53.3"
+"rollup@npm:2.56.1":
+  version: 2.56.1
+  resolution: "rollup@npm:2.56.1"
   dependencies:
     fsevents: ~2.3.2
   dependenciesMeta:
@@ -5329,7 +5329,7 @@ fsevents@~2.3.2:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 6734aa795875ae0add3e11b5b03bbcc391bb2a6b7c7393274e1cb21edc05c481b68b75a9a3fddc99e0cd8a201c4cd520449ffbf04d2861f82661d16b8d03ced0
+  checksum: 7ba1b872bd0978e395b294a63e5e9f1ad0031ae7718e91b207f0d21c0eef01c612f4c11458e65bffb636faf0a1a530f0c0c3ff882542f398acd6564e2f99e1eb
   languageName: node
   linkType: hard
 
