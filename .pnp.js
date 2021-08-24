@@ -3117,17 +3117,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@vitejs/plugin-vue", [
-        ["npm:1.4.0", {
-          "packageLocation": "./.yarn/cache/@vitejs-plugin-vue-npm-1.4.0-d23a74e625-2c45877223.zip/node_modules/@vitejs/plugin-vue/",
+        ["npm:1.6.0", {
+          "packageLocation": "./.yarn/cache/@vitejs-plugin-vue-npm-1.6.0-b0971951a9-20c287a615.zip/node_modules/@vitejs/plugin-vue/",
           "packageDependencies": [
-            ["@vitejs/plugin-vue", "npm:1.4.0"]
+            ["@vitejs/plugin-vue", "npm:1.6.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.4.0", {
-          "packageLocation": "./.yarn/$$virtual/@vitejs-plugin-vue-virtual-36ac6a9eec/0/cache/@vitejs-plugin-vue-npm-1.4.0-d23a74e625-2c45877223.zip/node_modules/@vitejs/plugin-vue/",
+        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.6.0", {
+          "packageLocation": "./.yarn/$$virtual/@vitejs-plugin-vue-virtual-1b6ca61a31/0/cache/@vitejs-plugin-vue-npm-1.6.0-b0971951a9-20c287a615.zip/node_modules/@vitejs/plugin-vue/",
           "packageDependencies": [
-            ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.4.0"],
+            ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.6.0"],
             ["@types/vue__compiler-sfc", null],
             ["@vue/compiler-sfc", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.1.5"]
           ],
@@ -4444,14 +4444,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:2.6.12", {
-          "packageLocation": "./.yarn/unplugged/core-js-npm-2.6.12-0b93d77d31/node_modules/core-js/",
+          "packageLocation": "./.yarn/cache/core-js-npm-2.6.12-0b93d77d31-b865823ce9.zip/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:2.6.12"]
           ],
           "linkType": "HARD",
         }],
         ["npm:3.15.2", {
-          "packageLocation": "./.yarn/unplugged/core-js-npm-3.15.2-6825052e10/node_modules/core-js/",
+          "packageLocation": "./.yarn/cache/core-js-npm-3.15.2-6825052e10-983706260a.zip/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.15.2"]
           ],
@@ -4689,7 +4689,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["esbuild", [
         ["npm:0.12.15", {
-          "packageLocation": "./.yarn/unplugged/esbuild-npm-0.12.15-7493c7de7f/node_modules/esbuild/",
+          "packageLocation": "./.yarn/cache/esbuild-npm-0.12.15-7493c7de7f-22ec14d41c.zip/node_modules/esbuild/",
           "packageDependencies": [
             ["esbuild", "npm:0.12.15"]
           ],
@@ -5895,7 +5895,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:15.14.1"],
             ["@typescript-eslint/eslint-plugin", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.29.0"],
             ["@typescript-eslint/parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.29.0"],
-            ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.4.0"],
+            ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.6.0"],
             ["@vue/babel-preset-app", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.5.13"],
             ["@vue/compiler-sfc", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.1.5"],
             ["@vue/eslint-config-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.0.0"],
@@ -7172,14 +7172,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["rollup-plugin-pug", [
         ["npm:1.1.1", {
-          "packageLocation": "./.yarn/unplugged/rollup-plugin-pug-virtual-1d1c0bea2b/node_modules/rollup-plugin-pug/",
+          "packageLocation": "./.yarn/cache/rollup-plugin-pug-npm-1.1.1-95fae810a2-89410bff47.zip/node_modules/rollup-plugin-pug/",
           "packageDependencies": [
             ["rollup-plugin-pug", "npm:1.1.1"]
           ],
           "linkType": "SOFT",
         }],
         ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1", {
-          "packageLocation": "./.yarn/unplugged/rollup-plugin-pug-virtual-1d1c0bea2b/node_modules/rollup-plugin-pug/",
+          "packageLocation": "./.yarn/$$virtual/rollup-plugin-pug-virtual-1d1c0bea2b/0/cache/rollup-plugin-pug-npm-1.1.1-95fae810a2-89410bff47.zip/node_modules/rollup-plugin-pug/",
           "packageDependencies": [
             ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],
             ["@types/rollup", null],
