@@ -3246,12 +3246,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.12.8":
-  version: 0.12.15
-  resolution: "esbuild@npm:0.12.15"
+"esbuild@npm:^0.12.17":
+  version: 0.12.22
+  resolution: "esbuild@npm:0.12.22"
   bin:
     esbuild: bin/esbuild
-  checksum: 22ec14d41c8a9256934b476575f3dbb47437c3c9953c4e4e00560454449075822c0824fa982a51cb545c255c561a781908da9711081d57b4f3bca15341569906
+  checksum: 248077344fea20da42e040c29852187ebb03fe357825a054ce4109838fa71c28ec5ef95a4bb63146148a77c9ddcc107fbb2591cdde210d88d083715c2254e37d
   languageName: node
   linkType: hard
 
@@ -4294,7 +4294,7 @@ fsevents@~2.3.2:
     rollup-plugin-pug: 1.1.1
     sass: 1.37.5
     typescript: 4.3.5
-    vite: 2.4.4
+    vite: 2.5.1
     vite-plugin-pug: 0.3.0
     vue: 3.1.5
     vue-router: 4.0.10
@@ -6006,11 +6006,11 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"vite@npm:2.4.4":
-  version: 2.4.4
-  resolution: "vite@npm:2.4.4"
+"vite@npm:2.5.1":
+  version: 2.5.1
+  resolution: "vite@npm:2.5.1"
   dependencies:
-    esbuild: ^0.12.8
+    esbuild: ^0.12.17
     fsevents: ~2.3.2
     postcss: ^8.3.6
     resolve: ^1.20.0
@@ -6020,7 +6020,7 @@ fsevents@~2.3.2:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 224e195aa5d089a3c0ca775a600de9ea1699d20bead83217136bf74dfc9ca0f555e9b8403462529915cdf5f42bf0397b34cd7249cdc5353132ada5e6951e2130
+  checksum: 1f17c2e205213a3e028655dcc4a9866995f4d372b9e1abe3caef3f8cb4d8e6ef1b4c64eb4b2bd957617764b290fb752617d4679b7bd8390ddfaecf7e54f889af
   languageName: node
   linkType: hard
 
