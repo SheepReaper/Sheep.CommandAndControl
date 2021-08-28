@@ -4292,7 +4292,7 @@ fsevents@~2.3.2:
     pug: 3.0.2
     rollup: 2.56.1
     rollup-plugin-pug: 1.1.1
-    sass: 1.37.5
+    sass: 1.38.2
     typescript: 4.3.5
     vite: 2.4.4
     vite-plugin-pug: 0.3.0
@@ -5455,14 +5455,14 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sass@npm:1.37.5":
-  version: 1.37.5
-  resolution: "sass@npm:1.37.5"
+"sass@npm:1.38.2":
+  version: 1.38.2
+  resolution: "sass@npm:1.38.2"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: f7751f481cee57b075b49d5e992bcda66f353098a2fc6e6a906e7732fd5dc4544ce7cba0efdbd3d6c5734ebff792026a462f6fa36e99359b475e9094418a2373
+  checksum: 5653617f78951606cc428e47613e893c78e3dac04c8c381a0ab164cb52803fb70c7a94ea5879fc6e8b32a7c56bb012a4a425f0e6a0ad29354c8cb329c6c0a3ed
   languageName: node
   linkType: hard
 
