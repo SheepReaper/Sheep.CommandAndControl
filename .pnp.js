@@ -3534,7 +3534,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prettier", null],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-prettier", "virtual:ce46d812221b09878b050f77f5060791d542acd433596058482adff2e44ab1dc78fc2f9121c1d23a7aa6ed0c707cfd8fd588cb0f82f7bb6ed7e11588bd7c873e#npm:6.15.0"],
-            ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.0"],
+            ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.2.1"],
             ["prettier", "npm:2.3.2"]
           ],
           "packagePeers": [
@@ -4444,14 +4444,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["core-js", [
         ["npm:2.6.12", {
-          "packageLocation": "./.yarn/unplugged/core-js-npm-2.6.12-0b93d77d31/node_modules/core-js/",
+          "packageLocation": "./.yarn/cache/core-js-npm-2.6.12-0b93d77d31-b865823ce9.zip/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:2.6.12"]
           ],
           "linkType": "HARD",
         }],
         ["npm:3.15.2", {
-          "packageLocation": "./.yarn/unplugged/core-js-npm-3.15.2-6825052e10/node_modules/core-js/",
+          "packageLocation": "./.yarn/cache/core-js-npm-3.15.2-6825052e10-983706260a.zip/node_modules/core-js/",
           "packageDependencies": [
             ["core-js", "npm:3.15.2"]
           ],
@@ -4689,7 +4689,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["esbuild", [
         ["npm:0.12.15", {
-          "packageLocation": "./.yarn/unplugged/esbuild-npm-0.12.15-7493c7de7f/node_modules/esbuild/",
+          "packageLocation": "./.yarn/cache/esbuild-npm-0.12.15-7493c7de7f-22ec14d41c.zip/node_modules/esbuild/",
           "packageDependencies": [
             ["esbuild", "npm:0.12.15"]
           ],
@@ -4841,17 +4841,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["eslint-plugin-prettier", [
-        ["npm:3.4.0", {
-          "packageLocation": "./.yarn/cache/eslint-plugin-prettier-npm-3.4.0-36b0696d09-322be1af8c.zip/node_modules/eslint-plugin-prettier/",
+        ["npm:4.2.1", {
+          "packageLocation": "./.yarn/cache/eslint-plugin-prettier-npm-4.2.1-ba8e1240f1-ff1b4155f2.zip/node_modules/eslint-plugin-prettier/",
           "packageDependencies": [
-            ["eslint-plugin-prettier", "npm:3.4.0"]
+            ["eslint-plugin-prettier", "npm:4.2.1"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.0", {
-          "packageLocation": "./.yarn/$$virtual/eslint-plugin-prettier-virtual-3279118bfa/0/cache/eslint-plugin-prettier-npm-3.4.0-36b0696d09-322be1af8c.zip/node_modules/eslint-plugin-prettier/",
+        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.2.1", {
+          "packageLocation": "./.yarn/$$virtual/eslint-plugin-prettier-virtual-ecfd157846/0/cache/eslint-plugin-prettier-npm-4.2.1-ba8e1240f1-ff1b4155f2.zip/node_modules/eslint-plugin-prettier/",
           "packageDependencies": [
-            ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.0"],
+            ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.2.1"],
             ["@types/eslint", null],
             ["@types/prettier", null],
             ["eslint", "npm:7.32.0"],
@@ -5904,7 +5904,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.1.0"],
             ["dropzone", "npm:5.9.2"],
             ["eslint", "npm:7.32.0"],
-            ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.0"],
+            ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.2.1"],
             ["eslint-plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.15.1"],
             ["prettier", "npm:2.3.2"],
             ["pug", "npm:3.0.2"],
@@ -7172,14 +7172,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["rollup-plugin-pug", [
         ["npm:1.1.1", {
-          "packageLocation": "./.yarn/unplugged/rollup-plugin-pug-virtual-1d1c0bea2b/node_modules/rollup-plugin-pug/",
+          "packageLocation": "./.yarn/cache/rollup-plugin-pug-npm-1.1.1-95fae810a2-89410bff47.zip/node_modules/rollup-plugin-pug/",
           "packageDependencies": [
             ["rollup-plugin-pug", "npm:1.1.1"]
           ],
           "linkType": "SOFT",
         }],
         ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1", {
-          "packageLocation": "./.yarn/unplugged/rollup-plugin-pug-virtual-1d1c0bea2b/node_modules/rollup-plugin-pug/",
+          "packageLocation": "./.yarn/$$virtual/rollup-plugin-pug-virtual-1d1c0bea2b/0/cache/rollup-plugin-pug-npm-1.1.1-95fae810a2-89410bff47.zip/node_modules/rollup-plugin-pug/",
           "packageDependencies": [
             ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],
             ["@types/rollup", null],
