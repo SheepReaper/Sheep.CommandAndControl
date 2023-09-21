@@ -3957,6 +3957,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"immutable@npm:^4.0.0":
+  version: 4.3.4
+  resolution: "immutable@npm:4.3.4"
+  checksum: 8cd490dbd479d4da7484c383a57769adf25fd383af9fdb70f081c5e164969841374f4007ab63a230512f4830b1c7d4948c102d3bdb1eae34d240f0d47223a50c
+  languageName: node
+  linkType: hard
+
 "import-fresh@npm:^3.0.0, import-fresh@npm:^3.2.1":
   version: 3.3.0
   resolution: "import-fresh@npm:3.3.0"
@@ -4292,7 +4299,7 @@ fsevents@~2.3.2:
     pug: 3.0.2
     rollup: 2.56.1
     rollup-plugin-pug: 1.1.1
-    sass: 1.37.5
+    sass: 1.68.0
     typescript: 4.3.5
     vite: 2.4.4
     vite-plugin-pug: 0.3.0
@@ -5455,14 +5462,16 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sass@npm:1.37.5":
-  version: 1.37.5
-  resolution: "sass@npm:1.37.5"
+"sass@npm:1.68.0":
+  version: 1.68.0
+  resolution: "sass@npm:1.68.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
+    immutable: ^4.0.0
+    source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: f7751f481cee57b075b49d5e992bcda66f353098a2fc6e6a906e7732fd5dc4544ce7cba0efdbd3d6c5734ebff792026a462f6fa36e99359b475e9094418a2373
+  checksum: 4271df0e118ac2509002577478a603c4903a31691d32df2ecfae708a6be181fcd20ff6974834ea6551d029e67fe0262941e37ebe7114a80dc775133447bca95a
   languageName: node
   linkType: hard
 
@@ -5577,6 +5586,13 @@ fsevents@~2.3.2:
     ip: ^1.1.5
     smart-buffer: ^4.1.0
   checksum: 9a5735cf9be6f756006b4c5ed23f17c15ffbfc0afb04b5d1b49516b7a27818c807a6a5b5419a65a140a1964149ec9ebb6cd8f0e06d7c60282912204d781371db
+  languageName: node
+  linkType: hard
+
+"source-map-js@npm:>=0.6.2 <2.0.0":
+  version: 1.0.2
+  resolution: "source-map-js@npm:1.0.2"
+  checksum: 3bb232796ad9b71bad151cb30c7fc1a2afdaf5bcfd4aa7806f56a2d4ff4824e1481e960436c5e9ec26e8c1ae129aee8107df0859c15b1ccada31a9a7ef254abc
   languageName: node
   linkType: hard
 
