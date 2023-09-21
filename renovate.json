@@ -20,5 +20,10 @@
     ":dependencyDashboard",
     ":followTag(parcel, nightly)",
     ":semanticCommits"
-  ]
+  ],
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": true,
+    "assignees": ["@SheepReaper"]
+  }
 }
