@@ -1837,10 +1837,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:2.9.3":
-  version: 2.9.3
-  resolution: "@popperjs/core@npm:2.9.3"
-  checksum: cf7381686820f04cb75aacef5373bac43b9b33eaea3387203650c3a89150dc407caf2e0c637184b2f82d83bba352a297d5a3569d1784158593a1e6e2a2af12a2
+"@popperjs/core@npm:2.11.8":
+  version: 2.11.8
+  resolution: "@popperjs/core@npm:2.11.8"
+  checksum: 8c170d4eb56b6604b190eb5ed9dd6ab4b9e9cdb6ef6ee5b3884fe14af37a3a4289af1bfa0373e4dab288fddb12b43d94a565f313beaae023cd1da742173b050b
   languageName: node
   linkType: hard
 
@@ -4279,7 +4279,7 @@ fsevents@~2.3.2:
     "@babel/eslint-parser": 7.15.0
     "@ckeditor/ckeditor5-build-classic": 29.1.0
     "@ckeditor/ckeditor5-vue": 2.0.1
-    "@popperjs/core": 2.9.3
+    "@popperjs/core": 2.11.8
     "@prettier/plugin-pug": 1.16.3
     "@types/node": 15.14.1
     "@typescript-eslint/eslint-plugin": 4.29.0
