@@ -3304,17 +3304,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-vue@npm:7.15.1":
-  version: 7.15.1
-  resolution: "eslint-plugin-vue@npm:7.15.1"
+"eslint-plugin-vue@npm:7.20.0":
+  version: 7.20.0
+  resolution: "eslint-plugin-vue@npm:7.20.0"
   dependencies:
     eslint-utils: ^2.1.0
     natural-compare: ^1.4.0
     semver: ^6.3.0
     vue-eslint-parser: ^7.10.0
   peerDependencies:
-    eslint: ^6.2.0 || ^7.0.0
-  checksum: d36c50725c68a42a7197235075bbe4e7ab7cdf89bbdf254a9827bfe1c79e535523f8fcf1dd0b925951d3c9d98d9fc43067c3ed1a2e3e845f77405789f7e64873
+    eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
+  checksum: b755e8b8ab9700cbde366b3bc3a5b3ca35a3f2eb2076e91dc48f46b7ac17772180eac683de87e97776bc8057cbfc5a8b27f977a7b4fc5c98e8cea111eb0a62fa
   languageName: node
   linkType: hard
 
@@ -4294,7 +4294,7 @@ fsevents@~2.3.2:
     dropzone: 5.9.2
     eslint: 7.32.0
     eslint-plugin-prettier: 3.4.0
-    eslint-plugin-vue: 7.15.1
+    eslint-plugin-vue: 7.20.0
     prettier: 2.3.2
     pug: 3.0.2
     rollup: 2.56.1
