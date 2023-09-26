@@ -3137,23 +3137,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@vitejs/plugin-vue", [
-        ["npm:1.4.0", {
-          "packageLocation": "./.yarn/cache/@vitejs-plugin-vue-npm-1.4.0-d23a74e625-2c45877223.zip/node_modules/@vitejs/plugin-vue/",
+        ["npm:1.10.2", {
+          "packageLocation": "./.yarn/cache/@vitejs-plugin-vue-npm-1.10.2-ad99aecb5f-3cc7b04c3e.zip/node_modules/@vitejs/plugin-vue/",
           "packageDependencies": [
-            ["@vitejs/plugin-vue", "npm:1.4.0"]
+            ["@vitejs/plugin-vue", "npm:1.10.2"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.4.0", {
-          "packageLocation": "./.yarn/$$virtual/@vitejs-plugin-vue-virtual-36ac6a9eec/0/cache/@vitejs-plugin-vue-npm-1.4.0-d23a74e625-2c45877223.zip/node_modules/@vitejs/plugin-vue/",
+        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.10.2", {
+          "packageLocation": "./.yarn/$$virtual/@vitejs-plugin-vue-virtual-0efd7c6330/0/cache/@vitejs-plugin-vue-npm-1.10.2-ad99aecb5f-3cc7b04c3e.zip/node_modules/@vitejs/plugin-vue/",
           "packageDependencies": [
-            ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.4.0"],
-            ["@types/vue__compiler-sfc", null],
-            ["@vue/compiler-sfc", "npm:3.3.4"]
+            ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.10.2"],
+            ["@types/vite", null],
+            ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:2.9.16"]
           ],
           "packagePeers": [
-            "@types/vue__compiler-sfc",
-            "@vue/compiler-sfc"
+            "@types/vite",
+            "vite"
           ],
           "linkType": "HARD",
         }]
@@ -6052,7 +6052,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:15.14.1"],
             ["@typescript-eslint/eslint-plugin", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.33.0"],
             ["@typescript-eslint/parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.33.0"],
-            ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.4.0"],
+            ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.10.2"],
             ["@vue/babel-preset-app", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.5.13"],
             ["@vue/compiler-sfc", "npm:3.3.4"],
             ["@vue/eslint-config-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.0.0"],
