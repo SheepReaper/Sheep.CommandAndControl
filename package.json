@@ -1,20 +1,13 @@
 {
-  "name": "root",
-  "version": "1.0.0",
-  "repository": "https://github.com/SheepReaper/Sheep.CommandAndControl.git",
-  "author": "Bryan Gonzalez <bgonza868@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "devDependencies": {
-    "@types/dropzone": "5.7.4",
-    "@types/eslint": "7.28.0",
-    "@types/prettier": "2.3.2",
-    "eslint": "7.32.0",
-    "prettier": "2.3.2",
-    "typescript": "4.9.5",
-    "vls": "0.7.4"
-  },
+  "packageManager": "yarn@3.6.3",
   "workspaces": [
     "src/ListeningPostWebUi"
-  ]
+  ],
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/prettier": "^3",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  }
 }
