@@ -3167,10 +3167,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/node", [\
-        ["npm:15.14.1", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-15.14.1-991c0e1117-efcc7e52a2.zip/node_modules/@types/node/",\
+        ["npm:15.14.9", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-15.14.9-739a59edff-49f7f0522a.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:15.14.1"]\
+            ["@types/node", "npm:15.14.9"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6396,7 +6396,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ckeditor/ckeditor5-vue", "npm:2.0.1"],\
             ["@popperjs/core", "npm:2.11.8"],\
             ["@prettier/plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.16.3"],\
-            ["@types/node", "npm:15.14.1"],\
+            ["@types/node", "npm:15.14.9"],\
             ["@typescript-eslint/eslint-plugin", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.33.0"],\
             ["@typescript-eslint/parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.33.0"],\
             ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.10.2"],\
