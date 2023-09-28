@@ -2022,10 +2022,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:15.14.1":
-  version: 15.14.1
-  resolution: "@types/node@npm:15.14.1"
-  checksum: efcc7e52a2d4d2e64c9e80ec72e3a08271a8536a713ffbfaa8391bd2a34bce599b8c2926eddc2f060a32df1c5dbd6a5d58be20ef4ac3fc6a45920622d4c87707
+"@types/node@npm:15.14.9":
+  version: 15.14.9
+  resolution: "@types/node@npm:15.14.9"
+  checksum: 49f7f0522a3af4b8389aee660e88426490cd54b86356672a1fedb49919a8797c00d090ec2dcc4a5df34edc2099d57fc2203d796c4e7fbd382f2022ccd789eee7
   languageName: node
   linkType: hard
 
@@ -4655,7 +4655,7 @@ __metadata:
     "@ckeditor/ckeditor5-vue": 2.0.1
     "@popperjs/core": 2.11.8
     "@prettier/plugin-pug": 1.16.3
-    "@types/node": 15.14.1
+    "@types/node": 15.14.9
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
     "@vitejs/plugin-vue": 1.10.2
