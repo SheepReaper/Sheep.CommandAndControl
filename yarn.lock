@@ -4676,7 +4676,7 @@ __metadata:
     sass: 1.68.0
     typescript: 4.9.5
     vite: 2.9.16
-    vite-plugin-pug: 0.3.0
+    vite-plugin-pug: 0.3.2
     vue: 3.3.4
     vue-router: 4.0.10
     vuex: 4.0.2
@@ -5158,7 +5158,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0":
+"picocolors@npm:^1.0.0, picocolors@npm:~1":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
   checksum: a2e8092dd86c8396bdba9f2b5481032848525b3dc295ce9b57896f931e63fc16f79805144321f72976383fc249584672a75cc18d6777c6b757603f372f745981
@@ -6273,14 +6273,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pug@npm:0.3.0":
-  version: 0.3.0
-  resolution: "vite-plugin-pug@npm:0.3.0"
+"vite-plugin-pug@npm:0.3.2":
+  version: 0.3.2
+  resolution: "vite-plugin-pug@npm:0.3.2"
   dependencies:
+    picocolors: ~1
     pug: ^3.0.2
-  peerDependencies:
-    vite: ~2
-  checksum: 54080775fcb5554b14d3e78c8710833f6dcbd2e13398bb2d8aa711f87e7df8e694b4bd94fe7b9131cf4acfdb5154c17a58ce8736a1c557d85f5e94c116064934
+  checksum: 96ec88843a7730c7e9a9220b3a24c1cc17a77c8090746540d57ece3c7a717504426ccdcdf6dc694c5ab82c6c8bd71d89e0bfd3f620f4b39376ce0f72f5d70694
   languageName: node
   linkType: hard
 
