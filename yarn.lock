@@ -2196,9 +2196,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/babel-preset-app@npm:4.5.13":
-  version: 4.5.13
-  resolution: "@vue/babel-preset-app@npm:4.5.13"
+"@vue/babel-preset-app@npm:4.5.19":
+  version: 4.5.19
+  resolution: "@vue/babel-preset-app@npm:4.5.19"
   dependencies:
     "@babel/core": ^7.11.0
     "@babel/helper-compilation-targets": ^7.9.6
@@ -2225,7 +2225,7 @@ __metadata:
       optional: true
     vue:
       optional: true
-  checksum: 9745a2ba168c41d243b58b4f147ce02cc5d1e6eeda6fc09402354d07cb006c671dcdcf74438a026321c73f543fe835c40c0d0042a55f55999a3042052d396377
+  checksum: 47788f94c3316f3b5182f65c4dc35e60de4e746ad4a7e1b726894b97bb26de2ba25324b84ce801ab52bbd5b30ca1a1243ea5cf69cfcfcc92eb586f526e3b6b37
   languageName: node
   linkType: hard
 
@@ -4659,7 +4659,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
     "@vitejs/plugin-vue": 1.10.2
-    "@vue/babel-preset-app": 4.5.13
+    "@vue/babel-preset-app": 4.5.19
     "@vue/compiler-sfc": 3.3.4
     "@vue/eslint-config-prettier": 6.0.0
     "@vue/eslint-config-typescript": 7.0.0
