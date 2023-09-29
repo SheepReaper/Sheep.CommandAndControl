@@ -4833,10 +4833,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["dropzone", [\
-        ["npm:5.9.2", {\
-          "packageLocation": "./.yarn/cache/dropzone-npm-5.9.2-baffe890a9-4c906f1e08.zip/node_modules/dropzone/",\
+        ["npm:5.9.3", {\
+          "packageLocation": "./.yarn/cache/dropzone-npm-5.9.3-f764b50f2a-7fe7e32ff1.zip/node_modules/dropzone/",\
           "packageDependencies": [\
-            ["dropzone", "npm:5.9.2"]\
+            ["dropzone", "npm:5.9.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6406,7 +6406,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vue/eslint-config-typescript", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.0.0"],\
             ["axios", "npm:0.21.2"],\
             ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.1.0"],\
-            ["dropzone", "npm:5.9.2"],\
+            ["dropzone", "npm:5.9.3"],\
             ["eslint", "npm:7.32.0"],\
             ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.0"],\
             ["eslint-plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.20.0"],\
