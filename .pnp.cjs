@@ -6417,7 +6417,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass", "npm:1.68.0"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"],\
             ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:2.9.16"],\
-            ["vite-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:0.3.0"],\
+            ["vite-plugin-pug", "npm:0.3.2"],\
             ["vue", "npm:3.3.4"],\
             ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.10"],\
             ["vuex", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.2"]\
@@ -8204,24 +8204,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["vite-plugin-pug", [\
-        ["npm:0.3.0", {\
-          "packageLocation": "./.yarn/cache/vite-plugin-pug-npm-0.3.0-a0b9e41c17-54080775fc.zip/node_modules/vite-plugin-pug/",\
+        ["npm:0.3.2", {\
+          "packageLocation": "./.yarn/cache/vite-plugin-pug-npm-0.3.2-519205f96e-96ec88843a.zip/node_modules/vite-plugin-pug/",\
           "packageDependencies": [\
-            ["vite-plugin-pug", "npm:0.3.0"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:0.3.0", {\
-          "packageLocation": "./.yarn/__virtual__/vite-plugin-pug-virtual-e05dfbc5a8/0/cache/vite-plugin-pug-npm-0.3.0-a0b9e41c17-54080775fc.zip/node_modules/vite-plugin-pug/",\
-          "packageDependencies": [\
-            ["vite-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:0.3.0"],\
-            ["@types/vite", null],\
-            ["pug", "npm:3.0.2"],\
-            ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:2.9.16"]\
-          ],\
-          "packagePeers": [\
-            "@types/vite",\
-            "vite"\
+            ["vite-plugin-pug", "npm:0.3.2"],\
+            ["picocolors", "npm:1.0.0"],\
+            ["pug", "npm:3.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
