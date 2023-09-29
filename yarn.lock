@@ -3260,10 +3260,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dropzone@npm:5.9.2":
-  version: 5.9.2
-  resolution: "dropzone@npm:5.9.2"
-  checksum: 4c906f1e08421bbbb14f5e41ad37e5694317b6761f0a7e95d22c3037f6a05fe01ba48b722392187cccef367f18fdbaa18b1ae172c0b5cdb9a39ecba04ebb4f0a
+"dropzone@npm:5.9.3":
+  version: 5.9.3
+  resolution: "dropzone@npm:5.9.3"
+  checksum: 7fe7e32ff188ab38bb3ddd468938ef78c158ce4cada8b2184cdd78a1d52fd961af56f1f0bec11a7881aab6d43d7fc9f9a6dc6addbfbea93c1ad784dbc6444e4d
   languageName: node
   linkType: hard
 
@@ -4665,7 +4665,7 @@ __metadata:
     "@vue/eslint-config-typescript": 7.0.0
     axios: 0.21.2
     bootstrap: 5.1.0
-    dropzone: 5.9.2
+    dropzone: 5.9.3
     eslint: 7.32.0
     eslint-plugin-prettier: 3.4.0
     eslint-plugin-vue: 7.20.0
