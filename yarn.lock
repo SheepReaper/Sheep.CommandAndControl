@@ -1964,14 +1964,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prettier/plugin-pug@npm:1.16.3":
-  version: 1.16.3
-  resolution: "@prettier/plugin-pug@npm:1.16.3"
+"@prettier/plugin-pug@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@prettier/plugin-pug@npm:3.0.0"
   dependencies:
-    pug-lexer: ^5.0.0
+    pug-lexer: ^5.0.1
   peerDependencies:
-    prettier: ^2.1.0
-  checksum: 7aa38bc99cdcdf2a6f769dea283da06487e59648770ee145ef6ddc23b9df87380d254c062d5c8c39310d8abe322736c0f402c722241b72d44b8a1e599de1752c
+    prettier: ^3.0.0
+  checksum: 06ad73e3abfd8d70666b8d12864b92a7bc65828f615fa60533d6c33b49e87638a9e3cbd1de1f4fae3a7f64c619bd035017d827ed668d724deeb7c3b161e723da
   languageName: node
   linkType: hard
 
@@ -4654,7 +4654,7 @@ __metadata:
     "@ckeditor/ckeditor5-build-classic": 29.2.0
     "@ckeditor/ckeditor5-vue": 2.0.1
     "@popperjs/core": 2.11.8
-    "@prettier/plugin-pug": 1.16.3
+    "@prettier/plugin-pug": 3.0.0
     "@types/node": 15.14.9
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
@@ -5350,7 +5350,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pug-lexer@npm:^5.0.0, pug-lexer@npm:^5.0.1":
+"pug-lexer@npm:^5.0.1":
   version: 5.0.1
   resolution: "pug-lexer@npm:5.0.1"
   dependencies:
