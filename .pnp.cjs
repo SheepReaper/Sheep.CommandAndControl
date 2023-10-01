@@ -3087,17 +3087,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@prettier/plugin-pug", [\
-        ["npm:1.16.3", {\
-          "packageLocation": "./.yarn/cache/@prettier-plugin-pug-npm-1.16.3-52322ac174-7aa38bc99c.zip/node_modules/@prettier/plugin-pug/",\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/@prettier-plugin-pug-npm-3.0.0-8b83d6864b-06ad73e3ab.zip/node_modules/@prettier/plugin-pug/",\
           "packageDependencies": [\
-            ["@prettier/plugin-pug", "npm:1.16.3"]\
+            ["@prettier/plugin-pug", "npm:3.0.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.16.3", {\
-          "packageLocation": "./.yarn/__virtual__/@prettier-plugin-pug-virtual-ef9bc04731/0/cache/@prettier-plugin-pug-npm-1.16.3-52322ac174-7aa38bc99c.zip/node_modules/@prettier/plugin-pug/",\
+        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/@prettier-plugin-pug-virtual-2c09e06e8d/0/cache/@prettier-plugin-pug-npm-3.0.0-8b83d6864b-06ad73e3ab.zip/node_modules/@prettier/plugin-pug/",\
           "packageDependencies": [\
-            ["@prettier/plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.16.3"],\
+            ["@prettier/plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.0.0"],\
             ["@types/prettier", null],\
             ["prettier", "npm:2.3.2"],\
             ["pug-lexer", "npm:5.0.1"]\
@@ -6395,7 +6395,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ckeditor/ckeditor5-build-classic", "npm:29.2.0"],\
             ["@ckeditor/ckeditor5-vue", "npm:2.0.1"],\
             ["@popperjs/core", "npm:2.11.8"],\
-            ["@prettier/plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.16.3"],\
+            ["@prettier/plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.0.0"],\
             ["@types/node", "npm:15.14.9"],\
             ["@typescript-eslint/eslint-plugin", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.33.0"],\
             ["@typescript-eslint/parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.33.0"],\
