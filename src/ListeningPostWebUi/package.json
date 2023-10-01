@@ -27,7 +27,7 @@
     "@types/node": "18.18.1",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
-    "@vitejs/plugin-vue": "1.10.2",
+    "@vitejs/plugin-vue": "4.3.4",
     "@vue/babel-preset-app": "4.5.19",
     "@vue/compiler-sfc": "3.3.4",
     "@vue/eslint-config-prettier": "6.0.0",
