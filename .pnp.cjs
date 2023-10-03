@@ -6629,7 +6629,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:9.17.0"],\
             ["prettier", "npm:3.0.3"],\
             ["pug", "npm:3.0.2"],\
-            ["rollup", "npm:2.56.1"],\
+            ["rollup", "npm:3.29.4"],\
             ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
             ["sass", "npm:1.68.0"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"],\
@@ -7794,18 +7794,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["rollup", [\
-        ["npm:2.56.1", {\
-          "packageLocation": "./.yarn/cache/rollup-npm-2.56.1-d2dbac02b3-494f3e1739.zip/node_modules/rollup/",\
-          "packageDependencies": [\
-            ["rollup", "npm:2.56.1"],\
-            ["fsevents", "patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:2.77.3", {\
           "packageLocation": "./.yarn/cache/rollup-npm-2.77.3-be523d3443-b179c68249.zip/node_modules/rollup/",\
           "packageDependencies": [\
             ["rollup", "npm:2.77.3"],\
+            ["fsevents", "patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.29.4", {\
+          "packageLocation": "./.yarn/cache/rollup-npm-3.29.4-5e5e5f2087-8bb20a39c8.zip/node_modules/rollup/",\
+          "packageDependencies": [\
+            ["rollup", "npm:3.29.4"],\
             ["fsevents", "patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"]\
           ],\
           "linkType": "HARD"\
@@ -7827,7 +7827,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gen-pug-source-map", "npm:1.0.0"],\
             ["pug", "npm:2.0.4"],\
             ["pug-runtime", "npm:2.0.5"],\
-            ["rollup", "npm:2.56.1"],\
+            ["rollup", "npm:3.29.4"],\
             ["rollup-pluginutils", "npm:2.8.2"]\
           ],\
           "packagePeers": [\
