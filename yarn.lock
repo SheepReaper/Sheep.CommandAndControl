@@ -4786,7 +4786,7 @@ __metadata:
     eslint: 8.50.0
     eslint-plugin-prettier: 5.0.0
     eslint-plugin-vue: 9.17.0
-    prettier: 2.3.2
+    prettier: 3.0.3
     pug: 3.0.2
     rollup: 2.56.1
     rollup-plugin-pug: 1.1.1
@@ -5410,15 +5410,6 @@ __metadata:
   bin:
     prettier: bin/prettier.cjs
   checksum: e10b9af02b281f6c617362ebd2571b1d7fc9fb8a3bd17e371754428cda992e5e8d8b7a046e8f7d3e2da1dcd21aa001e2e3c797402ebb6111b5cd19609dd228e0
-  languageName: node
-  linkType: hard
-
-"prettier@npm:2.3.2":
-  version: 2.3.2
-  resolution: "prettier@npm:2.3.2"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 17ce5784ac67621c292df58e2da60b2ee150c2d6aebea22a6ad9e52fcd6a5e66c349d0a8436ea3bd8ff9d778920a5f68000d7625b74f43558718a49755aa5259
   languageName: node
   linkType: hard
 
