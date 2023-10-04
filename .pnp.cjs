@@ -2812,10 +2812,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ckeditor/ckeditor5-vue", [\
-        ["npm:2.0.1", {\
-          "packageLocation": "./.yarn/cache/@ckeditor-ckeditor5-vue-npm-2.0.1-e73083fc77-f85c8dbd9e.zip/node_modules/@ckeditor/ckeditor5-vue/",\
+        ["npm:5.1.0", {\
+          "packageLocation": "./.yarn/unplugged/@ckeditor-ckeditor5-vue-npm-5.1.0-30baf5573c/node_modules/@ckeditor/ckeditor5-vue/",\
           "packageDependencies": [\
-            ["@ckeditor/ckeditor5-vue", "npm:2.0.1"]\
+            ["@ckeditor/ckeditor5-vue", "npm:5.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6655,7 +6655,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.15.0"],\
             ["@babel/eslint-parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.15.0"],\
             ["@ckeditor/ckeditor5-build-classic", "npm:40.0.0"],\
-            ["@ckeditor/ckeditor5-vue", "npm:2.0.1"],\
+            ["@ckeditor/ckeditor5-vue", "npm:5.1.0"],\
             ["@popperjs/core", "npm:2.11.8"],\
             ["@prettier/plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.0.0"],\
             ["@types/node", "npm:18.18.1"],\

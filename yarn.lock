@@ -1739,10 +1739,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ckeditor/ckeditor5-vue@npm:2.0.1":
-  version: 2.0.1
-  resolution: "@ckeditor/ckeditor5-vue@npm:2.0.1"
-  checksum: f85c8dbd9e6b0d1ac07046086239cc62c87edba60d0a64ddae87a79c0e32ce858db32d68757bcac6cedc889f9e1423701dcbebb87a53858cdff3df98f5ffdab2
+"@ckeditor/ckeditor5-vue@npm:5.1.0":
+  version: 5.1.0
+  resolution: "@ckeditor/ckeditor5-vue@npm:5.1.0"
+  checksum: 7124de1038560b5903d88c691bf3086a8e6f4c993090b591c5d1d4e72475605cf00d053f2b8f0c4bb526852b47535f46024215d9ea2ff063250b0a899e209961
   languageName: node
   linkType: hard
 
@@ -4816,7 +4816,7 @@ __metadata:
     "@babel/core": 7.15.0
     "@babel/eslint-parser": 7.15.0
     "@ckeditor/ckeditor5-build-classic": 40.0.0
-    "@ckeditor/ckeditor5-vue": 2.0.1
+    "@ckeditor/ckeditor5-vue": 5.1.0
     "@popperjs/core": 2.11.8
     "@prettier/plugin-pug": 3.0.0
     "@types/node": 18.18.1
