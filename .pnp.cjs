@@ -6852,7 +6852,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.4.11"],\
             ["vite-plugin-pug", "npm:0.3.2"],\
             ["vue", "npm:3.3.4"],\
-            ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.10"],\
+            ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.2.5"],\
             ["vuex", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.2"]\
           ],\
           "linkType": "SOFT"\
@@ -8840,17 +8840,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["vue-router", [\
-        ["npm:4.0.10", {\
-          "packageLocation": "./.yarn/cache/vue-router-npm-4.0.10-48d0577ca9-9047f4538f.zip/node_modules/vue-router/",\
+        ["npm:4.2.5", {\
+          "packageLocation": "./.yarn/cache/vue-router-npm-4.2.5-3479f41e41-2449db4f3a.zip/node_modules/vue-router/",\
           "packageDependencies": [\
-            ["vue-router", "npm:4.0.10"]\
+            ["vue-router", "npm:4.2.5"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.10", {\
-          "packageLocation": "./.yarn/__virtual__/vue-router-virtual-af6d73d857/0/cache/vue-router-npm-4.0.10-48d0577ca9-9047f4538f.zip/node_modules/vue-router/",\
+        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.2.5", {\
+          "packageLocation": "./.yarn/__virtual__/vue-router-virtual-ea6f01423d/0/cache/vue-router-npm-4.2.5-3479f41e41-2449db4f3a.zip/node_modules/vue-router/",\
           "packageDependencies": [\
-            ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.10"],\
+            ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.2.5"],\
             ["@types/vue", null],\
             ["@vue/devtools-api", "npm:6.5.0"],\
             ["vue", "npm:3.3.4"]\
