@@ -3180,12 +3180,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:5.1.0":
-  version: 5.1.0
-  resolution: "bootstrap@npm:5.1.0"
+"bootstrap@npm:5.3.2":
+  version: 5.3.2
+  resolution: "bootstrap@npm:5.3.2"
   peerDependencies:
-    "@popperjs/core": ^2.9.3
-  checksum: 1e556b71c47b55f6411f789e6d43986f6a3646875f1bef47ee8b1bc16e5d395e75b275d207d6bda7d9752d0573eb4ee5faecb03ebea17dca6259ac8dd68a6aea
+    "@popperjs/core": ^2.11.8
+  checksum: d5580b253d121ffc137388d41da58dce8d15f1ccd574e12f28d4a08e7649ca15e95db645b2b677cb8025bccd446bff04138fc0fe64f8cba0ccc5dc004a8644cf
   languageName: node
   linkType: hard
 
@@ -4927,7 +4927,7 @@ __metadata:
     "@vue/eslint-config-prettier": 8.0.0
     "@vue/eslint-config-typescript": 12.0.0
     axios: 1.5.1
-    bootstrap: 5.1.0
+    bootstrap: 5.3.2
     dropzone: 5.9.3
     eslint: 8.50.0
     eslint-plugin-prettier: 5.0.0
