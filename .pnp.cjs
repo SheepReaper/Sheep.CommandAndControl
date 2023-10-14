@@ -6877,7 +6877,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["vite-plugin-pug", "npm:0.3.2"],\
             ["vue", "npm:3.3.4"],\
             ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.2.5"],\
-            ["vuex", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.2"]\
+            ["vuex", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.1.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -8887,17 +8887,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["vuex", [\
-        ["npm:4.0.2", {\
-          "packageLocation": "./.yarn/cache/vuex-npm-4.0.2-809c9d1907-d7c03f0afc.zip/node_modules/vuex/",\
+        ["npm:4.1.0", {\
+          "packageLocation": "./.yarn/cache/vuex-npm-4.1.0-c1d51099be-f5e375a9c1.zip/node_modules/vuex/",\
           "packageDependencies": [\
-            ["vuex", "npm:4.0.2"]\
+            ["vuex", "npm:4.1.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/vuex-virtual-fa85c17f3f/0/cache/vuex-npm-4.0.2-809c9d1907-d7c03f0afc.zip/node_modules/vuex/",\
+        ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/vuex-virtual-26e3239e70/0/cache/vuex-npm-4.1.0-c1d51099be-f5e375a9c1.zip/node_modules/vuex/",\
           "packageDependencies": [\
-            ["vuex", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.0.2"],\
+            ["vuex", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.1.0"],\
             ["@types/vue", null],\
             ["@vue/devtools-api", "npm:6.5.0"],\
             ["vue", "npm:3.3.4"]\
