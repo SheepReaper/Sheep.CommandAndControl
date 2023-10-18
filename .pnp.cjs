@@ -6846,7 +6846,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pug", "npm:3.0.2"],\
             ["rollup", "npm:4.1.4"],\
             ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
-            ["sass", "npm:1.69.3"],\
+            ["sass", "npm:1.69.4"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
             ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.4.11"],\
             ["vite-plugin-pug", "npm:0.3.2"],\
@@ -8146,10 +8146,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sass", [\
-        ["npm:1.69.3", {\
-          "packageLocation": "./.yarn/cache/sass-npm-1.69.3-e7774b19a7-b89a3370c7.zip/node_modules/sass/",\
+        ["npm:1.69.4", {\
+          "packageLocation": "./.yarn/cache/sass-npm-1.69.4-bea57e4b30-ed5558445b.zip/node_modules/sass/",\
           "packageDependencies": [\
-            ["sass", "npm:1.69.3"],\
+            ["sass", "npm:1.69.4"],\
             ["chokidar", "npm:3.5.3"],\
             ["immutable", "npm:4.3.4"],\
             ["source-map-js", "npm:1.0.2"]\
@@ -8735,7 +8735,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lightningcss", null],\
             ["postcss", "npm:8.4.31"],\
             ["rollup", "npm:3.29.4"],\
-            ["sass", "npm:1.69.3"],\
+            ["sass", "npm:1.69.4"],\
             ["stylus", null],\
             ["sugarss", null],\
             ["terser", null]\
