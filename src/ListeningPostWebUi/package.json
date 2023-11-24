@@ -11,7 +11,7 @@
     "lint": "eslint --ext .ts,.js,.json,vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "40.0.0",
+    "@ckeditor/ckeditor5-build-classic": "40.1.0",
     "@ckeditor/ckeditor5-vue": "5.1.0",
     "@popperjs/core": "2.11.8",
     "axios": "1.6.2",
