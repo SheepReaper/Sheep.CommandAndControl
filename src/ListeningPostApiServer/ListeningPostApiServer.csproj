@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <UserSecretsId>db188bd9-4081-4c69-ba50-417f2a7c5dc5</UserSecretsId>
     <DockerComposeProjectPath>..\ListeningPostApiServer-Docker\docker-compose.dcproj</DockerComposeProjectPath>
