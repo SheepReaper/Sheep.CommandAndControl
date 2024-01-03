@@ -2663,16 +2663,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/eslint-config-prettier@npm:8.0.0":
-  version: 8.0.0
-  resolution: "@vue/eslint-config-prettier@npm:8.0.0"
+"@vue/eslint-config-prettier@npm:9.0.0":
+  version: 9.0.0
+  resolution: "@vue/eslint-config-prettier@npm:9.0.0"
   dependencies:
-    eslint-config-prettier: "npm:^8.8.0"
+    eslint-config-prettier: "npm:^9.0.0"
     eslint-plugin-prettier: "npm:^5.0.0"
   peerDependencies:
     eslint: ">= 8.0.0"
     prettier: ">= 3.0.0"
-  checksum: 136a301f811f3d2d3aa7f3f36836dcf0c5e8ffe12c51ac1aa6252092c1e022c51e1f23b3217f6efb5bbf7f3b4750118952abe69b28ab671740d628882b9aa247
+  checksum: 465fe43e7a4f3181e73298df55cc5ba1de4e4349b6d859ef38e52f82406a0eac938809721b3a0f026b56ae533d51b45c4a2ecb6112d78e8d6e6ee3ca0892bba6
   languageName: node
   linkType: hard
 
@@ -3667,14 +3667,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.8.0":
-  version: 8.10.0
-  resolution: "eslint-config-prettier@npm:8.10.0"
+"eslint-config-prettier@npm:^9.0.0":
+  version: 9.1.0
+  resolution: "eslint-config-prettier@npm:9.1.0"
   peerDependencies:
     eslint: ">=7.0.0"
   bin:
     eslint-config-prettier: bin/cli.js
-  checksum: 19f8c497d9bdc111a17a61b25ded97217be3755bbc4714477dfe535ed539dddcaf42ef5cf8bb97908b058260cf89a3d7c565cb0be31096cbcd39f4c2fa5fe43c
+  checksum: 6d332694b36bc9ac6fdb18d3ca2f6ac42afa2ad61f0493e89226950a7091e38981b66bac2b47ba39d15b73fff2cd32c78b850a9cf9eed9ca9a96bfb2f3a2f10d
   languageName: node
   linkType: hard
 
@@ -4608,7 +4608,7 @@ __metadata:
     "@vitejs/plugin-vue": "npm:5.0.2"
     "@vue/babel-preset-app": "npm:5.0.8"
     "@vue/compiler-sfc": "npm:3.4.3"
-    "@vue/eslint-config-prettier": "npm:8.0.0"
+    "@vue/eslint-config-prettier": "npm:9.0.0"
     "@vue/eslint-config-typescript": "npm:12.0.0"
     axios: "npm:1.6.3"
     bootstrap: "npm:5.3.2"
