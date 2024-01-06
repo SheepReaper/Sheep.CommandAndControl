@@ -38,7 +38,7 @@
     "eslint-plugin-vue": "9.19.2",
     "prettier": "3.1.1",
     "pug": "3.0.2",
-    "rollup": "4.9.2",
+    "rollup": "4.9.4",
     "rollup-plugin-pug": "1.1.1",
     "sass": "1.69.7",
     "typescript": "5.3.3",
