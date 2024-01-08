@@ -14,7 +14,7 @@
     "@ckeditor/ckeditor5-build-classic": "40.2.0",
     "@ckeditor/ckeditor5-vue": "5.1.0",
     "@popperjs/core": "2.11.8",
-    "axios": "1.6.3",
+    "axios": "1.6.5",
     "bootstrap": "5.3.2",
     "vue": "3.4.5",
     "vue-router": "4.2.5",
