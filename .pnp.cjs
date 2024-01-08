@@ -4601,11 +4601,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["axios", [\
-      ["npm:1.6.3", {\
-        "packageLocation": "../../../../cache/others/berry/cache/axios-npm-1.6.3-9277f36de0-10c0.zip/node_modules/axios/",\
+      ["npm:1.6.5", {\
+        "packageLocation": "../../../../cache/others/berry/cache/axios-npm-1.6.5-87404a12d6-10c0.zip/node_modules/axios/",\
         "packageDependencies": [\
-          ["axios", "npm:1.6.3"],\
-          ["follow-redirects", "virtual:9277f36de0de51601211a12a2dcaba6488d347002383dc5cdedd739edff124fcfe82505dc1a85b8b6809cad1691f45361146fefc471f868c27c0e0a8b4b76609#npm:1.15.4"],\
+          ["axios", "npm:1.6.5"],\
+          ["follow-redirects", "virtual:87404a12d617a0f284f46fa368966665b2913bbd41d7ad24d282540aefa3360d8754e9717ae9b8aa4b57d1893372657e94658e9e39b9d068bbcf6ea38c2ceb2f#npm:1.15.4"],\
           ["form-data", "npm:4.0.0"],\
           ["proxy-from-env", "npm:1.1.0"]\
         ],\
@@ -5813,10 +5813,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:9277f36de0de51601211a12a2dcaba6488d347002383dc5cdedd739edff124fcfe82505dc1a85b8b6809cad1691f45361146fefc471f868c27c0e0a8b4b76609#npm:1.15.4", {\
-        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-49b4a80ff9/5/cache/others/berry/cache/follow-redirects-npm-1.15.4-3384d6a415-10c0.zip/node_modules/follow-redirects/",\
+      ["virtual:87404a12d617a0f284f46fa368966665b2913bbd41d7ad24d282540aefa3360d8754e9717ae9b8aa4b57d1893372657e94658e9e39b9d068bbcf6ea38c2ceb2f#npm:1.15.4", {\
+        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-74c4962fb5/5/cache/others/berry/cache/follow-redirects-npm-1.15.4-3384d6a415-10c0.zip/node_modules/follow-redirects/",\
         "packageDependencies": [\
-          ["follow-redirects", "virtual:9277f36de0de51601211a12a2dcaba6488d347002383dc5cdedd739edff124fcfe82505dc1a85b8b6809cad1691f45361146fefc471f868c27c0e0a8b4b76609#npm:1.15.4"],\
+          ["follow-redirects", "virtual:87404a12d617a0f284f46fa368966665b2913bbd41d7ad24d282540aefa3360d8754e9717ae9b8aa4b57d1893372657e94658e9e39b9d068bbcf6ea38c2ceb2f#npm:1.15.4"],\
           ["@types/debug", null],\
           ["debug", null]\
         ],\
@@ -6531,7 +6531,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/compiler-sfc", "npm:3.4.5"],\
           ["@vue/eslint-config-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:9.0.0"],\
           ["@vue/eslint-config-typescript", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:12.0.0"],\
-          ["axios", "npm:1.6.3"],\
+          ["axios", "npm:1.6.5"],\
           ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.2"],\
           ["dropzone", "npm:5.9.3"],\
           ["eslint", "npm:8.56.0"],\

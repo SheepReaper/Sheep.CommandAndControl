@@ -3021,14 +3021,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:1.6.3":
-  version: 1.6.3
-  resolution: "axios@npm:1.6.3"
+"axios@npm:1.6.5":
+  version: 1.6.5
+  resolution: "axios@npm:1.6.5"
   dependencies:
-    follow-redirects: "npm:^1.15.0"
+    follow-redirects: "npm:^1.15.4"
     form-data: "npm:^4.0.0"
     proxy-from-env: "npm:^1.1.0"
-  checksum: dcc6d982353db33e6893ef01cdf81d0a0548dbd8fba0cb046dc4aee1a6a16226721faa4c2a13b2673d47130509629cdb93bb991b3a2bd4ef17a5ac27a8bba0da
+  checksum: aeb9acf87590d8aa67946072ced38e01ca71f5dfe043782c0ccea667e5dd5c45830c08afac9be3d7c894f09684b8ab2a458f497d197b73621233bcf202d9d468
   languageName: node
   linkType: hard
 
@@ -4055,7 +4055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.15.0":
+"follow-redirects@npm:^1.15.4":
   version: 1.15.4
   resolution: "follow-redirects@npm:1.15.4"
   peerDependenciesMeta:
@@ -4701,7 +4701,7 @@ __metadata:
     "@vue/compiler-sfc": "npm:3.4.5"
     "@vue/eslint-config-prettier": "npm:9.0.0"
     "@vue/eslint-config-typescript": "npm:12.0.0"
-    axios: "npm:1.6.3"
+    axios: "npm:1.6.5"
     bootstrap: "npm:5.3.2"
     dropzone: "npm:5.9.3"
     eslint: "npm:8.56.0"
