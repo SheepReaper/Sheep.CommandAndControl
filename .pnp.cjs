@@ -3370,6 +3370,13 @@ const RAW_RUNTIME_STATE =
           ["@rollup/rollup-android-arm-eabi", "npm:4.9.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-android-arm-eabi-npm-4.9.5-61e16d95f2/node_modules/@rollup/rollup-android-arm-eabi/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-android-arm-eabi", "npm:4.9.5"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@rollup/rollup-android-arm64", [\
@@ -3377,6 +3384,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-android-arm64-npm-4.9.4-18d3b916f0/node_modules/@rollup/rollup-android-arm64/",\
         "packageDependencies": [\
           ["@rollup/rollup-android-arm64", "npm:4.9.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-android-arm64-npm-4.9.5-6ccfc7470d/node_modules/@rollup/rollup-android-arm64/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-android-arm64", "npm:4.9.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3388,6 +3402,13 @@ const RAW_RUNTIME_STATE =
           ["@rollup/rollup-darwin-arm64", "npm:4.9.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-darwin-arm64-npm-4.9.5-16e34a3e7b/node_modules/@rollup/rollup-darwin-arm64/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-darwin-arm64", "npm:4.9.5"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@rollup/rollup-darwin-x64", [\
@@ -3395,6 +3416,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-darwin-x64-npm-4.9.4-5c9b628ca8/node_modules/@rollup/rollup-darwin-x64/",\
         "packageDependencies": [\
           ["@rollup/rollup-darwin-x64", "npm:4.9.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-darwin-x64-npm-4.9.5-b519416430/node_modules/@rollup/rollup-darwin-x64/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-darwin-x64", "npm:4.9.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3406,6 +3434,13 @@ const RAW_RUNTIME_STATE =
           ["@rollup/rollup-linux-arm-gnueabihf", "npm:4.9.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-arm-gnueabihf-npm-4.9.5-40be8c3d35/node_modules/@rollup/rollup-linux-arm-gnueabihf/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-linux-arm-gnueabihf", "npm:4.9.5"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@rollup/rollup-linux-arm64-gnu", [\
@@ -3413,6 +3448,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-arm64-gnu-npm-4.9.4-e967c544c0/node_modules/@rollup/rollup-linux-arm64-gnu/",\
         "packageDependencies": [\
           ["@rollup/rollup-linux-arm64-gnu", "npm:4.9.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-arm64-gnu-npm-4.9.5-9441a712f1/node_modules/@rollup/rollup-linux-arm64-gnu/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-linux-arm64-gnu", "npm:4.9.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3424,6 +3466,13 @@ const RAW_RUNTIME_STATE =
           ["@rollup/rollup-linux-arm64-musl", "npm:4.9.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-arm64-musl-npm-4.9.5-f4080391bd/node_modules/@rollup/rollup-linux-arm64-musl/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-linux-arm64-musl", "npm:4.9.5"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@rollup/rollup-linux-riscv64-gnu", [\
@@ -3431,6 +3480,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-riscv64-gnu-npm-4.9.4-b237bdaddb/node_modules/@rollup/rollup-linux-riscv64-gnu/",\
         "packageDependencies": [\
           ["@rollup/rollup-linux-riscv64-gnu", "npm:4.9.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-riscv64-gnu-npm-4.9.5-d720fe8d34/node_modules/@rollup/rollup-linux-riscv64-gnu/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-linux-riscv64-gnu", "npm:4.9.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3442,6 +3498,13 @@ const RAW_RUNTIME_STATE =
           ["@rollup/rollup-linux-x64-gnu", "npm:4.9.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-x64-gnu-npm-4.9.5-dc241948bc/node_modules/@rollup/rollup-linux-x64-gnu/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-linux-x64-gnu", "npm:4.9.5"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@rollup/rollup-linux-x64-musl", [\
@@ -3449,6 +3512,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-x64-musl-npm-4.9.4-432e71e740/node_modules/@rollup/rollup-linux-x64-musl/",\
         "packageDependencies": [\
           ["@rollup/rollup-linux-x64-musl", "npm:4.9.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-linux-x64-musl-npm-4.9.5-fed94cd7c4/node_modules/@rollup/rollup-linux-x64-musl/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-linux-x64-musl", "npm:4.9.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3460,6 +3530,13 @@ const RAW_RUNTIME_STATE =
           ["@rollup/rollup-win32-arm64-msvc", "npm:4.9.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-arm64-msvc-npm-4.9.5-ffba176332/node_modules/@rollup/rollup-win32-arm64-msvc/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-win32-arm64-msvc", "npm:4.9.5"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@rollup/rollup-win32-ia32-msvc", [\
@@ -3469,6 +3546,13 @@ const RAW_RUNTIME_STATE =
           ["@rollup/rollup-win32-ia32-msvc", "npm:4.9.4"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-ia32-msvc-npm-4.9.5-f1996a16ec/node_modules/@rollup/rollup-win32-ia32-msvc/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-win32-ia32-msvc", "npm:4.9.5"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@rollup/rollup-win32-x64-msvc", [\
@@ -3476,6 +3560,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-x64-msvc-npm-4.9.4-66bbd04da6/node_modules/@rollup/rollup-win32-x64-msvc/",\
         "packageDependencies": [\
           ["@rollup/rollup-win32-x64-msvc", "npm:4.9.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-x64-msvc-npm-4.9.5-b56946ea61/node_modules/@rollup/rollup-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["@rollup/rollup-win32-x64-msvc", "npm:4.9.5"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6447,7 +6538,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:9.19.2"],\
           ["prettier", "npm:3.1.1"],\
           ["pug", "npm:3.0.2"],\
-          ["rollup", "npm:4.9.4"],\
+          ["rollup", "npm:4.9.5"],\
           ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
           ["sass", "npm:1.69.7"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
@@ -7536,6 +7627,28 @@ const RAW_RUNTIME_STATE =
           ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.9.5", {\
+        "packageLocation": "../../../../cache/others/berry/cache/rollup-npm-4.9.5-deca2874bb-10c0.zip/node_modules/rollup/",\
+        "packageDependencies": [\
+          ["rollup", "npm:4.9.5"],\
+          ["@rollup/rollup-android-arm-eabi", "npm:4.9.5"],\
+          ["@rollup/rollup-android-arm64", "npm:4.9.5"],\
+          ["@rollup/rollup-darwin-arm64", "npm:4.9.5"],\
+          ["@rollup/rollup-darwin-x64", "npm:4.9.5"],\
+          ["@rollup/rollup-linux-arm-gnueabihf", "npm:4.9.5"],\
+          ["@rollup/rollup-linux-arm64-gnu", "npm:4.9.5"],\
+          ["@rollup/rollup-linux-arm64-musl", "npm:4.9.5"],\
+          ["@rollup/rollup-linux-riscv64-gnu", "npm:4.9.5"],\
+          ["@rollup/rollup-linux-x64-gnu", "npm:4.9.5"],\
+          ["@rollup/rollup-linux-x64-musl", "npm:4.9.5"],\
+          ["@rollup/rollup-win32-arm64-msvc", "npm:4.9.5"],\
+          ["@rollup/rollup-win32-ia32-msvc", "npm:4.9.5"],\
+          ["@rollup/rollup-win32-x64-msvc", "npm:4.9.5"],\
+          ["@types/estree", "npm:1.0.5"],\
+          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["rollup-plugin-pug", [\
@@ -7554,7 +7667,7 @@ const RAW_RUNTIME_STATE =
           ["gen-pug-source-map", "npm:1.0.0"],\
           ["pug", "npm:2.0.4"],\
           ["pug-runtime", "npm:2.0.5"],\
-          ["rollup", "npm:4.9.4"],\
+          ["rollup", "npm:4.9.5"],\
           ["rollup-pluginutils", "npm:2.8.2"]\
         ],\
         "packagePeers": [\
