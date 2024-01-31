@@ -105,17 +105,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@babel/eslint-parser", [\
-      ["npm:7.23.9", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@babel-eslint-parser-npm-7.23.9-ac6e67f974-10c0.zip/node_modules/@babel/eslint-parser/",\
+      ["npm:7.23.10", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@babel-eslint-parser-npm-7.23.10-7be7518fee-10c0.zip/node_modules/@babel/eslint-parser/",\
         "packageDependencies": [\
-          ["@babel/eslint-parser", "npm:7.23.9"]\
+          ["@babel/eslint-parser", "npm:7.23.10"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.23.9", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-eslint-parser-virtual-1930c4e81f/5/cache/others/berry/cache/@babel-eslint-parser-npm-7.23.9-ac6e67f974-10c0.zip/node_modules/@babel/eslint-parser/",\
+      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.23.10", {\
+        "packageLocation": "./.yarn/__virtual__/@babel-eslint-parser-virtual-512dc88719/5/cache/others/berry/cache/@babel-eslint-parser-npm-7.23.10-7be7518fee-10c0.zip/node_modules/@babel/eslint-parser/",\
         "packageDependencies": [\
-          ["@babel/eslint-parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.23.9"],\
+          ["@babel/eslint-parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.23.10"],\
           ["@babel/core", "npm:7.23.9"],\
           ["@nicolo-ribaudo/eslint-scope-5-internals", "npm:5.1.1-v1"],\
           ["@types/babel__core", null],\
@@ -6652,7 +6652,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["listeningpostwebui", "workspace:src/ListeningPostWebUi"],\
           ["@babel/core", "npm:7.23.9"],\
-          ["@babel/eslint-parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.23.9"],\
+          ["@babel/eslint-parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.23.10"],\
           ["@ckeditor/ckeditor5-build-classic", "npm:40.2.0"],\
           ["@ckeditor/ckeditor5-vue", "npm:5.1.0"],\
           ["@popperjs/core", "npm:2.11.8"],\
