@@ -21,7 +21,7 @@
     "vuex": "4.1.0"
   },
   "devDependencies": {
-    "@babel/core": "7.23.9",
+    "@babel/core": "7.24.0",
     "@babel/eslint-parser": "7.23.10",
     "@prettier/plugin-pug": "3.0.0",
     "@types/node": "20.11.20",
