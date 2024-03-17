@@ -4654,11 +4654,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["axios", [\
-      ["npm:1.6.7", {\
-        "packageLocation": "../../../../cache/others/berry/cache/axios-npm-1.6.7-d7b9974d1b-10c0.zip/node_modules/axios/",\
+      ["npm:1.6.8", {\
+        "packageLocation": "../../../../cache/others/berry/cache/axios-npm-1.6.8-85cf1e7152-10c0.zip/node_modules/axios/",\
         "packageDependencies": [\
-          ["axios", "npm:1.6.7"],\
-          ["follow-redirects", "virtual:d7b9974d1bba76881cc57a280a16dd4914416a6fc4923c2efbb6328057412974da1e719cef1530b7a62b97d85d828f7e1d49b5f6de3b5b0854d49902ec87827c#npm:1.15.5"],\
+          ["axios", "npm:1.6.8"],\
+          ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"],\
           ["form-data", "npm:4.0.0"],\
           ["proxy-from-env", "npm:1.1.0"]\
         ],\
@@ -5880,17 +5880,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["follow-redirects", [\
-      ["npm:1.15.5", {\
-        "packageLocation": "../../../../cache/others/berry/cache/follow-redirects-npm-1.15.5-9d14db76ca-10c0.zip/node_modules/follow-redirects/",\
+      ["npm:1.15.6", {\
+        "packageLocation": "../../../../cache/others/berry/cache/follow-redirects-npm-1.15.6-50635fe51d-10c0.zip/node_modules/follow-redirects/",\
         "packageDependencies": [\
-          ["follow-redirects", "npm:1.15.5"]\
+          ["follow-redirects", "npm:1.15.6"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:d7b9974d1bba76881cc57a280a16dd4914416a6fc4923c2efbb6328057412974da1e719cef1530b7a62b97d85d828f7e1d49b5f6de3b5b0854d49902ec87827c#npm:1.15.5", {\
-        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-393395f3f6/5/cache/others/berry/cache/follow-redirects-npm-1.15.5-9d14db76ca-10c0.zip/node_modules/follow-redirects/",\
+      ["virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6", {\
+        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-7bb5ea93fd/5/cache/others/berry/cache/follow-redirects-npm-1.15.6-50635fe51d-10c0.zip/node_modules/follow-redirects/",\
         "packageDependencies": [\
-          ["follow-redirects", "virtual:d7b9974d1bba76881cc57a280a16dd4914416a6fc4923c2efbb6328057412974da1e719cef1530b7a62b97d85d828f7e1d49b5f6de3b5b0854d49902ec87827c#npm:1.15.5"],\
+          ["follow-redirects", "virtual:85cf1e7152e3c0d8e39e61ad2b81b59a43fb6bdb8f3bf49869bb97804b1403ecaee4505fcb0d4869cfdd99ee3eaa880b79498575407fb770c800bf64c64156ec#npm:1.15.6"],\
           ["@types/debug", null],\
           ["debug", null]\
         ],\
@@ -6617,7 +6617,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/compiler-sfc", "npm:3.4.21"],\
           ["@vue/eslint-config-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:9.0.0"],\
           ["@vue/eslint-config-typescript", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:12.0.0"],\
-          ["axios", "npm:1.6.7"],\
+          ["axios", "npm:1.6.8"],\
           ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.3"],\
           ["dropzone", "npm:5.9.3"],\
           ["eslint", "npm:8.57.0"],\
