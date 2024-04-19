@@ -31,7 +31,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
-          ["@types/eslint", "npm:8.56.9"],\
+          ["@types/eslint", "npm:8.56.10"],\
           ["@types/prettier", "npm:3.0.0"],\
           ["eslint", "npm:8.57.0"],\
           ["prettier", "npm:3.2.5"],\
@@ -3560,10 +3560,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/eslint", [\
-      ["npm:8.56.9", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@types-eslint-npm-8.56.9-2edf45a02f-10c0.zip/node_modules/@types/eslint/",\
+      ["npm:8.56.10", {\
+        "packageLocation": "../../../../cache/others/berry/cache/@types-eslint-npm-8.56.10-957cc305f5-10c0.zip/node_modules/@types/eslint/",\
         "packageDependencies": [\
-          ["@types/eslint", "npm:8.56.9"],\
+          ["@types/eslint", "npm:8.56.10"],\
           ["@types/estree", "npm:1.0.5"],\
           ["@types/json-schema", "npm:7.0.15"]\
         ],\
@@ -7766,7 +7766,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["root-workspace-0b6124", "workspace:."],\
-          ["@types/eslint", "npm:8.56.9"],\
+          ["@types/eslint", "npm:8.56.10"],\
           ["@types/prettier", "npm:3.0.0"],\
           ["eslint", "npm:8.57.0"],\
           ["prettier", "npm:3.2.5"],\
