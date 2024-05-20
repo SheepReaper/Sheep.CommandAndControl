@@ -58,7 +58,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@babel/code-frame", "npm:7.24.2"],\
           ["@babel/highlight", "npm:7.24.5"],\
-          ["picocolors", "npm:1.0.0"]\
+          ["picocolors", "npm:1.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -498,7 +498,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-validator-identifier", "npm:7.24.5"],\
           ["chalk", "npm:2.4.2"],\
           ["js-tokens", "npm:4.0.0"],\
-          ["picocolors", "npm:1.0.0"]\
+          ["picocolors", "npm:1.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2417,7 +2417,7 @@ const RAW_RUNTIME_STATE =
           ["babel-plugin-polyfill-corejs2", "virtual:f850909d8c06afd135123c1113650e0e20e64a40c9edd276921c27cebb631f86d47be7176f1c10961a3fb539f752ceedcda5695888522c384dffe675715eee28#npm:0.4.11"],\
           ["babel-plugin-polyfill-corejs3", "virtual:f850909d8c06afd135123c1113650e0e20e64a40c9edd276921c27cebb631f86d47be7176f1c10961a3fb539f752ceedcda5695888522c384dffe675715eee28#npm:0.10.4"],\
           ["babel-plugin-polyfill-regenerator", "virtual:f850909d8c06afd135123c1113650e0e20e64a40c9edd276921c27cebb631f86d47be7176f1c10961a3fb539f752ceedcda5695888522c384dffe675715eee28#npm:0.6.2"],\
-          ["core-js-compat", "npm:3.37.0"],\
+          ["core-js-compat", "npm:3.37.1"],\
           ["semver", "npm:6.3.1"]\
         ],\
         "packagePeers": [\
@@ -3991,8 +3991,8 @@ const RAW_RUNTIME_STATE =
           ["@vue/babel-plugin-jsx", "virtual:a9799f3b97cf3d7fd58d040a41f24021fa6811f6c496479d175c252bbda4a3063b4b7d73e923c95f2f7f431d683d82dd32bc49350135fcc7b2d864f9aaa4958e#npm:1.2.2"],\
           ["@vue/babel-preset-jsx", "virtual:a9799f3b97cf3d7fd58d040a41f24021fa6811f6c496479d175c252bbda4a3063b4b7d73e923c95f2f7f431d683d82dd32bc49350135fcc7b2d864f9aaa4958e#npm:1.4.0"],\
           ["babel-plugin-dynamic-import-node", "npm:2.3.3"],\
-          ["core-js", "npm:3.37.0"],\
-          ["core-js-compat", "npm:3.37.0"],\
+          ["core-js", "npm:3.37.1"],\
+          ["core-js-compat", "npm:3.37.1"],\
           ["semver", "npm:7.6.2"],\
           ["vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.27"]\
         ],\
@@ -4651,7 +4651,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/core", "npm:7.24.5"],\
           ["@babel/helper-define-polyfill-provider", "virtual:07ee3a9238b8b89d00f31989650d9117c88a14018926846152352252b4f4486219c12ad883906edab3fb35a73106dc2b40a3f3eb8931a424ca85a5e931f139db#npm:0.6.2"],\
           ["@types/babel__core", null],\
-          ["core-js-compat", "npm:3.37.0"]\
+          ["core-js-compat", "npm:3.37.1"]\
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -4818,10 +4818,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/browserslist-npm-4.23.0-8126a959d4-10c0.zip/node_modules/browserslist/",\
         "packageDependencies": [\
           ["browserslist", "npm:4.23.0"],\
-          ["caniuse-lite", "npm:1.0.30001617"],\
-          ["electron-to-chromium", "npm:1.4.763"],\
+          ["caniuse-lite", "npm:1.0.30001620"],\
+          ["electron-to-chromium", "npm:1.4.774"],\
           ["node-releases", "npm:2.0.14"],\
-          ["update-browserslist-db", "virtual:8126a959d46e6def6d7f2497c47970a23a94adac85f5be1df9be290c674503b9bcbe0dc057e2741ee222cc2a8a3b9f584b20c3a9eb5ce085704d99fc5d94514c#npm:1.0.15"]\
+          ["update-browserslist-db", "virtual:8126a959d46e6def6d7f2497c47970a23a94adac85f5be1df9be290c674503b9bcbe0dc057e2741ee222cc2a8a3b9f584b20c3a9eb5ce085704d99fc5d94514c#npm:1.0.16"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4894,10 +4894,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["caniuse-lite", [\
-      ["npm:1.0.30001617", {\
-        "packageLocation": "../../../../cache/others/berry/cache/caniuse-lite-npm-1.0.30001617-5cf8ee8c51-10c0.zip/node_modules/caniuse-lite/",\
+      ["npm:1.0.30001620", {\
+        "packageLocation": "../../../../cache/others/berry/cache/caniuse-lite-npm-1.0.30001620-389289b1a8-10c0.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
-          ["caniuse-lite", "npm:1.0.30001617"]\
+          ["caniuse-lite", "npm:1.0.30001620"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5125,19 +5125,19 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:3.37.0", {\
-        "packageLocation": "./.yarn/unplugged/core-js-npm-3.37.0-98818d5691/node_modules/core-js/",\
+      ["npm:3.37.1", {\
+        "packageLocation": "./.yarn/unplugged/core-js-npm-3.37.1-b1db5e7c23/node_modules/core-js/",\
         "packageDependencies": [\
-          ["core-js", "npm:3.37.0"]\
+          ["core-js", "npm:3.37.1"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["core-js-compat", [\
-      ["npm:3.37.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/core-js-compat-npm-3.37.0-9323d119db-10c0.zip/node_modules/core-js-compat/",\
+      ["npm:3.37.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/core-js-compat-npm-3.37.1-51cca8bb53-10c0.zip/node_modules/core-js-compat/",\
         "packageDependencies": [\
-          ["core-js-compat", "npm:3.37.0"],\
+          ["core-js-compat", "npm:3.37.1"],\
           ["browserslist", "npm:4.23.0"]\
         ],\
         "linkType": "HARD"\
@@ -5295,10 +5295,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["electron-to-chromium", [\
-      ["npm:1.4.763", {\
-        "packageLocation": "../../../../cache/others/berry/cache/electron-to-chromium-npm-1.4.763-ee873a602e-10c0.zip/node_modules/electron-to-chromium/",\
+      ["npm:1.4.774", {\
+        "packageLocation": "../../../../cache/others/berry/cache/electron-to-chromium-npm-1.4.774-ebc55ac867-10c0.zip/node_modules/electron-to-chromium/",\
         "packageDependencies": [\
-          ["electron-to-chromium", "npm:1.4.763"]\
+          ["electron-to-chromium", "npm:1.4.774"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6176,10 +6176,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["immutable", [\
-      ["npm:4.3.5", {\
-        "packageLocation": "../../../../cache/others/berry/cache/immutable-npm-4.3.5-5958499808-10c0.zip/node_modules/immutable/",\
+      ["npm:4.3.6", {\
+        "packageLocation": "../../../../cache/others/berry/cache/immutable-npm-4.3.6-2cc137ece1-10c0.zip/node_modules/immutable/",\
         "packageDependencies": [\
-          ["immutable", "npm:4.3.5"]\
+          ["immutable", "npm:4.3.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7095,10 +7095,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["picocolors", [\
-      ["npm:1.0.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/picocolors-npm-1.0.0-d81e0b1927-10c0.zip/node_modules/picocolors/",\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/picocolors-npm-1.0.1-39442f3da8-10c0.zip/node_modules/picocolors/",\
         "packageDependencies": [\
-          ["picocolors", "npm:1.0.0"]\
+          ["picocolors", "npm:1.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7118,7 +7118,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["postcss", "npm:8.4.38"],\
           ["nanoid", "npm:3.3.7"],\
-          ["picocolors", "npm:1.0.0"],\
+          ["picocolors", "npm:1.0.1"],\
           ["source-map-js", "npm:1.2.0"]\
         ],\
         "linkType": "HARD"\
@@ -7739,7 +7739,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["sass", "npm:1.77.2"],\
           ["chokidar", "npm:3.6.0"],\
-          ["immutable", "npm:4.3.5"],\
+          ["immutable", "npm:4.3.6"],\
           ["source-map-js", "npm:1.2.0"]\
         ],\
         "linkType": "HARD"\
@@ -8219,21 +8219,21 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["update-browserslist-db", [\
-      ["npm:1.0.15", {\
-        "packageLocation": "../../../../cache/others/berry/cache/update-browserslist-db-npm-1.0.15-7a2f8a8231-10c0.zip/node_modules/update-browserslist-db/",\
+      ["npm:1.0.16", {\
+        "packageLocation": "../../../../cache/others/berry/cache/update-browserslist-db-npm-1.0.16-ca365328e3-10c0.zip/node_modules/update-browserslist-db/",\
         "packageDependencies": [\
-          ["update-browserslist-db", "npm:1.0.15"]\
+          ["update-browserslist-db", "npm:1.0.16"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:8126a959d46e6def6d7f2497c47970a23a94adac85f5be1df9be290c674503b9bcbe0dc057e2741ee222cc2a8a3b9f584b20c3a9eb5ce085704d99fc5d94514c#npm:1.0.15", {\
-        "packageLocation": "./.yarn/__virtual__/update-browserslist-db-virtual-7733afb0c1/5/cache/others/berry/cache/update-browserslist-db-npm-1.0.15-7a2f8a8231-10c0.zip/node_modules/update-browserslist-db/",\
+      ["virtual:8126a959d46e6def6d7f2497c47970a23a94adac85f5be1df9be290c674503b9bcbe0dc057e2741ee222cc2a8a3b9f584b20c3a9eb5ce085704d99fc5d94514c#npm:1.0.16", {\
+        "packageLocation": "./.yarn/__virtual__/update-browserslist-db-virtual-13f1e97996/5/cache/others/berry/cache/update-browserslist-db-npm-1.0.16-ca365328e3-10c0.zip/node_modules/update-browserslist-db/",\
         "packageDependencies": [\
-          ["update-browserslist-db", "virtual:8126a959d46e6def6d7f2497c47970a23a94adac85f5be1df9be290c674503b9bcbe0dc057e2741ee222cc2a8a3b9f584b20c3a9eb5ce085704d99fc5d94514c#npm:1.0.15"],\
+          ["update-browserslist-db", "virtual:8126a959d46e6def6d7f2497c47970a23a94adac85f5be1df9be290c674503b9bcbe0dc057e2741ee222cc2a8a3b9f584b20c3a9eb5ce085704d99fc5d94514c#npm:1.0.16"],\
           ["@types/browserslist", null],\
           ["browserslist", "npm:4.23.0"],\
           ["escalade", "npm:3.1.2"],\
-          ["picocolors", "npm:1.0.0"]\
+          ["picocolors", "npm:1.0.1"]\
         ],\
         "packagePeers": [\
           "@types/browserslist",\
@@ -8323,7 +8323,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/vite-plugin-pug-npm-0.3.2-519205f96e-10c0.zip/node_modules/vite-plugin-pug/",\
         "packageDependencies": [\
           ["vite-plugin-pug", "npm:0.3.2"],\
-          ["picocolors", "npm:1.0.0"],\
+          ["picocolors", "npm:1.0.1"],\
           ["pug", "npm:3.0.2"]\
         ],\
         "linkType": "HARD"\
