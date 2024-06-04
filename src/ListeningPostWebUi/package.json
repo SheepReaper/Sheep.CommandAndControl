@@ -24,7 +24,7 @@
     "@babel/core": "7.24.6",
     "@babel/eslint-parser": "7.24.6",
     "@prettier/plugin-pug": "3.0.0",
-    "@types/node": "20.13.0",
+    "@types/node": "20.14.1",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "@vitejs/plugin-vue": "5.0.5",
