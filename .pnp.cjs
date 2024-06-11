@@ -6575,7 +6575,7 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.2.13"],\
           ["vite-plugin-pug", "npm:0.3.2"],\
           ["vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.27"],\
-          ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.3.2"],\
+          ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.3.3"],\
           ["vuex", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.1.0"]\
         ],\
         "linkType": "SOFT"\
@@ -8408,17 +8408,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["vue-router", [\
-      ["npm:4.3.2", {\
-        "packageLocation": "../../../../cache/others/berry/cache/vue-router-npm-4.3.2-29bbfd90fe-10c0.zip/node_modules/vue-router/",\
+      ["npm:4.3.3", {\
+        "packageLocation": "../../../../cache/others/berry/cache/vue-router-npm-4.3.3-af8e67016f-10c0.zip/node_modules/vue-router/",\
         "packageDependencies": [\
-          ["vue-router", "npm:4.3.2"]\
+          ["vue-router", "npm:4.3.3"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.3.2", {\
-        "packageLocation": "./.yarn/__virtual__/vue-router-virtual-2cc4ac4c5a/5/cache/others/berry/cache/vue-router-npm-4.3.2-29bbfd90fe-10c0.zip/node_modules/vue-router/",\
+      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.3.3", {\
+        "packageLocation": "./.yarn/__virtual__/vue-router-virtual-2618c744d0/5/cache/others/berry/cache/vue-router-npm-4.3.3-af8e67016f-10c0.zip/node_modules/vue-router/",\
         "packageDependencies": [\
-          ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.3.2"],\
+          ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.3.3"],\
           ["@types/vue", null],\
           ["@vue/devtools-api", "npm:6.6.3"],\
           ["vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.4.27"]\
