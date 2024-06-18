@@ -3601,7 +3601,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/@types-prettier-npm-3.0.0-6c770110eb-10c0.zip/node_modules/@types/prettier/",\
         "packageDependencies": [\
           ["@types/prettier", "npm:3.0.0"],\
-          ["prettier", "npm:3.3.1"]\
+          ["prettier", "npm:3.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4124,7 +4124,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-plugin-utils", "npm:7.24.7"],\
           ["@babel/parser", "npm:7.24.7"],\
           ["@types/babel__core", null],\
-          ["@vue/compiler-sfc", "npm:3.4.27"]\
+          ["@vue/compiler-sfc", "npm:3.4.29"]\
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -4384,18 +4384,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-core", [\
-      ["npm:3.4.27", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-core-npm-3.4.27-47b9973d44-10c0.zip/node_modules/@vue/compiler-core/",\
-        "packageDependencies": [\
-          ["@vue/compiler-core", "npm:3.4.27"],\
-          ["@babel/parser", "npm:7.24.7"],\
-          ["@vue/shared", "npm:3.4.27"],\
-          ["entities", "npm:4.5.0"],\
-          ["estree-walker", "npm:2.0.2"],\
-          ["source-map-js", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.29", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-core-npm-3.4.29-29bc9e7853-10c0.zip/node_modules/@vue/compiler-core/",\
         "packageDependencies": [\
@@ -4410,15 +4398,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-dom", [\
-      ["npm:3.4.27", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-dom-npm-3.4.27-d580461c51-10c0.zip/node_modules/@vue/compiler-dom/",\
-        "packageDependencies": [\
-          ["@vue/compiler-dom", "npm:3.4.27"],\
-          ["@vue/compiler-core", "npm:3.4.27"],\
-          ["@vue/shared", "npm:3.4.27"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.29", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-dom-npm-3.4.29-a117217369-10c0.zip/node_modules/@vue/compiler-dom/",\
         "packageDependencies": [\
@@ -4430,22 +4409,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-sfc", [\
-      ["npm:3.4.27", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-sfc-npm-3.4.27-bcd155fd03-10c0.zip/node_modules/@vue/compiler-sfc/",\
-        "packageDependencies": [\
-          ["@vue/compiler-sfc", "npm:3.4.27"],\
-          ["@babel/parser", "npm:7.24.7"],\
-          ["@vue/compiler-core", "npm:3.4.27"],\
-          ["@vue/compiler-dom", "npm:3.4.27"],\
-          ["@vue/compiler-ssr", "npm:3.4.27"],\
-          ["@vue/shared", "npm:3.4.27"],\
-          ["estree-walker", "npm:2.0.2"],\
-          ["magic-string", "npm:0.30.10"],\
-          ["postcss", "npm:8.4.38"],\
-          ["source-map-js", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.29", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-sfc-npm-3.4.29-25de7bdaef-10c0.zip/node_modules/@vue/compiler-sfc/",\
         "packageDependencies": [\
@@ -4464,15 +4427,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-ssr", [\
-      ["npm:3.4.27", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-ssr-npm-3.4.27-dacc7c58dd-10c0.zip/node_modules/@vue/compiler-ssr/",\
-        "packageDependencies": [\
-          ["@vue/compiler-ssr", "npm:3.4.27"],\
-          ["@vue/compiler-dom", "npm:3.4.27"],\
-          ["@vue/shared", "npm:3.4.27"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.29", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-ssr-npm-3.4.29-acc329a1f4-10c0.zip/node_modules/@vue/compiler-ssr/",\
         "packageDependencies": [\
@@ -4612,13 +4566,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/shared", [\
-      ["npm:3.4.27", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-shared-npm-3.4.27-0ec62782fb-10c0.zip/node_modules/@vue/shared/",\
-        "packageDependencies": [\
-          ["@vue/shared", "npm:3.4.27"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.29", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-shared-npm-3.4.29-f059414627-10c0.zip/node_modules/@vue/shared/",\
         "packageDependencies": [\
@@ -4658,10 +4605,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:8.11.3", {\
-        "packageLocation": "../../../../cache/others/berry/cache/acorn-npm-8.11.3-0d7ab48b38-10c0.zip/node_modules/acorn/",\
+      ["npm:8.12.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/acorn-npm-8.12.0-10680c055b-10c0.zip/node_modules/acorn/",\
         "packageDependencies": [\
-          ["acorn", "npm:8.11.3"]\
+          ["acorn", "npm:8.12.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4689,7 +4636,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["acorn-jsx", "virtual:a50722a5a9326b6a5f12350c494c4db3aa0f4caeac45e3e9e5fe071da20014ecfe738fe2ebe2c9c98abae81a4ea86b42f56d776b3bd5ec37f9ad3670c242b242#npm:5.3.2"],\
           ["@types/acorn", null],\
-          ["acorn", "npm:8.11.3"]\
+          ["acorn", "npm:8.12.0"]\
         ],\
         "packagePeers": [\
           "@types/acorn",\
@@ -5070,8 +5017,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/browserslist-npm-4.23.1-5d546adfd4-10c0.zip/node_modules/browserslist/",\
         "packageDependencies": [\
           ["browserslist", "npm:4.23.1"],\
-          ["caniuse-lite", "npm:1.0.30001629"],\
-          ["electron-to-chromium", "npm:1.4.796"],\
+          ["caniuse-lite", "npm:1.0.30001636"],\
+          ["electron-to-chromium", "npm:1.4.803"],\
           ["node-releases", "npm:2.0.14"],\
           ["update-browserslist-db", "virtual:5d546adfd40497567a2beaa05ac4b4ad48276a2420121d97df67ea4556d0bdf92c4336a43dcb6a63e246890704267e5510f16f5288829796be62a2f7fd8b1ff5#npm:1.0.16"]\
         ],\
@@ -5146,10 +5093,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["caniuse-lite", [\
-      ["npm:1.0.30001629", {\
-        "packageLocation": "../../../../cache/others/berry/cache/caniuse-lite-npm-1.0.30001629-167713d247-10c0.zip/node_modules/caniuse-lite/",\
+      ["npm:1.0.30001636", {\
+        "packageLocation": "../../../../cache/others/berry/cache/caniuse-lite-npm-1.0.30001636-29fc49025a-10c0.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
-          ["caniuse-lite", "npm:1.0.30001629"]\
+          ["caniuse-lite", "npm:1.0.30001636"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5547,10 +5494,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["electron-to-chromium", [\
-      ["npm:1.4.796", {\
-        "packageLocation": "../../../../cache/others/berry/cache/electron-to-chromium-npm-1.4.796-f75cc49719-10c0.zip/node_modules/electron-to-chromium/",\
+      ["npm:1.4.803", {\
+        "packageLocation": "../../../../cache/others/berry/cache/electron-to-chromium-npm-1.4.803-8d9fa16501-10c0.zip/node_modules/electron-to-chromium/",\
         "packageDependencies": [\
-          ["electron-to-chromium", "npm:1.4.796"]\
+          ["electron-to-chromium", "npm:1.4.803"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5879,7 +5826,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/espree-npm-9.6.1-a50722a5a9-10c0.zip/node_modules/espree/",\
         "packageDependencies": [\
           ["espree", "npm:9.6.1"],\
-          ["acorn", "npm:8.11.3"],\
+          ["acorn", "npm:8.12.0"],\
           ["acorn-jsx", "virtual:a50722a5a9326b6a5f12350c494c4db3aa0f4caeac45e3e9e5fe071da20014ecfe738fe2ebe2c9c98abae81a4ea86b42f56d776b3bd5ec37f9ad3670c242b242#npm:5.3.2"],\
           ["eslint-visitor-keys", "npm:3.4.3"]\
         ],\
@@ -6091,10 +6038,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["foreground-child", [\
-      ["npm:3.1.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/foreground-child-npm-3.1.1-77e78ed774-10c0.zip/node_modules/foreground-child/",\
+      ["npm:3.2.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/foreground-child-npm-3.2.1-788dc2267e-10c0.zip/node_modules/foreground-child/",\
         "packageDependencies": [\
-          ["foreground-child", "npm:3.1.1"],\
+          ["foreground-child", "npm:3.2.1"],\
           ["cross-spawn", "npm:7.0.3"],\
           ["signal-exit", "npm:4.1.0"]\
         ],\
@@ -6197,7 +6144,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/glob-npm-10.4.1-a0d030e0a9-10c0.zip/node_modules/glob/",\
         "packageDependencies": [\
           ["glob", "npm:10.4.1"],\
-          ["foreground-child", "npm:3.1.1"],\
+          ["foreground-child", "npm:3.2.1"],\
           ["jackspeak", "npm:3.4.0"],\
           ["minimatch", "npm:9.0.4"],\
           ["minipass", "npm:7.1.2"],\
@@ -7397,13 +7344,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["prettier", [\
-      ["npm:3.3.1", {\
-        "packageLocation": "./.yarn/unplugged/prettier-npm-3.3.1-91c1be8598/node_modules/prettier/",\
-        "packageDependencies": [\
-          ["prettier", "npm:3.3.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.3.2", {\
         "packageLocation": "./.yarn/unplugged/prettier-npm-3.3.2-efeafcaa4b/node_modules/prettier/",\
         "packageDependencies": [\
