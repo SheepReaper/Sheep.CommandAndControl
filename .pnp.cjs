@@ -4124,7 +4124,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/helper-plugin-utils", "npm:7.24.7"],\
           ["@babel/parser", "npm:7.24.7"],\
           ["@types/babel__core", null],\
-          ["@vue/compiler-sfc", "npm:3.4.29"]\
+          ["@vue/compiler-sfc", "npm:3.4.30"]\
         ],\
         "packagePeers": [\
           "@babel/core",\
@@ -4384,18 +4384,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-core", [\
-      ["npm:3.4.29", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-core-npm-3.4.29-29bc9e7853-10c0.zip/node_modules/@vue/compiler-core/",\
-        "packageDependencies": [\
-          ["@vue/compiler-core", "npm:3.4.29"],\
-          ["@babel/parser", "npm:7.24.7"],\
-          ["@vue/shared", "npm:3.4.29"],\
-          ["entities", "npm:4.5.0"],\
-          ["estree-walker", "npm:2.0.2"],\
-          ["source-map-js", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.30", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-core-npm-3.4.30-f4933d9063-10c0.zip/node_modules/@vue/compiler-core/",\
         "packageDependencies": [\
@@ -4410,15 +4398,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-dom", [\
-      ["npm:3.4.29", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-dom-npm-3.4.29-a117217369-10c0.zip/node_modules/@vue/compiler-dom/",\
-        "packageDependencies": [\
-          ["@vue/compiler-dom", "npm:3.4.29"],\
-          ["@vue/compiler-core", "npm:3.4.29"],\
-          ["@vue/shared", "npm:3.4.29"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.30", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-dom-npm-3.4.30-7742f540f5-10c0.zip/node_modules/@vue/compiler-dom/",\
         "packageDependencies": [\
@@ -4430,22 +4409,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-sfc", [\
-      ["npm:3.4.29", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-sfc-npm-3.4.29-25de7bdaef-10c0.zip/node_modules/@vue/compiler-sfc/",\
-        "packageDependencies": [\
-          ["@vue/compiler-sfc", "npm:3.4.29"],\
-          ["@babel/parser", "npm:7.24.7"],\
-          ["@vue/compiler-core", "npm:3.4.29"],\
-          ["@vue/compiler-dom", "npm:3.4.29"],\
-          ["@vue/compiler-ssr", "npm:3.4.29"],\
-          ["@vue/shared", "npm:3.4.29"],\
-          ["estree-walker", "npm:2.0.2"],\
-          ["magic-string", "npm:0.30.10"],\
-          ["postcss", "npm:8.4.38"],\
-          ["source-map-js", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.30", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-sfc-npm-3.4.30-7854a51719-10c0.zip/node_modules/@vue/compiler-sfc/",\
         "packageDependencies": [\
@@ -4464,15 +4427,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/compiler-ssr", [\
-      ["npm:3.4.29", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-ssr-npm-3.4.29-acc329a1f4-10c0.zip/node_modules/@vue/compiler-ssr/",\
-        "packageDependencies": [\
-          ["@vue/compiler-ssr", "npm:3.4.29"],\
-          ["@vue/compiler-dom", "npm:3.4.29"],\
-          ["@vue/shared", "npm:3.4.29"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.30", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-compiler-ssr-npm-3.4.30-bf06ebff88-10c0.zip/node_modules/@vue/compiler-ssr/",\
         "packageDependencies": [\
@@ -4612,13 +4566,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vue/shared", [\
-      ["npm:3.4.29", {\
-        "packageLocation": "../../../../cache/others/berry/cache/@vue-shared-npm-3.4.29-f059414627-10c0.zip/node_modules/@vue/shared/",\
-        "packageDependencies": [\
-          ["@vue/shared", "npm:3.4.29"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.4.30", {\
         "packageLocation": "../../../../cache/others/berry/cache/@vue-shared-npm-3.4.30-8d6e063bf4-10c0.zip/node_modules/@vue/shared/",\
         "packageDependencies": [\
@@ -5071,7 +5018,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["browserslist", "npm:4.23.1"],\
           ["caniuse-lite", "npm:1.0.30001636"],\
-          ["electron-to-chromium", "npm:1.4.803"],\
+          ["electron-to-chromium", "npm:1.4.811"],\
           ["node-releases", "npm:2.0.14"],\
           ["update-browserslist-db", "virtual:5d546adfd40497567a2beaa05ac4b4ad48276a2420121d97df67ea4556d0bdf92c4336a43dcb6a63e246890704267e5510f16f5288829796be62a2f7fd8b1ff5#npm:1.0.16"]\
         ],\
@@ -5085,7 +5032,7 @@ const RAW_RUNTIME_STATE =
           ["cacache", "npm:18.0.3"],\
           ["@npmcli/fs", "npm:3.1.1"],\
           ["fs-minipass", "npm:3.0.3"],\
-          ["glob", "npm:10.4.1"],\
+          ["glob", "npm:10.4.2"],\
           ["lru-cache", "npm:10.2.2"],\
           ["minipass", "npm:7.1.2"],\
           ["minipass-collect", "npm:2.0.1"],\
@@ -5547,10 +5494,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["electron-to-chromium", [\
-      ["npm:1.4.803", {\
-        "packageLocation": "../../../../cache/others/berry/cache/electron-to-chromium-npm-1.4.803-8d9fa16501-10c0.zip/node_modules/electron-to-chromium/",\
+      ["npm:1.4.811", {\
+        "packageLocation": "../../../../cache/others/berry/cache/electron-to-chromium-npm-1.4.811-d556259240-10c0.zip/node_modules/electron-to-chromium/",\
         "packageDependencies": [\
-          ["electron-to-chromium", "npm:1.4.803"]\
+          ["electron-to-chromium", "npm:1.4.811"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6193,14 +6140,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["glob", [\
-      ["npm:10.4.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/glob-npm-10.4.1-a0d030e0a9-10c0.zip/node_modules/glob/",\
+      ["npm:10.4.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/glob-npm-10.4.2-c8431e09a9-10c0.zip/node_modules/glob/",\
         "packageDependencies": [\
-          ["glob", "npm:10.4.1"],\
+          ["glob", "npm:10.4.2"],\
           ["foreground-child", "npm:3.2.1"],\
           ["jackspeak", "npm:3.4.0"],\
           ["minimatch", "npm:9.0.4"],\
           ["minipass", "npm:7.1.2"],\
+          ["package-json-from-dist", "npm:1.0.0"],\
           ["path-scurry", "npm:1.11.1"]\
         ],\
         "linkType": "HARD"\
@@ -6516,10 +6464,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["is-core-module", [\
-      ["npm:2.13.1", {\
-        "packageLocation": "../../../../cache/others/berry/cache/is-core-module-npm-2.13.1-36e17434f9-10c0.zip/node_modules/is-core-module/",\
+      ["npm:2.14.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/is-core-module-npm-2.14.0-24e925b9e1-10c0.zip/node_modules/is-core-module/",\
         "packageDependencies": [\
-          ["is-core-module", "npm:2.13.1"],\
+          ["is-core-module", "npm:2.14.0"],\
           ["hasown", "npm:2.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -7144,7 +7092,7 @@ const RAW_RUNTIME_STATE =
           ["node-gyp", "npm:10.1.0"],\
           ["env-paths", "npm:2.2.1"],\
           ["exponential-backoff", "npm:3.1.1"],\
-          ["glob", "npm:10.4.1"],\
+          ["glob", "npm:10.4.2"],\
           ["graceful-fs", "npm:4.2.11"],\
           ["make-fetch-happen", "npm:13.0.1"],\
           ["nopt", "npm:7.2.1"],\
@@ -7276,6 +7224,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["p-map", "npm:4.0.0"],\
           ["aggregate-error", "npm:3.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["package-json-from-dist", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../../../../cache/others/berry/cache/package-json-from-dist-npm-1.0.0-961f0fcb3b-10c0.zip/node_modules/package-json-from-dist/",\
+        "packageDependencies": [\
+          ["package-json-from-dist", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7835,7 +7792,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/resolve-patch-4254c24959-10c0.zip/node_modules/resolve/",\
         "packageDependencies": [\
           ["resolve", "patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"],\
-          ["is-core-module", "npm:2.13.1"],\
+          ["is-core-module", "npm:2.14.0"],\
           ["path-parse", "npm:1.0.7"],\
           ["supports-preserve-symlinks-flag", "npm:1.0.0"]\
         ],\
