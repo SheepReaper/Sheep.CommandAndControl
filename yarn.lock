@@ -1728,10 +1728,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ckeditor/ckeditor5-vue@npm:5.1.0":
-  version: 5.1.0
-  resolution: "@ckeditor/ckeditor5-vue@npm:5.1.0"
-  checksum: 10c0/156fc64c9ef61512965775d33f9caa2c7f5ad10ebc9e8532bd5647e1b261505f919d39492c98a227bd335aaec60fda6d5123510d31d97ad9ce4a0a9daca5f74d
+"@ckeditor/ckeditor5-vue@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@ckeditor/ckeditor5-vue@npm:6.0.0"
+  dependencies:
+    lodash-es: "npm:^4.17.21"
+  peerDependencies:
+    ckeditor5: ">=42.0.0 || ^0.0.0-nightly"
+    vue: ^3.0.0
+  checksum: 10c0/d514546efc69cc7a45565d7f6d220e53eb2eedba4ede3055706b8fd816e216431a88c5be1bbd88779d06badd9fcb202e7fba74dfbabf83e4add4af66dd80a5fc
   languageName: node
   linkType: hard
 
@@ -4959,7 +4964,7 @@ __metadata:
     "@babel/core": "npm:7.25.2"
     "@babel/eslint-parser": "npm:7.25.1"
     "@ckeditor/ckeditor5-build-classic": "npm:40.2.0"
-    "@ckeditor/ckeditor5-vue": "npm:5.1.0"
+    "@ckeditor/ckeditor5-vue": "npm:6.0.0"
     "@popperjs/core": "npm:2.11.8"
     "@prettier/plugin-pug": "npm:3.0.0"
     "@types/node": "npm:20.14.14"
@@ -4999,7 +5004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash-es@npm:4.17.21":
+"lodash-es@npm:4.17.21, lodash-es@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash-es@npm:4.17.21"
   checksum: 10c0/fb407355f7e6cd523a9383e76e6b455321f0f153a6c9625e21a8827d10c54c2a2341bd2ae8d034358b60e07325e1330c14c224ff582d04612a46a4f0479ff2f2
