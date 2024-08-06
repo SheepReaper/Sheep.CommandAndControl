@@ -16,7 +16,7 @@
     "@popperjs/core": "2.11.8",
     "axios": "1.7.3",
     "bootstrap": "5.3.3",
-    "vue": "3.4.35",
+    "vue": "3.4.36",
     "vue-router": "4.4.2",
     "vuex": "4.1.0"
   },
@@ -29,7 +29,7 @@
     "@typescript-eslint/parser": "7.18.0",
     "@vitejs/plugin-vue": "5.1.2",
     "@vue/babel-preset-app": "5.0.8",
-    "@vue/compiler-sfc": "3.4.35",
+    "@vue/compiler-sfc": "3.4.36",
     "@vue/eslint-config-prettier": "9.0.0",
     "@vue/eslint-config-typescript": "12.0.0",
     "dropzone": "5.9.3",
