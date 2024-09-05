@@ -2287,12 +2287,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.16.3":
-  version: 20.16.3
-  resolution: "@types/node@npm:20.16.3"
+"@types/node@npm:20.16.5":
+  version: 20.16.5
+  resolution: "@types/node@npm:20.16.5"
   dependencies:
     undici-types: "npm:~6.19.2"
-  checksum: 10c0/907c01d58ae36695fbed0b101e7a14cc2e0c5b9b2ba7904ef21cef093e4aac0649ac2a7a283fc94e19311dd0551d778445dd45fcf2d8bd45c494c9ecd802de69
+  checksum: 10c0/6af7994129815010bcbc4cf8221865559c8116ff43e74a6549525c2108267596fc2d18aff5d5ecfe089fb60a119f975631343e2c65c52bfa0955ed9dc56733d6
   languageName: node
   linkType: hard
 
@@ -4795,7 +4795,7 @@ __metadata:
     "@ckeditor/ckeditor5-vue": "npm:5.1.0"
     "@popperjs/core": "npm:2.11.8"
     "@prettier/plugin-pug": "npm:3.0.0"
-    "@types/node": "npm:20.16.3"
+    "@types/node": "npm:20.16.5"
     "@typescript-eslint/eslint-plugin": "npm:7.18.0"
     "@typescript-eslint/parser": "npm:7.18.0"
     "@vitejs/plugin-vue": "npm:5.1.3"
