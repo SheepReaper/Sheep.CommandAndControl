@@ -40,7 +40,7 @@
     "pug": "3.0.3",
     "rollup": "4.21.2",
     "rollup-plugin-pug": "1.1.1",
-    "sass": "1.77.8",
+    "sass": "1.78.0",
     "typescript": "5.5.4",
     "vite": "5.4.3",
     "vite-plugin-pug": "0.3.2"
