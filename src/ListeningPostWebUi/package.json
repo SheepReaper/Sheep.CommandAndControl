@@ -23,7 +23,7 @@
   "devDependencies": {
     "@babel/core": "7.25.2",
     "@babel/eslint-parser": "7.25.1",
-    "@prettier/plugin-pug": "3.0.0",
+    "@prettier/plugin-pug": "3.1.0",
     "@types/node": "20.16.5",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
