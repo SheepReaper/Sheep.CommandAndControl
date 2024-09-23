@@ -4775,17 +4775,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["anymatch", [\
-      ["npm:3.1.3", {\
-        "packageLocation": "../../../../cache/others/berry/cache/anymatch-npm-3.1.3-bc81d103b1-10c0.zip/node_modules/anymatch/",\
-        "packageDependencies": [\
-          ["anymatch", "npm:3.1.3"],\
-          ["normalize-path", "npm:3.0.0"],\
-          ["picomatch", "npm:2.3.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["argparse", [\
       ["npm:2.0.1", {\
         "packageLocation": "../../../../cache/others/berry/cache/argparse-npm-2.0.1-faff7999e6-10c0.zip/node_modules/argparse/",\
@@ -4973,15 +4962,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../cache/others/berry/cache/balanced-match-npm-1.0.2-a53c126459-10c0.zip/node_modules/balanced-match/",\
         "packageDependencies": [\
           ["balanced-match", "npm:1.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["binary-extensions", [\
-      ["npm:2.3.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/binary-extensions-npm-2.3.0-bd3f20d865-10c0.zip/node_modules/binary-extensions/",\
-        "packageDependencies": [\
-          ["binary-extensions", "npm:2.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5180,18 +5160,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["chokidar", [\
-      ["npm:3.6.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/chokidar-npm-3.6.0-3c413a828f-10c0.zip/node_modules/chokidar/",\
+      ["npm:4.0.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/chokidar-npm-4.0.1-989df9ae3c-10c0.zip/node_modules/chokidar/",\
         "packageDependencies": [\
-          ["chokidar", "npm:3.6.0"],\
-          ["anymatch", "npm:3.1.3"],\
-          ["braces", "npm:3.0.3"],\
-          ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
-          ["glob-parent", "npm:5.1.2"],\
-          ["is-binary-path", "npm:2.1.0"],\
-          ["is-glob", "npm:4.0.3"],\
-          ["normalize-path", "npm:3.0.0"],\
-          ["readdirp", "npm:3.6.0"]\
+          ["chokidar", "npm:4.0.1"],\
+          ["readdirp", "npm:4.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6480,16 +6453,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["is-binary-path", [\
-      ["npm:2.1.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/is-binary-path-npm-2.1.0-e61d46f557-10c0.zip/node_modules/is-binary-path/",\
-        "packageDependencies": [\
-          ["is-binary-path", "npm:2.1.0"],\
-          ["binary-extensions", "npm:2.3.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["is-buffer", [\
       ["npm:1.1.6", {\
         "packageLocation": "../../../../cache/others/berry/cache/is-buffer-npm-1.1.6-08199d9ccc-10c0.zip/node_modules/is-buffer/",\
@@ -6800,7 +6763,7 @@ const RAW_RUNTIME_STATE =
           ["pug", "npm:3.0.3"],\
           ["rollup", "npm:4.21.3"],\
           ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
-          ["sass", "npm:1.78.0"],\
+          ["sass", "npm:1.79.3"],\
           ["typescript", "patch:typescript@npm%3A5.6.2#optional!builtin<compat/typescript>::version=5.6.2&hash=8c6c40"],\
           ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.4.7"],\
           ["vite-plugin-pug", "npm:0.3.2"],\
@@ -7155,15 +7118,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["nopt", "npm:7.2.1"],\
           ["abbrev", "npm:2.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["normalize-path", [\
-      ["npm:3.0.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/normalize-path-npm-3.0.0-658ba7d77f-10c0.zip/node_modules/normalize-path/",\
-        "packageDependencies": [\
-          ["normalize-path", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7728,11 +7682,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["readdirp", [\
-      ["npm:3.6.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/readdirp-npm-3.6.0-f950cc74ab-10c0.zip/node_modules/readdirp/",\
+      ["npm:4.0.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/readdirp-npm-4.0.1-17b55c8032-10c0.zip/node_modules/readdirp/",\
         "packageDependencies": [\
-          ["readdirp", "npm:3.6.0"],\
-          ["picomatch", "npm:2.3.1"]\
+          ["readdirp", "npm:4.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7972,11 +7925,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.78.0", {\
-        "packageLocation": "../../../../cache/others/berry/cache/sass-npm-1.78.0-4aa9d2730a-10c0.zip/node_modules/sass/",\
+      ["npm:1.79.3", {\
+        "packageLocation": "../../../../cache/others/berry/cache/sass-npm-1.79.3-2f182844db-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
-          ["sass", "npm:1.78.0"],\
-          ["chokidar", "npm:3.6.0"],\
+          ["sass", "npm:1.79.3"],\
+          ["chokidar", "npm:4.0.1"],\
           ["immutable", "npm:4.3.7"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
@@ -8534,7 +8487,7 @@ const RAW_RUNTIME_STATE =
           ["lightningcss", null],\
           ["postcss", "npm:8.4.47"],\
           ["rollup", "npm:4.21.3"],\
-          ["sass", "npm:1.78.0"],\
+          ["sass", "npm:1.79.3"],\
           ["sass-embedded", null],\
           ["stylus", null],\
           ["sugarss", null],\
