@@ -43,6 +43,6 @@
     "sass": "1.79.4",
     "typescript": "5.6.2",
     "vite": "5.4.8",
-    "vite-plugin-pug": "0.3.2"
+    "vite-plugin-pug": "0.4.1"
   }
 }

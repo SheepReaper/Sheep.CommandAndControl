@@ -4939,7 +4939,7 @@ __metadata:
     sass: "npm:1.79.4"
     typescript: "npm:5.6.2"
     vite: "npm:5.4.8"
-    vite-plugin-pug: "npm:0.3.2"
+    vite-plugin-pug: "npm:0.4.1"
     vue: "npm:3.5.10"
     vue-router: "npm:4.4.5"
     vuex: "npm:4.1.0"
@@ -5726,7 +5726,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pug@npm:3.0.3, pug@npm:^3.0.2":
+"pug@npm:3.0.3, pug@npm:^3.0.3":
   version: 3.0.3
   resolution: "pug@npm:3.0.3"
   dependencies:
@@ -6556,13 +6556,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-plugin-pug@npm:0.3.2":
-  version: 0.3.2
-  resolution: "vite-plugin-pug@npm:0.3.2"
+"vite-plugin-pug@npm:0.4.1":
+  version: 0.4.1
+  resolution: "vite-plugin-pug@npm:0.4.1"
   dependencies:
     picocolors: "npm:~1"
-    pug: "npm:^3.0.2"
-  checksum: 10c0/6869c360bf42a06f978d82f8227e6d4946053c2b41dfae8ffd6f0fc5fa09b79d8bdce766a5c8a7825f3c56416669a9efc4cc810d1835d9a3c7b194a428c9e964
+    pug: "npm:^3.0.3"
+  checksum: 10c0/003a283ea8225aacb1709e19e62eca7d87875d60718af5bf2082b789ac915db2ce228aa66a2e7d9753fca275108e7922d408e0203a88a0453f187b76a169da76
   languageName: node
   linkType: hard
 

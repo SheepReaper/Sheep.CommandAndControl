@@ -6885,7 +6885,7 @@ const RAW_RUNTIME_STATE =
           ["sass", "npm:1.79.4"],\
           ["typescript", "patch:typescript@npm%3A5.6.2#optional!builtin<compat/typescript>::version=5.6.2&hash=8c6c40"],\
           ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.4.8"],\
-          ["vite-plugin-pug", "npm:0.3.2"],\
+          ["vite-plugin-pug", "npm:0.4.1"],\
           ["vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.5.10"],\
           ["vue-router", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.4.5"],\
           ["vuex", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:4.1.0"]\
@@ -8658,10 +8658,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["vite-plugin-pug", [\
-      ["npm:0.3.2", {\
-        "packageLocation": "../../../../cache/others/berry/cache/vite-plugin-pug-npm-0.3.2-519205f96e-10c0.zip/node_modules/vite-plugin-pug/",\
+      ["npm:0.4.1", {\
+        "packageLocation": "../../../../cache/others/berry/cache/vite-plugin-pug-npm-0.4.1-f7907b38aa-10c0.zip/node_modules/vite-plugin-pug/",\
         "packageDependencies": [\
-          ["vite-plugin-pug", "npm:0.3.2"],\
+          ["vite-plugin-pug", "npm:0.4.1"],\
           ["picocolors", "npm:1.1.0"],\
           ["pug", "npm:3.0.3"]\
         ],\
