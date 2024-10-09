@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0@sha256:30d8619d9a4f68508d9b17fc2088e857e629d3f9ceaaf57c22d6747f7326d89e AS base
+FROM mcr.microsoft.com/dotnet/aspnet:9.0@sha256:a54b9e95a8e30028bd0a862dfc1a67ee36e71f7900b25aed37c9119c55682c7f AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0@sha256:df188b6cb642450d83d3d857a992bbbef248212fd456dcb9ae582ddd1bb96dce AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0@sha256:ecdbce3ac370d065b4e34bdb367ed8ac10e24d2af630716f9828bf24b360691c AS build
 WORKDIR /src
 COPY ["ListeningPostApiServer/ListeningPostApiServer.csproj" "ListeningPostApiServer/"]
 RUN dotnet restore "ListeningPostApiServer/ListeningPostApiServer.csproj"
