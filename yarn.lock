@@ -1631,6 +1631,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ckeditor/ckeditor5-integrations-common@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@ckeditor/ckeditor5-integrations-common@npm:2.1.0"
+  peerDependencies:
+    ckeditor5: ">=42.0.0 || ^0.0.0-nightly"
+  checksum: 10c0/4c18fc6e89731b9fa9cffd4c5d452f94774947d17b65877eed5a1b9024004ef0b16572352001f39a715a93d2bbfffce9f0c7a18f7070da4dcccb407f88e7687d
+  languageName: node
+  linkType: hard
+
 "@ckeditor/ckeditor5-link@npm:40.2.0":
   version: 40.2.0
   resolution: "@ckeditor/ckeditor5-link@npm:40.2.0"
@@ -1759,10 +1768,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ckeditor/ckeditor5-vue@npm:5.1.0":
-  version: 5.1.0
-  resolution: "@ckeditor/ckeditor5-vue@npm:5.1.0"
-  checksum: 10c0/156fc64c9ef61512965775d33f9caa2c7f5ad10ebc9e8532bd5647e1b261505f919d39492c98a227bd335aaec60fda6d5123510d31d97ad9ce4a0a9daca5f74d
+"@ckeditor/ckeditor5-vue@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@ckeditor/ckeditor5-vue@npm:7.2.0"
+  dependencies:
+    "@ckeditor/ckeditor5-integrations-common": "npm:^2.1.0"
+    lodash-es: "npm:^4.17.21"
+  peerDependencies:
+    ckeditor5: ">=42.0.0 || ^0.0.0-nightly"
+    vue: ^3.4.0
+  checksum: 10c0/889d6cdc4b7f4bff2f4299ab49bfeddb30f620d7986f327d1bf06c340ebd3d3032da39e7b42877c73c82848fd376ff4974338c54a841452aa39bac0563a640a7
   languageName: node
   linkType: hard
 
@@ -4911,7 +4926,7 @@ __metadata:
     "@babel/core": "npm:7.25.8"
     "@babel/eslint-parser": "npm:7.25.8"
     "@ckeditor/ckeditor5-build-classic": "npm:40.2.0"
-    "@ckeditor/ckeditor5-vue": "npm:5.1.0"
+    "@ckeditor/ckeditor5-vue": "npm:7.2.0"
     "@popperjs/core": "npm:2.11.8"
     "@prettier/plugin-pug": "npm:3.1.0"
     "@types/node": "npm:20.16.13"
@@ -4951,7 +4966,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash-es@npm:4.17.21":
+"lodash-es@npm:4.17.21, lodash-es@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash-es@npm:4.17.21"
   checksum: 10c0/fb407355f7e6cd523a9383e76e6b455321f0f153a6c9625e21a8827d10c54c2a2341bd2ae8d034358b60e07325e1330c14c224ff582d04612a46a4f0479ff2f2
