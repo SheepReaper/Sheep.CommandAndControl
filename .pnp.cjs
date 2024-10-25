@@ -6991,7 +6991,7 @@ const RAW_RUNTIME_STATE =
           ["pug", "npm:3.0.3"],\
           ["rollup", "npm:4.24.0"],\
           ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
-          ["sass", "npm:1.80.3"],\
+          ["sass", "npm:1.80.4"],\
           ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"],\
           ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.4.9"],\
           ["vite-plugin-pug", "npm:0.4.1"],\
@@ -8172,10 +8172,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.80.3", {\
-        "packageLocation": "../../../../cache/others/berry/cache/sass-npm-1.80.3-4465a3ce7e-10c0.zip/node_modules/sass/",\
+      ["npm:1.80.4", {\
+        "packageLocation": "../../../../cache/others/berry/cache/sass-npm-1.80.4-604cd1b502-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
-          ["sass", "npm:1.80.3"],\
+          ["sass", "npm:1.80.4"],\
           ["@parcel/watcher", "npm:2.4.1"],\
           ["chokidar", "npm:4.0.1"],\
           ["immutable", "npm:4.3.7"],\
@@ -8735,7 +8735,7 @@ const RAW_RUNTIME_STATE =
           ["lightningcss", null],\
           ["postcss", "npm:8.4.47"],\
           ["rollup", "npm:4.24.0"],\
-          ["sass", "npm:1.80.3"],\
+          ["sass", "npm:1.80.4"],\
           ["sass-embedded", null],\
           ["stylus", null],\
           ["sugarss", null],\
