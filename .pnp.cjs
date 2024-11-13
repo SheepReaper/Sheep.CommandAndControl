@@ -6832,10 +6832,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["immutable", [\
-      ["npm:4.3.7", {\
-        "packageLocation": "../../../../cache/others/berry/cache/immutable-npm-4.3.7-a76ac3621b-10c0.zip/node_modules/immutable/",\
+      ["npm:5.0.2", {\
+        "packageLocation": "../../../../cache/others/berry/cache/immutable-npm-5.0.2-d7d3c3ff6b-10c0.zip/node_modules/immutable/",\
         "packageDependencies": [\
-          ["immutable", "npm:4.3.7"]\
+          ["immutable", "npm:5.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7203,7 +7203,7 @@ const RAW_RUNTIME_STATE =
           ["pug", "npm:3.0.3"],\
           ["rollup", "npm:4.24.4"],\
           ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
-          ["sass", "npm:1.80.6"],\
+          ["sass", "npm:1.80.7"],\
           ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"],\
           ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.4.10"],\
           ["vite-plugin-pug", "npm:0.4.1"],\
@@ -8411,13 +8411,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.80.6", {\
-        "packageLocation": "../../../../cache/others/berry/cache/sass-npm-1.80.6-30d57f2c14-10c0.zip/node_modules/sass/",\
+      ["npm:1.80.7", {\
+        "packageLocation": "../../../../cache/others/berry/cache/sass-npm-1.80.7-f3e7fc66fb-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
-          ["sass", "npm:1.80.6"],\
+          ["sass", "npm:1.80.7"],\
           ["@parcel/watcher", "npm:2.4.1"],\
           ["chokidar", "npm:4.0.1"],\
-          ["immutable", "npm:4.3.7"],\
+          ["immutable", "npm:5.0.2"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -8974,7 +8974,7 @@ const RAW_RUNTIME_STATE =
           ["lightningcss", null],\
           ["postcss", "npm:8.4.47"],\
           ["rollup", "npm:4.24.0"],\
-          ["sass", "npm:1.80.6"],\
+          ["sass", "npm:1.80.7"],\
           ["sass-embedded", null],\
           ["stylus", null],\
           ["sugarss", null],\
