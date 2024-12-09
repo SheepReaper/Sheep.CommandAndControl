@@ -3347,16 +3347,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/eslint-config-prettier@npm:9.0.0":
-  version: 9.0.0
-  resolution: "@vue/eslint-config-prettier@npm:9.0.0"
+"@vue/eslint-config-prettier@npm:10.1.0":
+  version: 10.1.0
+  resolution: "@vue/eslint-config-prettier@npm:10.1.0"
   dependencies:
-    eslint-config-prettier: "npm:^9.0.0"
-    eslint-plugin-prettier: "npm:^5.0.0"
+    eslint-config-prettier: "npm:^9.1.0"
+    eslint-plugin-prettier: "npm:^5.2.1"
   peerDependencies:
-    eslint: ">= 8.0.0"
+    eslint: ">= 8.21.0"
     prettier: ">= 3.0.0"
-  checksum: 10c0/465fe43e7a4f3181e73298df55cc5ba1de4e4349b6d859ef38e52f82406a0eac938809721b3a0f026b56ae533d51b45c4a2ecb6112d78e8d6e6ee3ca0892bba6
+  checksum: 10c0/b3216e10fe7644374fca8025b8f8be253cd501c484a9bbe9d71619fe5a06552b3d9e6292827103f8dc1162f11f697b3f6662aa621b38aec5b4dd19b75769b15b
   languageName: node
   linkType: hard
 
@@ -4352,7 +4352,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^9.0.0":
+"eslint-config-prettier@npm:^9.1.0":
   version: 9.1.0
   resolution: "eslint-config-prettier@npm:9.1.0"
   peerDependencies:
@@ -4363,7 +4363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:5.2.1, eslint-plugin-prettier@npm:^5.0.0":
+"eslint-plugin-prettier@npm:5.2.1, eslint-plugin-prettier@npm:^5.2.1":
   version: 5.2.1
   resolution: "eslint-plugin-prettier@npm:5.2.1"
   dependencies:
@@ -5288,7 +5288,7 @@ __metadata:
     "@vitejs/plugin-vue": "npm:5.2.1"
     "@vue/babel-preset-app": "npm:5.0.8"
     "@vue/compiler-sfc": "npm:3.5.13"
-    "@vue/eslint-config-prettier": "npm:9.0.0"
+    "@vue/eslint-config-prettier": "npm:10.1.0"
     "@vue/eslint-config-typescript": "npm:12.0.0"
     axios: "npm:1.7.9"
     bootstrap: "npm:5.3.3"
