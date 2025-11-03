@@ -5432,17 +5432,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["bootstrap", [\
-      ["npm:5.3.3", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/bootstrap-npm-5.3.3-da08e2f0fe-10c0.zip/node_modules/bootstrap/",\
+      ["npm:5.3.8", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/bootstrap-npm-5.3.8-b7bef82d06-10c0.zip/node_modules/bootstrap/",\
         "packageDependencies": [\
-          ["bootstrap", "npm:5.3.3"]\
+          ["bootstrap", "npm:5.3.8"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.3", {\
-        "packageLocation": "./.yarn/__virtual__/bootstrap-virtual-6c3b0c7eb0/7/runner/cache/others/berry/cache/bootstrap-npm-5.3.3-da08e2f0fe-10c0.zip/node_modules/bootstrap/",\
+      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.8", {\
+        "packageLocation": "./.yarn/__virtual__/bootstrap-virtual-e3a0e94fee/7/runner/cache/others/berry/cache/bootstrap-npm-5.3.8-b7bef82d06-10c0.zip/node_modules/bootstrap/",\
         "packageDependencies": [\
-          ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.3"],\
+          ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.8"],\
           ["@popperjs/core", "npm:2.11.8"],\
           ["@types/popperjs__core", null]\
         ],\
@@ -7300,7 +7300,7 @@ const RAW_RUNTIME_STATE =
           ["@vue/eslint-config-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:9.0.0"],\
           ["@vue/eslint-config-typescript", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:12.0.0"],\
           ["axios", "npm:1.12.0"],\
-          ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.3"],\
+          ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.8"],\
           ["dropzone", "npm:5.9.3"],\
           ["eslint", "npm:8.57.1"],\
           ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.2.1"],\
