@@ -2553,11 +2553,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@babel/runtime", [\
-      ["npm:7.25.7", {\
-        "packageLocation": "../../.yarn/berry/cache/@babel-runtime-npm-7.25.7-67dab27f3f-10c0.zip/node_modules/@babel/runtime/",\
+      ["npm:7.28.4", {\
+        "packageLocation": "../../.yarn/berry/cache/@babel-runtime-npm-7.28.4-31bc1b0001-10c0.zip/node_modules/@babel/runtime/",\
         "packageDependencies": [\
-          ["@babel/runtime", "npm:7.25.7"],\
-          ["regenerator-runtime", "npm:0.14.1"]\
+          ["@babel/runtime", "npm:7.28.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4612,7 +4611,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/plugin-syntax-jsx", "virtual:76d161ff305117c9f30b4e240928d2adc9a270cbca98233425a6c88b8ceda2072a44259b9def940410bdc241bc54bd88486a83c8bc3d84c8c27b5377e5d2d01b#npm:7.25.7"],\
           ["@babel/plugin-transform-runtime", "virtual:76d161ff305117c9f30b4e240928d2adc9a270cbca98233425a6c88b8ceda2072a44259b9def940410bdc241bc54bd88486a83c8bc3d84c8c27b5377e5d2d01b#npm:7.25.7"],\
           ["@babel/preset-env", "virtual:76d161ff305117c9f30b4e240928d2adc9a270cbca98233425a6c88b8ceda2072a44259b9def940410bdc241bc54bd88486a83c8bc3d84c8c27b5377e5d2d01b#npm:7.25.7"],\
-          ["@babel/runtime", "npm:7.25.7"],\
+          ["@babel/runtime", "npm:7.28.4"],\
           ["@types/babel__core", null],\
           ["@types/core-js", null],\
           ["@types/vue", null],\
@@ -8320,13 +8319,6 @@ const RAW_RUNTIME_STATE =
           ["regenerator-runtime", "npm:0.11.1"]\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["npm:0.14.1", {\
-        "packageLocation": "../../.yarn/berry/cache/regenerator-runtime-npm-0.14.1-a6c97c609a-10c0.zip/node_modules/regenerator-runtime/",\
-        "packageDependencies": [\
-          ["regenerator-runtime", "npm:0.14.1"]\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["regenerator-transform", [\
@@ -8334,7 +8326,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/regenerator-transform-npm-0.15.2-109e57a69f-10c0.zip/node_modules/regenerator-transform/",\
         "packageDependencies": [\
           ["regenerator-transform", "npm:0.15.2"],\
-          ["@babel/runtime", "npm:7.25.7"]\
+          ["@babel/runtime", "npm:7.28.4"]\
         ],\
         "linkType": "HARD"\
       }]\
