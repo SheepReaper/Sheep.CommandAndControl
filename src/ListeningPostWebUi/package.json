@@ -33,7 +33,7 @@
     "@vue/eslint-config-prettier": "9.0.0",
     "@vue/eslint-config-typescript": "12.0.0",
     "dropzone": "5.9.3",
-    "eslint": "8.57.1",
+    "eslint": "10.0.0",
     "eslint-plugin-prettier": "5.5.4",
     "eslint-plugin-vue": "9.33.0",
     "prettier": "3.6.2",
