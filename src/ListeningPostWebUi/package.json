@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "44.3.0",
-    "@ckeditor/ckeditor5-vue": "5.1.0",
+    "@ckeditor/ckeditor5-vue": "7.3.1",
     "@popperjs/core": "2.11.8",
     "axios": "1.13.5",
     "bootstrap": "5.3.8",
