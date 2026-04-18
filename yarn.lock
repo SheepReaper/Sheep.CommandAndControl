@@ -2022,6 +2022,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ckeditor/ckeditor5-integrations-common@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@ckeditor/ckeditor5-integrations-common@npm:2.3.1"
+  peerDependencies:
+    ckeditor5: ">=42.0.0 || ^0.0.0-nightly"
+  checksum: 10c0/307b0a74075364e68a23204028e1fa946c48572fb13686d73ecf7b5e3900005cb2177f9e9f0e8eb54b1d263e18c5e68c4a370493ad05b2d276859ed36e7c95a6
+  languageName: node
+  linkType: hard
+
 "@ckeditor/ckeditor5-language@npm:44.3.0":
   version: 44.3.0
   resolution: "@ckeditor/ckeditor5-language@npm:44.3.0"
@@ -2346,10 +2355,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ckeditor/ckeditor5-vue@npm:5.1.0":
-  version: 5.1.0
-  resolution: "@ckeditor/ckeditor5-vue@npm:5.1.0"
-  checksum: 10c0/156fc64c9ef61512965775d33f9caa2c7f5ad10ebc9e8532bd5647e1b261505f919d39492c98a227bd335aaec60fda6d5123510d31d97ad9ce4a0a9daca5f74d
+"@ckeditor/ckeditor5-vue@npm:7.4.2":
+  version: 7.4.2
+  resolution: "@ckeditor/ckeditor5-vue@npm:7.4.2"
+  dependencies:
+    "@ckeditor/ckeditor5-integrations-common": "npm:^2.3.1"
+    lodash-es: "npm:^4.18.1"
+  peerDependencies:
+    ckeditor5: ">=42.0.0 || ^0.0.0-nightly || ^0.0.0-internal"
+    vue: ^3.4.0
+  checksum: 10c0/76998e2a91b36b5a4da421ae9d695a103088d80a6764e23f48c9b6a9621458de3919ff3b7f3794b6cc0903b666a638f43eb3caf571c9a1f10fbe590ce4f58ac0
   languageName: node
   linkType: hard
 
@@ -6122,7 +6137,7 @@ __metadata:
     "@babel/core": "npm:7.28.5"
     "@babel/eslint-parser": "npm:7.28.5"
     "@ckeditor/ckeditor5-build-classic": "npm:44.3.0"
-    "@ckeditor/ckeditor5-vue": "npm:5.1.0"
+    "@ckeditor/ckeditor5-vue": "npm:7.4.2"
     "@popperjs/core": "npm:2.11.8"
     "@prettier/plugin-pug": "npm:3.4.2"
     "@types/node": "npm:20.19.25"
@@ -6166,6 +6181,13 @@ __metadata:
   version: 4.17.21
   resolution: "lodash-es@npm:4.17.21"
   checksum: 10c0/fb407355f7e6cd523a9383e76e6b455321f0f153a6c9625e21a8827d10c54c2a2341bd2ae8d034358b60e07325e1330c14c224ff582d04612a46a4f0479ff2f2
+  languageName: node
+  linkType: hard
+
+"lodash-es@npm:^4.18.1":
+  version: 4.18.1
+  resolution: "lodash-es@npm:4.18.1"
+  checksum: 10c0/35d4dcf87ef07f8d090f409447575800108057e360b445f590d0d25d09e3d1e33a163d2fc100d4d072b0f901d5e2fc533cd7c4bfd8eeb38a06abec693823c8b8
   languageName: node
   linkType: hard
 
