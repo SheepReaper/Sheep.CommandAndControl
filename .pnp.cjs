@@ -6999,25 +6999,25 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["npm:5.5.4", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/eslint-plugin-prettier-npm-5.5.4-401c52477f-10c0.zip/node_modules/eslint-plugin-prettier/",\
+      ["npm:5.5.5", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/eslint-plugin-prettier-npm-5.5.5-60d71e7039-10c0.zip/node_modules/eslint-plugin-prettier/",\
         "packageDependencies": [\
-          ["eslint-plugin-prettier", "npm:5.5.4"]\
+          ["eslint-plugin-prettier", "npm:5.5.5"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.5.4", {\
-        "packageLocation": "./.yarn/__virtual__/eslint-plugin-prettier-virtual-e79e93743c/7/runner/cache/others/berry/cache/eslint-plugin-prettier-npm-5.5.4-401c52477f-10c0.zip/node_modules/eslint-plugin-prettier/",\
+      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.5.5", {\
+        "packageLocation": "./.yarn/__virtual__/eslint-plugin-prettier-virtual-1db98166a5/7/runner/cache/others/berry/cache/eslint-plugin-prettier-npm-5.5.5-60d71e7039-10c0.zip/node_modules/eslint-plugin-prettier/",\
         "packageDependencies": [\
           ["@types/eslint", null],\
           ["@types/eslint-config-prettier", null],\
           ["@types/prettier", null],\
           ["eslint", "npm:8.57.1"],\
           ["eslint-config-prettier", null],\
-          ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.5.4"],\
+          ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.5.5"],\
           ["prettier", "npm:3.6.2"],\
-          ["prettier-linter-helpers", "npm:1.0.0"],\
-          ["synckit", "npm:0.11.11"]\
+          ["prettier-linter-helpers", "npm:1.0.1"],\
+          ["synckit", "npm:0.11.12"]\
         ],\
         "packagePeers": [\
           "@types/eslint-config-prettier",\
@@ -8113,7 +8113,7 @@ const RAW_RUNTIME_STATE =
           ["bootstrap", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.3.8"],\
           ["dropzone", "npm:5.9.3"],\
           ["eslint", "npm:8.57.1"],\
-          ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.5.4"],\
+          ["eslint-plugin-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.5.5"],\
           ["eslint-plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:9.33.0"],\
           ["listeningpostwebui", "workspace:src/ListeningPostWebUi"],\
           ["prettier", "npm:3.6.2"],\
@@ -8792,6 +8792,14 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["fast-diff", "npm:1.3.0"],\
           ["prettier-linter-helpers", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/prettier-linter-helpers-npm-1.0.1-269f5b4fc0-10c0.zip/node_modules/prettier-linter-helpers/",\
+        "packageDependencies": [\
+          ["fast-diff", "npm:1.3.0"],\
+          ["prettier-linter-helpers", "npm:1.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9653,11 +9661,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["synckit", [\
-      ["npm:0.11.11", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/synckit-npm-0.11.11-415ad819d7-10c0.zip/node_modules/synckit/",\
+      ["npm:0.11.12", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/synckit-npm-0.11.12-cdf9ac5b7c-10c0.zip/node_modules/synckit/",\
         "packageDependencies": [\
           ["@pkgr/core", "npm:0.2.9"],\
-          ["synckit", "npm:0.11.11"]\
+          ["synckit", "npm:0.11.12"]\
         ],\
         "linkType": "HARD"\
       }],\
