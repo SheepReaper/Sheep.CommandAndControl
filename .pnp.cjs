@@ -8117,7 +8117,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:9.33.0"],\
           ["listeningpostwebui", "workspace:src/ListeningPostWebUi"],\
           ["prettier", "npm:3.6.2"],\
-          ["pug", "npm:3.0.3"],\
+          ["pug", "npm:3.0.4"],\
           ["rollup", "npm:4.59.0"],\
           ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
           ["sass", "npm:1.94.2"],\
@@ -8873,6 +8873,21 @@ const RAW_RUNTIME_STATE =
           ["pug-strip-comments", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/pug-npm-3.0.4-d7b0b8a8da-10c0.zip/node_modules/pug/",\
+        "packageDependencies": [\
+          ["pug", "npm:3.0.4"],\
+          ["pug-code-gen", "npm:3.0.4"],\
+          ["pug-filters", "npm:4.0.0"],\
+          ["pug-lexer", "npm:5.0.1"],\
+          ["pug-linker", "npm:4.0.0"],\
+          ["pug-load", "npm:3.0.0"],\
+          ["pug-parser", "npm:6.0.0"],\
+          ["pug-runtime", "npm:3.0.1"],\
+          ["pug-strip-comments", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["pug-attrs", [\
@@ -8921,6 +8936,21 @@ const RAW_RUNTIME_STATE =
           ["js-stringify", "npm:1.0.2"],\
           ["pug-attrs", "npm:3.0.0"],\
           ["pug-code-gen", "npm:3.0.3"],\
+          ["pug-error", "npm:2.1.0"],\
+          ["pug-runtime", "npm:3.0.1"],\
+          ["void-elements", "npm:3.1.0"],\
+          ["with", "npm:7.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:3.0.4", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/pug-code-gen-npm-3.0.4-74cca8f307-10c0.zip/node_modules/pug-code-gen/",\
+        "packageDependencies": [\
+          ["constantinople", "npm:4.0.1"],\
+          ["doctypes", "npm:1.1.0"],\
+          ["js-stringify", "npm:1.0.2"],\
+          ["pug-attrs", "npm:3.0.0"],\
+          ["pug-code-gen", "npm:3.0.4"],\
           ["pug-error", "npm:2.1.0"],\
           ["pug-runtime", "npm:3.0.1"],\
           ["void-elements", "npm:3.1.0"],\
