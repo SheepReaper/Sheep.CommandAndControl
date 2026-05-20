@@ -4,7 +4,7 @@
     "src/ListeningPostWebUi"
   ],
   "devDependencies": {
-    "@types/eslint": "8.56.12",
+    "@types/eslint": "9.6.1",
     "@types/prettier": "3.0.0",
     "eslint": "8.57.1",
     "prettier": "3.6.2",
