@@ -6358,11 +6358,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["chokidar", [\
-      ["npm:4.0.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/chokidar-npm-4.0.1-989df9ae3c-10c0.zip/node_modules/chokidar/",\
+      ["npm:5.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/chokidar-npm-5.0.0-2f70d31c86-10c0.zip/node_modules/chokidar/",\
         "packageDependencies": [\
-          ["chokidar", "npm:4.0.1"],\
-          ["readdirp", "npm:4.0.2"]\
+          ["chokidar", "npm:5.0.0"],\
+          ["readdirp", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7781,10 +7781,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["immutable", [\
-      ["npm:5.0.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/immutable-npm-5.0.2-d7d3c3ff6b-10c0.zip/node_modules/immutable/",\
+      ["npm:5.1.6", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/immutable-npm-5.1.6-827ccd5bc0-10c0.zip/node_modules/immutable/",\
         "packageDependencies": [\
-          ["immutable", "npm:5.0.2"]\
+          ["immutable", "npm:5.1.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8152,7 +8152,7 @@ const RAW_RUNTIME_STATE =
           ["pug", "npm:3.0.4"],\
           ["rollup", "npm:4.62.0"],\
           ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
-          ["sass", "npm:1.94.2"],\
+          ["sass", "npm:1.101.0"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.4.3"],\
           ["vite-plugin-pug", "npm:0.4.1"],\
@@ -9193,10 +9193,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["readdirp", [\
-      ["npm:4.0.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/readdirp-npm-4.0.2-8001f0febc-10c0.zip/node_modules/readdirp/",\
+      ["npm:5.0.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/readdirp-npm-5.0.0-82b01a282e-10c0.zip/node_modules/readdirp/",\
         "packageDependencies": [\
-          ["readdirp", "npm:4.0.2"]\
+          ["readdirp", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9481,13 +9481,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.94.2", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.94.2-25ad66b92d-10c0.zip/node_modules/sass/",\
+      ["npm:1.101.0", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.101.0-ce15824a44-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
           ["@parcel/watcher", "npm:2.4.1"],\
-          ["chokidar", "npm:4.0.1"],\
-          ["immutable", "npm:5.0.2"],\
-          ["sass", "npm:1.94.2"],\
+          ["chokidar", "npm:5.0.0"],\
+          ["immutable", "npm:5.1.6"],\
+          ["sass", "npm:1.101.0"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -10087,7 +10087,7 @@ const RAW_RUNTIME_STATE =
           ["picomatch", "npm:4.0.4"],\
           ["postcss", "npm:8.5.9"],\
           ["rollup", "npm:4.60.1"],\
-          ["sass", "npm:1.94.2"],\
+          ["sass", "npm:1.101.0"],\
           ["sass-embedded", null],\
           ["stylus", null],\
           ["sugarss", null],\
