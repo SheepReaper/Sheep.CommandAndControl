@@ -4237,6 +4237,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@rolldown/pluginutils", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@rolldown-pluginutils-npm-1.0.1-165a2f27ab-10c0.zip/node_modules/@rolldown/pluginutils/",\
+        "packageDependencies": [\
+          ["@rolldown/pluginutils", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@rollup/rollup-android-arm-eabi", [\
       ["npm:4.60.1", {\
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-android-arm-eabi-npm-4.60.1-480aeeed32/node_modules/@rollup/rollup-android-arm-eabi/",\
@@ -5199,19 +5208,20 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@vitejs/plugin-vue", [\
-      ["npm:5.2.4", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@vitejs-plugin-vue-npm-5.2.4-157bde6453-10c0.zip/node_modules/@vitejs/plugin-vue/",\
+      ["npm:6.0.7", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/@vitejs-plugin-vue-npm-6.0.7-bbb56e53ea-10c0.zip/node_modules/@vitejs/plugin-vue/",\
         "packageDependencies": [\
-          ["@vitejs/plugin-vue", "npm:5.2.4"]\
+          ["@vitejs/plugin-vue", "npm:6.0.7"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.2.4", {\
-        "packageLocation": "./.yarn/__virtual__/@vitejs-plugin-vue-virtual-5a740bb3c7/7/runner/cache/others/berry/cache/@vitejs-plugin-vue-npm-5.2.4-157bde6453-10c0.zip/node_modules/@vitejs/plugin-vue/",\
+      ["virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.0.7", {\
+        "packageLocation": "./.yarn/__virtual__/@vitejs-plugin-vue-virtual-c553b1fbd8/7/runner/cache/others/berry/cache/@vitejs-plugin-vue-npm-6.0.7-bbb56e53ea-10c0.zip/node_modules/@vitejs/plugin-vue/",\
         "packageDependencies": [\
+          ["@rolldown/pluginutils", "npm:1.0.1"],\
           ["@types/vite", null],\
           ["@types/vue", null],\
-          ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.2.4"],\
+          ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.0.7"],\
           ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.4.3"],\
           ["vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:3.5.38"]\
         ],\
@@ -8136,7 +8146,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.19.43"],\
           ["@typescript-eslint/eslint-plugin", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.18.0"],\
           ["@typescript-eslint/parser", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:7.18.0"],\
-          ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.2.4"],\
+          ["@vitejs/plugin-vue", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.0.7"],\
           ["@vue/babel-preset-app", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:5.0.9"],\
           ["@vue/compiler-sfc", "npm:3.5.38"],\
           ["@vue/eslint-config-prettier", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:9.0.0"],\
