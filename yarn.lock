@@ -6334,7 +6334,7 @@ __metadata:
     vite: "npm:6.4.6"
     vite-plugin-pug: "npm:0.4.1"
     vue: "npm:3.5.45"
-    vue-router: "npm:4.6.4"
+    vue-router: "npm:4.6.5"
     vuex: "npm:4.1.0"
   languageName: unknown
   linkType: soft
@@ -8281,14 +8281,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-router@npm:4.6.4":
-  version: 4.6.4
-  resolution: "vue-router@npm:4.6.4"
+"vue-router@npm:4.6.5":
+  version: 4.6.5
+  resolution: "vue-router@npm:4.6.5"
   dependencies:
     "@vue/devtools-api": "npm:^6.6.4"
   peerDependencies:
     vue: ^3.5.0
-  checksum: 10c0/9dcbe1124f1f444ae263ca37914829eea1ebff3feaa182559efee611dfd4436bbebe0ebffdcb60e37fecfb2fbdc691346df00996eeba708485e9ea9b8a7dd193
+  checksum: 10c0/806253d6066f10b436a5aac809db347096f660b3c17b06c2fa9afdc36e10334c825b9122bca390598dc3014256ee625e82e3ed896bd6242e6f3f436bc8536fd1
   languageName: node
   linkType: hard
 
