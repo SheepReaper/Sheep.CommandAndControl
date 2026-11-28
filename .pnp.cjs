@@ -8216,7 +8216,7 @@ const RAW_RUNTIME_STATE =
           ["pug", "npm:3.0.4"],\
           ["rollup", "npm:4.68.8"],\
           ["rollup-plugin-pug", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:1.1.1"],\
-          ["sass", "npm:1.107.1"],\
+          ["sass", "npm:1.108.2"],\
           ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
           ["vite", "virtual:4a8294427c2a96c699b85564fe797bfae5f02a042b7731764d75fbf8733727164d88eef12f38e0210b16d92b867777eba7f39da3779c92a71a03fc9b57baf746#npm:6.4.6"],\
           ["vite-plugin-pug", "npm:0.4.1"],\
@@ -9546,13 +9546,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["sass", [\
-      ["npm:1.107.1", {\
-        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.107.1-3af411c423-10c0.zip/node_modules/sass/",\
+      ["npm:1.108.2", {\
+        "packageLocation": "../../../../../../runner/cache/others/berry/cache/sass-npm-1.108.2-5fa8c6c24d-10c0.zip/node_modules/sass/",\
         "packageDependencies": [\
           ["@parcel/watcher", "npm:2.4.1"],\
           ["chokidar", "npm:5.0.0"],\
           ["immutable", "npm:5.1.6"],\
-          ["sass", "npm:1.107.1"],\
+          ["sass", "npm:1.108.2"],\
           ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
@@ -10167,7 +10167,7 @@ const RAW_RUNTIME_STATE =
           ["picomatch", "npm:4.0.4"],\
           ["postcss", "npm:8.5.9"],\
           ["rollup", "npm:4.60.1"],\
-          ["sass", "npm:1.107.1"],\
+          ["sass", "npm:1.108.2"],\
           ["sass-embedded", null],\
           ["stylus", null],\
           ["sugarss", null],\
